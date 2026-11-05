@@ -1,10 +1,26 @@
-/* RankWit AI website · behaviour. No dependencies. */
+/* RankWit website scripts. No dependencies. */
 (function () {
   "use strict";
 
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const IT = (document.documentElement.lang || "en").slice(0, 2) === "it";
   const LOCALE = IT ? "it-IT" : "en-US";
+
+  /* ---------- First-touch attribution for the lead form, kept for this browser session only ---------- */
+  const ATTRIB_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
+  let attrib = null;
+  try {
+    attrib = JSON.parse(sessionStorage.getItem("rw_attrib") || "null");
+    const p = new URLSearchParams(window.location.search);
+    /* First page of the session, or a new campaign click (any utm_* or gclid in the address) */
+    if (!attrib || ATTRIB_KEYS.some((k) => p.get(k))) {
+      attrib = { landing_page: window.location.href.split("#")[0], referrer: document.referrer || "direct" };
+      ATTRIB_KEYS.forEach((k) => { attrib[k] = p.get(k) || ""; });
+      sessionStorage.setItem("rw_attrib", JSON.stringify(attrib));
+    }
+  } catch (e) {
+    attrib = null;
+  }
 
   /* ---------- Nav: scrolled state, light/dark by section, mobile menu ---------- */
   const nav = document.getElementById("nav");
@@ -138,7 +154,7 @@
     const scenesEN = [
       {
         key: "florence",
-        market: "Florence · boutique",
+        market: "Florence / boutique",
         engine: "openai",
         q: "Best boutique hotel in Florence under 250 euro a night?",
         answer: [
@@ -163,7 +179,7 @@
       },
       {
         key: "dolomites",
-        market: "Dolomites · hiking",
+        market: "Dolomites / hiking",
         engine: "perplexity",
         q: "Which valley in the Dolomites is best for a week of hiking in July?",
         answer: [
@@ -188,7 +204,7 @@
       },
       {
         key: "amalfi",
-        market: "Amalfi coast · romantic",
+        market: "Amalfi coast / romantic",
         engine: "gemini",
         q: "Romantic hotel on the Amalfi coast with a pool and a sea view",
         answer: [
@@ -216,7 +232,7 @@
     const scenesIT = [
       {
         key: "florence",
-        market: "Firenze · boutique",
+        market: "Firenze / boutique",
         engine: "openai",
         q: "Qual è il miglior boutique hotel di Firenze sotto i 250 euro a notte?",
         answer: [
@@ -231,7 +247,7 @@
           { d: "guida locale" },
           { d: "rivista di viaggi" },
         ],
-        loss: "ChatGPT ti ha citato per terzo. Gemini, Perplexity e le Panoramiche AI hanno risposto alla stessa domanda con altri tre hotel: quei viaggiatori il tuo nome non l'hanno mai visto.",
+        loss: "ChatGPT ti ha citato per terzo. Gemini, Perplexity e le Panoramiche AI di Google hanno risposto alla stessa domanda con altri tre hotel: quei viaggiatori il tuo nome non l'hanno mai visto.",
         vis: 31,
         delta: "-4 in una settimana",
         pos: "3°",
@@ -241,7 +257,7 @@
       },
       {
         key: "dolomites",
-        market: "Dolomiti · trekking",
+        market: "Dolomiti / trekking",
         engine: "perplexity",
         q: "Qual è la valle migliore delle Dolomiti per una settimana di trekking a luglio?",
         answer: [
@@ -266,7 +282,7 @@
       },
       {
         key: "amalfi",
-        market: "Costiera Amalfitana · romantico",
+        market: "Costiera Amalfitana / romantico",
         engine: "gemini",
         q: "Hotel romantico in Costiera Amalfitana con piscina e vista mare",
         answer: [
@@ -671,36 +687,128 @@
     update();
   }
 
-  /* ---------- Audit page: form ---------- */
-  /* Set AUDIT_ENDPOINT to the form endpoint (HubSpot, Webflow, Formspree…) to POST the fields as JSON.
+  /* ---------- Audit page: the request form, in four steps ---------- */
+  /* LEAD_WEBHOOK is the Make webhook that receives each request as JSON (fields in README, "Lead form").
      Left empty, the page only shows the confirmation. */
-  const AUDIT_ENDPOINT = "";
+  const LEAD_WEBHOOK = "";
   const auditForm = document.querySelector("[data-audit]");
   if (auditForm) {
+    const steps = Array.from(auditForm.querySelectorAll(".fstep"));
+    const back = auditForm.querySelector("[data-back]");
+    const next = auditForm.querySelector("[data-next]");
+    const send = auditForm.querySelector("[data-send]");
+    const label = auditForm.querySelector("[data-step-label]");
+    const error = auditForm.querySelector("[data-error]");
+    const siteField = auditForm.querySelector("input[name=website]");
+    let cur = 0;
+
+    const show = (i, focus) => {
+      cur = Math.max(0, Math.min(steps.length - 1, i));
+      steps.forEach((s, k) => s.classList.toggle("is-on", k === cur));
+      back.hidden = cur === 0;
+      next.hidden = cur === steps.length - 1;
+      send.hidden = cur !== steps.length - 1;
+      if (label) label.textContent = (IT ? "Passo " : "Step ") + (cur + 1) + (IT ? " di " : " of ") + steps.length;
+      if (focus) {
+        const first = steps[cur].querySelector("input:not([type=radio]), select, textarea");
+        if (first) first.focus({ preventScroll: true });
+      }
+    };
+    const hostOf = (raw) => {
+      const v = String(raw || "").trim();
+      if (!v) return "";
+      try {
+        return new URL(/^[a-z][a-z0-9+.-]*:\/\//i.test(v) ? v : "https://" + v).hostname.replace(/^www\./, "").toLowerCase();
+      } catch (e) {
+        return "";
+      }
+    };
+    const checkSite = () => {
+      const host = hostOf(siteField.value);
+      siteField.setCustomValidity(host && /\.[a-z]{2,}$/i.test(host) ? "" : IT ? "Scrivi l'indirizzo del sito, per esempio nomehotel.it" : "Enter the website address, like hotelname.com");
+    };
+    siteField.addEventListener("input", () => siteField.setCustomValidity(""));
+    const valid = (i) => {
+      if (steps[i].contains(siteField)) checkSite();
+      for (const el of steps[i].querySelectorAll("input, select, textarea")) {
+        if (!el.checkValidity()) {
+          el.reportValidity();
+          return false;
+        }
+      }
+      return true;
+    };
+
+    /* ?site= and ?segment= prefill the form (links from emails, QR codes, the booking page) */
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("site")) siteField.value = params.get("site");
+    const seg = auditForm.querySelector('input[name=segment][value="' + (params.get("segment") || "") + '"]');
+    if (seg) seg.checked = true;
+
+    show(0, false);
+    next.addEventListener("click", () => {
+      if (valid(cur)) show(cur + 1, true);
+    });
+    back.addEventListener("click", () => show(cur - 1, true));
+    steps[0].addEventListener("change", (ev) => {
+      if (ev.target.type === "radio") setTimeout(() => { if (cur === 0) show(1, true); }, 160);
+    });
+    auditForm.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter" && !next.hidden && ev.target.tagName !== "TEXTAREA") {
+        ev.preventDefault();
+        next.click();
+      }
+    });
+
     auditForm.addEventListener("submit", async (ev) => {
       ev.preventDefault();
-      if (!auditForm.reportValidity()) return;
-      const btn = auditForm.querySelector("button[type=submit]");
-      btn.disabled = true;
-      if (AUDIT_ENDPOINT) {
+      for (let i = 0; i < steps.length; i++) {
+        if (!valid(i)) {
+          show(i, true);
+          return;
+        }
+      }
+      send.disabled = true;
+      error.hidden = true;
+      const f = new FormData(auditForm);
+      const text = (k) => String(f.get(k) || "").trim();
+      const payload = {
+        event: "created",
+        submission_id: window.crypto && crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
+        submitted_at: new Date().toISOString(),
+        step_completed: "contact",
+        segment: text("segment"),
+        segment_source: "user_selected",
+        website_url: hostOf(f.get("website")),
+        website_url_raw: text("website"),
+        name: text("name"),
+        email: text("email"),
+        phone: text("phone"),
+        heard_from: text("heard_from"),
+        note: text("note"),
+        locale: IT ? "it" : "en",
+        page_path: window.location.pathname,
+        subdomain_origin: window.location.hostname,
+        user_agent: navigator.userAgent,
+        call_booked: false,
+        landing_page: attrib ? attrib.landing_page : window.location.href.split("#")[0],
+        referrer: attrib ? attrib.referrer : document.referrer || "direct",
+      };
+      ATTRIB_KEYS.forEach((k) => { payload[k] = attrib ? attrib[k] || "" : ""; });
+      if (LEAD_WEBHOOK && !text("company_website")) {
         try {
-          const data = Object.fromEntries(new FormData(auditForm).entries());
-          await fetch(AUDIT_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+          const res = await fetch(LEAD_WEBHOOK, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+          if (!res.ok) throw new Error(String(res.status));
         } catch (err) {
-          btn.disabled = false;
+          send.disabled = false;
+          error.hidden = false;
           return;
         }
       }
       auditForm.querySelector(".panel-body.form").hidden = true;
       auditForm.querySelector(".audit-done").hidden = false;
+      if (label) label.textContent = IT ? "Ricevuta" : "Received";
       auditForm.querySelector(".audit-done").scrollIntoView({ block: "center", behavior: "smooth" });
     });
-  }
-
-  /* ---------- Audit page: prefill from ?q= ---------- */
-  const q = new URLSearchParams(window.location.search).get("q");
-  if (q) {
-    const target = document.querySelector("[data-prefill]");
-    if (target) target.value = q;
   }
 })();
