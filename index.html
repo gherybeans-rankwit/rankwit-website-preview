@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bukra-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=20261105f">
+<link rel="stylesheet" href="assets/site.css?v=20261106a">
 <meta property="og:title" content="GEO and AI visibility for hotels and destinations | RankWit">
 <meta property="og:description" content="RankWit measures every week how ChatGPT, Gemini, Perplexity, Claude and Google AI Overviews recommend hotels and destinations, and what to change.">
 <meta property="og:image" content="https://www.rankwit.ai/assets/og/home-en.png">
@@ -63,7 +63,7 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="./" aria-label="RankWit home"><svg viewBox="0 0 1533 220"><use href="#wordmark"/></svg></a>
-    <nav class="nav-links" aria-label="Main">
+    <nav class="nav-links" id="site-nav" aria-label="Main">
       <a href="hotel">Hotels</a>
       <a href="destinations">Destinations</a>
       <a href="https://osservatorio.rankwit.ai" target="_blank" rel="noopener">Observatory</a>
@@ -76,7 +76,7 @@
       <a class="btn btn-ghost" href="https://try.rankwit.ai/login">Log in</a>
       <a class="btn btn-primary" href="audit">Free AI audit</a>
     </div>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" data-toggle><svg><use href="#i-menu"/></svg></button>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" data-toggle><svg><use href="#i-menu"/></svg></button>
   </div>
 </header>
 
@@ -110,7 +110,7 @@
           <button class="chip" type="button" data-scene-tab="dolomites" aria-pressed="false"><svg><use href="#m-perplexity"/></svg> Dolomites destination</button>
           <button class="chip" type="button" data-scene-tab="amalfi" aria-pressed="false"><svg><use href="#m-gemini"/></svg> Hotel on the Amalfi coast</button>
         </div>
-        <span class="app-week">Week 43</span>
+        <span class="app-week">This week</span>
       </div>
       <div class="app-body">
         <nav class="app-side" aria-hidden="true">
@@ -157,7 +157,7 @@
     </div>
   </div>
   <div class="wrap">
-    <div class="engine-strip" aria-label="Engines we measure">
+    <div class="engine-strip" role="group" aria-label="Engines we measure">
       <span class="lbl">Answers from</span>
       <span class="e"><svg><use href="#m-openai"/></svg>ChatGPT</span>
       <span class="e"><svg><use href="#m-gemini"/></svg>Gemini</span>
@@ -332,8 +332,8 @@
         <p class="eyebrow">AI Visibility Lab</p>
         <h2>A workshop with your audit on the table.</h2>
         <p class="lead">The Lab is our hands-on format for hotels and destinations: one edition at a time, in one place, for a small group. You apply, we prepare your AI audit, and on the day you find it printed at your seat and work on your own site with the RankWit team.</p>
-        <p class="lead">Two editions so far, in Florence and Rimini. The next dates are on the Lab site.</p>
-        <div class="cta-row"><a class="btn btn-primary" href="https://lab.rankwit.ai" target="_blank" rel="noopener">Visit the Lab site <svg><use href="#i-arrow"/></svg></a></div>
+        <p class="lead">The Lab has already run in several destinations. The next dates are on the Lab site.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="https://visibility-lab.rankwit.ai" target="_blank" rel="noopener">Visit the Lab site <svg><use href="#i-arrow"/></svg></a></div>
       </div>
       <div class="panel lab-panel">
         <div class="panel-bar"><span class="pill"><svg><use href="#mark"/></svg> AI Visibility Lab</span><span class="right"><span class="pill">Three steps</span></span></div>
@@ -386,7 +386,7 @@
         <span class="h">Company</span>
         <a href="https://www.rankwit.ai/about">About</a>
         <a href="https://osservatorio.rankwit.ai" target="_blank" rel="noopener">Observatory</a>
-        <a href="https://lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
+        <a href="https://visibility-lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
         <a href="https://www.rankwit.ai/blog">Blog</a>
         <a href="https://www.linkedin.com/company/rankwit-ai/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://gherybeans-rankwit.github.io/rankwit-meet/en/">Contact</a>
@@ -405,6 +405,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js?v=20261105f"></script>
+<script src="assets/site.js?v=20261106a"></script>
 </body>
 </html>

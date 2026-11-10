@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/bukra-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/site.css?v=20261105f">
+<link rel="stylesheet" href="../assets/site.css?v=20261106a">
 <meta property="og:title" content="Come far consigliare il tuo hotel da ChatGPT e Gemini | RankWit">
 <meta property="og:description" content="Quando un ospite chiede all'AI un hotel come il tuo, riceve tre o quattro nomi. C'è anche il tuo?">
 <meta property="og:image" content="https://www.rankwit.ai/assets/og/hotels-it.png">
@@ -63,10 +63,10 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="./" aria-label="RankWit, home"><svg viewBox="0 0 1533 220"><use href="#wordmark"/></svg></a>
-    <nav class="nav-links" aria-label="Navigazione principale">
+    <nav class="nav-links" id="site-nav" aria-label="Navigazione principale">
       <a href="hotel" aria-current="page">Hotel</a>
       <a href="destinations">Destinazioni</a>
-      <a href="https://osservatorio.rankwit.ai/it/" target="_blank" rel="noopener">Osservatorio</a>
+      <a href="https://osservatorio.rankwit.ai/it" target="_blank" rel="noopener">Osservatorio</a>
       <a href="https://www.rankwit.ai/it/blog">Blog</a>
       <a href="https://gherybeans-rankwit.github.io/rankwit-meet/">Contatti</a>
       <span class="nav-menu-extra"><a class="btn btn-ghost" href="https://try.rankwit.ai/login">Accedi</a><a class="btn btn-primary" href="audit">Audit AI gratuito</a></span>
@@ -76,7 +76,7 @@
       <a class="btn btn-ghost" href="https://try.rankwit.ai/login">Accedi</a>
       <a class="btn btn-primary" href="audit">Audit AI gratuito</a>
     </div>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" data-toggle><svg><use href="#i-menu"/></svg></button>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" data-toggle><svg><use href="#i-menu"/></svg></button>
   </div>
 </header>
 
@@ -94,7 +94,7 @@
   </div>
   <div class="app-stage" data-app-stage>
     <div class="app">
-      <div class="app-top"><span class="app-brand" aria-hidden="true"><svg viewBox="0 0 279.09 219.12"><use href="#mark" width="279.09" height="219.12"/></svg></span><span class="app-crumb">Il tuo hotel<i>/</i>Firenze</span><span class="app-center"><span class="app-label">Cosa si sono sentiti rispondere tre ospiti questa settimana</span><span class="app-q">«Boutique hotel a Firenze sotto i 250 euro»</span></span><span class="app-week">Settimana 43</span></div>
+      <div class="app-top"><span class="app-brand" aria-hidden="true"><svg viewBox="0 0 279.09 219.12"><use href="#mark" width="279.09" height="219.12"/></svg></span><span class="app-crumb">Il tuo hotel<i>/</i>Firenze</span><span class="app-center"><span class="app-label">Cosa si sono sentiti rispondere tre ospiti questa settimana</span><span class="app-q">«Boutique hotel a Firenze sotto i 250 euro»</span></span><span class="app-week">Questa settimana</span></div>
       <div class="three-answers">
         <div class="ans-col">
           <div class="eng"><svg><use href="#m-openai"/></svg>ChatGPT<span class="q">questa settimana</span></div>
@@ -137,7 +137,7 @@
     </div>
     <div class="cols-3">
       <div class="col-plain"><span class="big">3 o 4 nomi</span><h3>L'ospite che ha ricevuto altri nomi</h3><p>Una risposta AI dà tre o quattro hotel e si ferma lì. Se il tuo non c'è, l'ospite non va a cercarti. Cerca l'hotel che gli è stato suggerito.</p></div>
-      <div class="col-plain"><span class="big">15-25%</span><h3>La prenotazione che passa da un'OTA</h3><p>Anche quando un motore ti cita, spesso rimanda alla tua scheda su una piattaforma di prenotazione invece che al tuo sito. L'ospite prenota lì, e paghi la commissione su una prenotazione che era già tua.</p></div>
+      <div class="col-plain"><span class="big">dal 15 al 25%</span><h3>La prenotazione che passa da un'OTA</h3><p>Anche quando un motore ti cita, spesso rimanda alla tua scheda su una piattaforma di prenotazione invece che al tuo sito. L'ospite prenota lì, e paghi la commissione su una prenotazione che era già tua.</p></div>
       <div class="col-plain"><span class="big">1 vecchia recensione</span><h3>L'informazione che nessuno ha corretto</h3><p>Un motore può ripetere per mesi che non hai il ristorante, o che d'inverno sei chiuso, solo perché lo diceva una vecchia recensione. Finché nessuno corregge la fonte, gli ospiti continuano a leggerlo.</p></div>
     </div>
   </div>
@@ -261,8 +261,8 @@
       <div class="col">
         <span class="h">Azienda</span>
         <a href="https://www.rankwit.ai/it/about">Chi siamo</a>
-        <a href="https://osservatorio.rankwit.ai/it/" target="_blank" rel="noopener">Osservatorio</a>
-        <a href="https://lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
+        <a href="https://osservatorio.rankwit.ai/it" target="_blank" rel="noopener">Osservatorio</a>
+        <a href="https://visibility-lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
         <a href="https://www.rankwit.ai/it/blog">Blog</a>
         <a href="https://www.linkedin.com/company/rankwit-ai/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://gherybeans-rankwit.github.io/rankwit-meet/">Contatti</a>
@@ -281,6 +281,6 @@
   </div>
 </footer>
 
-<script src="../assets/site.js?v=20261105f"></script>
+<script src="../assets/site.js?v=20261106a"></script>
 </body>
 </html>

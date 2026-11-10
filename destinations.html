@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bukra-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=20261105f">
+<link rel="stylesheet" href="assets/site.css?v=20261106a">
 <meta property="og:title" content="GEO for destinations, DMOs and tourism boards | RankWit">
 <meta property="og:description" content="RankWit shows DMOs and tourism boards which places in their territory the five main AI engines recommend, and which websites those answers rely on.">
 <meta property="og:image" content="https://www.rankwit.ai/assets/og/destinations-en.png">
@@ -62,7 +62,7 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="./" aria-label="RankWit home"><svg viewBox="0 0 1533 220"><use href="#wordmark"/></svg></a>
-    <nav class="nav-links" aria-label="Main">
+    <nav class="nav-links" id="site-nav" aria-label="Main">
       <a href="hotel">Hotels</a>
       <a href="destinations" aria-current="page">Destinations</a>
       <a href="https://osservatorio.rankwit.ai" target="_blank" rel="noopener">Observatory</a>
@@ -75,7 +75,7 @@
       <a class="btn btn-ghost" href="https://try.rankwit.ai/login">Log in</a>
       <a class="btn btn-primary" href="audit">Free AI audit</a>
     </div>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" data-toggle><svg><use href="#i-menu"/></svg></button>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" data-toggle><svg><use href="#i-menu"/></svg></button>
   </div>
 </header>
 
@@ -93,7 +93,7 @@
   </div>
   <div class="app-stage" data-app-stage style="width:min(100% - 2 * var(--gutter), 860px)">
     <div class="app">
-      <div class="app-top"><span class="app-brand" aria-hidden="true"><svg viewBox="0 0 279.09 219.12"><use href="#mark" width="279.09" height="219.12"/></svg></span><span class="app-crumb">Your destination<i>/</i>Lake region</span><span class="app-center"><span class="app-label">Engines recommending each area</span></span><span class="app-week">Week 43</span></div>
+      <div class="app-top"><span class="app-brand" aria-hidden="true"><svg viewBox="0 0 279.09 219.12"><use href="#mark" width="279.09" height="219.12"/></svg></span><span class="app-crumb">Your destination<i>/</i>Lake region</span><span class="app-center"><span class="app-label">Engines recommending each area</span></span><span class="app-week">This week</span></div>
       <div class="panel-body">
         <div class="areas" style="gap:12px">
           <div class="area"><span class="name"><span>City centre</span><span class="mono muted" style="font-size:.76rem">5 / 5</span></span><span class="seg"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span></div><div class="area"><span class="name"><span>Lake and shore</span><span class="mono muted" style="font-size:.76rem">4 / 5</span></span><span class="seg"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i></span></div><div class="area"><span class="name"><span>Wine hills</span><span class="mono muted" style="font-size:.76rem">3 / 5</span></span><span class="seg"><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i></span></div><div class="area"><span class="name"><span>Thermal spa town</span><span class="mono muted" style="font-size:.76rem">2 / 5</span></span><span class="seg"><i class="f"></i><i class="f"></i><i></i><i></i><i></i></span></div><div class="area"><span class="name"><span>Hiking valleys</span><span class="mono muted" style="font-size:.76rem">1 / 5</span></span><span class="seg"><i class="f"></i><i></i><i></i><i></i><i></i></span></div><div class="area"><span class="name"><span>Mountain villages</span><span class="mono muted" style="font-size:.76rem">0 / 5</span></span><span class="seg"><i></i><i></i><i></i><i></i><i></i></span></div>
@@ -196,7 +196,7 @@
         <span class="h">Company</span>
         <a href="https://www.rankwit.ai/about">About</a>
         <a href="https://osservatorio.rankwit.ai" target="_blank" rel="noopener">Observatory</a>
-        <a href="https://lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
+        <a href="https://visibility-lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
         <a href="https://www.rankwit.ai/blog">Blog</a>
         <a href="https://www.linkedin.com/company/rankwit-ai/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://gherybeans-rankwit.github.io/rankwit-meet/en/">Contact</a>
@@ -215,6 +215,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js?v=20261105f"></script>
+<script src="assets/site.js?v=20261106a"></script>
 </body>
 </html>

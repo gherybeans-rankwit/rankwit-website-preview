@@ -47,12 +47,18 @@
         toggle.setAttribute("aria-expanded", String(open));
         document.body.classList.toggle("menu-open", open);
       });
-      nav.querySelectorAll(".nav-links a").forEach((a) =>
-        a.addEventListener("click", () => {
-          nav.classList.remove("is-open");
-          document.body.classList.remove("menu-open");
-        })
-      );
+      const closeMenu = () => {
+        nav.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+        toggle.setAttribute("aria-expanded", "false");
+      };
+      nav.querySelectorAll(".nav-links a").forEach((a) => a.addEventListener("click", closeMenu));
+      document.addEventListener("keydown", (ev) => {
+        if (ev.key === "Escape" && nav.classList.contains("is-open")) {
+          closeMenu();
+          toggle.focus();
+        }
+      });
     }
   }
 
@@ -124,33 +130,9 @@
     requestAnimationFrame(tick);
   }
 
-  /* ---------- Prompt ticker: duplicate once for a seamless loop ---------- */
-  document.querySelectorAll("[data-ticker] .ticker-track").forEach((track) => {
-    track.innerHTML += track.innerHTML;
-  });
-
-  /* ---------- Prompt box: keep the query, go to the audit page ---------- */
-  document.querySelectorAll("[data-promptbox]").forEach((form) => {
-    form.addEventListener("submit", (ev) => {
-      const q = form.querySelector("input[name=q]");
-      if (q && !q.value.trim()) {
-        ev.preventDefault();
-        window.location.href = form.getAttribute("action");
-      }
-    });
-  });
-
   /* ---------- Answer explorer: typed question, streamed answer, live metrics ---------- */
   const explorer = document.querySelector("[data-explorer]");
   if (explorer) {
-    const engines = [
-      { key: "openai", name: "ChatGPT" },
-      { key: "gemini", name: "Gemini" },
-      { key: "perplexity", name: "Perplexity" },
-      { key: "claude", name: "Claude" },
-      { key: "google", name: "AI Overviews" },
-    ];
-
     const scenesEN = [
       {
         key: "florence",
@@ -316,9 +298,6 @@
     const visEl = $("[data-ex-vis]");
     const deltaEl = $("[data-ex-delta]");
     const posEl = $("[data-ex-pos]");
-    const engEl = $("[data-ex-engines]");
-    const barsEl = $("[data-ex-bars]");
-    const marketEl = $("[data-ex-market]");
 
     let idx = 0;
     let timer = null;
@@ -406,7 +385,6 @@
       if (crumbEl) crumbEl.innerHTML = `${PLACE[s.key][0]}<i>/</i>${PLACE[s.key][1]}`;
       drawChart(s.key);
       renderShare(s.key);
-      if (marketEl) marketEl.textContent = s.market;
       markEl.setAttribute("href", "#m-" + s.engine);
       visEl.textContent = s.vis + "%";
       if (deltaEl) {
@@ -417,21 +395,6 @@
       if (posNoteEl) posNoteEl.textContent = s.posNote || "";
       if (namedEl) namedEl.textContent = s.named.length + (IT ? " su 5" : " of 5");
       if (namedNoteEl) namedNoteEl.textContent = s.namedNote || "";
-      if (!engEl || !barsEl) return;
-      engEl.innerHTML = engines
-        .map((e) => `<span class="e ${s.named.includes(e.key) ? "on" : "off"}"><svg><use href="#m-${e.key}"/></svg>${e.name}</span>`)
-        .join("");
-      barsEl.innerHTML = s.bars
-        .map(
-          (b) =>
-            `<div class="bar${b.you ? " you" : ""}"><span class="who">${b.who}</span><span class="track"><span class="fill" style="width:0"></span></span><span class="num">${b.v}%</span></div>`
-        )
-        .join("");
-      requestAnimationFrame(() =>
-        requestAnimationFrame(() => {
-          barsEl.querySelectorAll(".fill").forEach((f, i) => (f.style.width = s.bars[i].v + "%"));
-        })
-      );
     }
 
     function renderAnswer(s) {
@@ -688,9 +651,9 @@
   }
 
   /* ---------- Audit page: the request form, in four steps ---------- */
-  /* LEAD_WEBHOOK is the Make webhook that receives each request as JSON (fields in README, "Lead form").
-     Left empty, the page only shows the confirmation. */
-  const LEAD_WEBHOOK = "";
+  /* LEAD_ENDPOINT is the site's own endpoint (functions/api/lead.js) that validates the request and
+     forwards it to Make (fields in README, "Lead form"). The Make URL lives on the host, not here. */
+  const LEAD_ENDPOINT = ""; /* preview: nothing is sent */
   const auditForm = document.querySelector("[data-audit]");
   if (auditForm) {
     const steps = Array.from(auditForm.querySelectorAll(".fstep"));
@@ -750,9 +713,6 @@
       if (valid(cur)) show(cur + 1, true);
     });
     back.addEventListener("click", () => show(cur - 1, true));
-    steps[0].addEventListener("change", (ev) => {
-      if (ev.target.type === "radio") setTimeout(() => { if (cur === 0) show(1, true); }, 160);
-    });
     auditForm.addEventListener("keydown", (ev) => {
       if (ev.key === "Enter" && !next.hidden && ev.target.tagName !== "TEXTAREA") {
         ev.preventDefault();
@@ -795,9 +755,9 @@
         referrer: attrib ? attrib.referrer : document.referrer || "direct",
       };
       ATTRIB_KEYS.forEach((k) => { payload[k] = attrib ? attrib[k] || "" : ""; });
-      if (LEAD_WEBHOOK && !text("company_website")) {
+      if (LEAD_ENDPOINT && !text("extra_field")) {
         try {
-          const res = await fetch(LEAD_WEBHOOK, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+          const res = await fetch(LEAD_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) });
           if (!res.ok) throw new Error(String(res.status));
         } catch (err) {
           send.disabled = false;
@@ -809,6 +769,7 @@
       auditForm.querySelector(".audit-done").hidden = false;
       if (label) label.textContent = IT ? "Ricevuta" : "Received";
       auditForm.querySelector(".audit-done").scrollIntoView({ block: "center", behavior: "smooth" });
+      auditForm.querySelector(".audit-done h2").focus({ preventScroll: true });
     });
   }
 })();

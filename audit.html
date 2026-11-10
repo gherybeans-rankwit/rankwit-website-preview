@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bukra-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=20261105f">
+<link rel="stylesheet" href="assets/site.css?v=20261106a">
 <style>
   .audit-form .panel-body.form { gap: 12px; }
   .audit-form .btn { margin-top: 6px; }
@@ -66,7 +66,7 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="./" aria-label="RankWit home"><svg viewBox="0 0 1533 220"><use href="#wordmark"/></svg></a>
-    <nav class="nav-links" aria-label="Main">
+    <nav class="nav-links" id="site-nav" aria-label="Main">
       <a href="hotel">Hotels</a>
       <a href="destinations">Destinations</a>
       <a href="https://osservatorio.rankwit.ai" target="_blank" rel="noopener">Observatory</a>
@@ -79,7 +79,7 @@
       <a class="btn btn-ghost" href="https://try.rankwit.ai/login">Log in</a>
       <a class="btn btn-primary" href="audit" aria-current="page">Free AI audit</a>
     </div>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" data-toggle><svg><use href="#i-menu"/></svg></button>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" data-toggle><svg><use href="#i-menu"/></svg></button>
   </div>
 </header>
 
@@ -99,8 +99,8 @@
       </ul>
     </div>
     <div>
-      <form class="panel audit-form" id="audit" data-audit>
-        <div class="panel-bar"><span class="pill"><svg><use href="#mark"/></svg> Audit request</span><span class="right"><span class="pill" data-step-label>2 minutes</span></span></div>
+      <form class="panel audit-form" id="audit" method="post" action="/api/lead" data-audit>
+        <div class="panel-bar"><span class="pill"><svg><use href="#mark"/></svg> Audit request</span><span class="right"><span class="pill" data-step-label aria-live="polite">2 minutes</span></span></div>
         <div class="panel-body form">
           <fieldset class="fstep is-on" data-step="1">
             <legend>Who are you?</legend>
@@ -150,19 +150,21 @@
               <textarea name="note" rows="3" placeholder="Competitors, markets, a question you care about…"></textarea>
             </label>
           </fieldset>
-          <label class="hp" aria-hidden="true">Company <input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
+          <div class="hp" hidden aria-hidden="true"><label>Leave this field empty <input type="text" name="extra_field" tabindex="-1" autocomplete="off"></label></div>
+          <input type="hidden" name="locale" value="en">
           <div class="fnav">
             <button class="btn btn-ghost" type="button" data-back hidden>Back</button>
             <button class="btn btn-primary btn-lg" type="button" data-next hidden>Continue <svg><use href="#i-arrow"/></svg></button>
             <button class="btn btn-primary btn-lg" type="submit" data-send>Get your free AI audit <svg><use href="#i-arrow"/></svg></button>
           </div>
-          <p class="note err" data-error hidden>We could not send your request. Please try again, or write to info@rankwit.ai.</p>
+          <p class="note err" data-error hidden role="alert">We could not send your request. Please try again, or write to info@rankwit.ai.</p>
+          <p class="note err target-only" id="audit-error">We could not send your request. Please try again, or write to info@rankwit.ai.</p>
           <p class="note">We use these details to prepare your audit and to get back to you about it. <a href="https://www.rankwit.ai/legal/privacy-policy-webapp">Privacy policy</a>.</p>
         </div>
         <div class="panel-body audit-done" hidden>
           <p class="eyebrow">Received</p>
-          <h2>Thanks. We have your request.</h2>
-          <p class="quiet" style="margin-top:10px">We run the travelers' questions about you on five engines and send the report to your inbox in a few days. If something is unclear, reply to the email we send you.</p>
+          <h2 tabindex="-1">Thanks. We have your request.</h2>
+          <p class="quiet" style="margin-top:10px">We run the travelers' questions about you on five engines and send the report to your inbox in a few days. If it does not arrive, check your spam folder or write to info@rankwit.ai.</p>
         </div>
       </form>
     </div>
@@ -281,7 +283,7 @@
         <span class="h">Company</span>
         <a href="https://www.rankwit.ai/about">About</a>
         <a href="https://osservatorio.rankwit.ai" target="_blank" rel="noopener">Observatory</a>
-        <a href="https://lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
+        <a href="https://visibility-lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
         <a href="https://www.rankwit.ai/blog">Blog</a>
         <a href="https://www.linkedin.com/company/rankwit-ai/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://gherybeans-rankwit.github.io/rankwit-meet/en/">Contact</a>
@@ -300,6 +302,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js?v=20261105f"></script>
+<script src="assets/site.js?v=20261106a"></script>
 </body>
 </html>

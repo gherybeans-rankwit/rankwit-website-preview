@@ -3714,6 +3714,9 @@ body.dark .hero-glow {
   .nav.is-open {
     background: var(--page);
     color: var(--ink);
+    /* backdrop-filter would make the nav the containing block of the fixed menu panel */
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
   .nav.is-open .nav-links {
     position: fixed;
@@ -3926,10 +3929,6 @@ body.dark .hero-glow {
 }
 
 @media (max-width: 900px) {
-  .nav.is-open .nav-menu-extra .btn-primary {
-    background: var(--accent);
-    color: #fff;
-  }
   .nav.is-open .nav-menu-extra .btn-ghost {
     background: transparent;
     color: var(--ink);
@@ -4092,4 +4091,16 @@ body.dark .hero-glow {
 
 .lab-panel .steps li:last-child {
   padding-bottom: 4px;
+}
+
+/* Audit form: the error paragraph shown after a form post without JavaScript (/audit?error=1#audit-error) */
+.target-only { display: none; }
+.target-only:target { display: block; }
+
+/* Demo window on phones: the example questions scroll sideways instead of being cut by the window */
+@media (max-width: 600px) {
+  .app-top { flex-wrap: wrap; }
+  .app-top .scene-tabs { order: 9; width: 100%; max-width: none; flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .app-top .scene-tabs::-webkit-scrollbar { display: none; }
+  .app-top .scene-tabs .chip { flex: none; }
 }

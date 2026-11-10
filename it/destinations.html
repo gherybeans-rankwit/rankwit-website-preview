@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/bukra-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/site.css?v=20261105f">
+<link rel="stylesheet" href="../assets/site.css?v=20261106a">
 <meta property="og:title" content="GEO per destinazioni, DMO ed enti del turismo | RankWit">
 <meta property="og:description" content="RankWit mostra a DMO ed enti del turismo quali luoghi del territorio consigliano i cinque principali motori AI, e su quali siti si basano le risposte.">
 <meta property="og:image" content="https://www.rankwit.ai/assets/og/destinations-it.png">
@@ -62,10 +62,10 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="./" aria-label="RankWit, home"><svg viewBox="0 0 1533 220"><use href="#wordmark"/></svg></a>
-    <nav class="nav-links" aria-label="Navigazione principale">
+    <nav class="nav-links" id="site-nav" aria-label="Navigazione principale">
       <a href="hotel">Hotel</a>
       <a href="destinations" aria-current="page">Destinazioni</a>
-      <a href="https://osservatorio.rankwit.ai/it/" target="_blank" rel="noopener">Osservatorio</a>
+      <a href="https://osservatorio.rankwit.ai/it" target="_blank" rel="noopener">Osservatorio</a>
       <a href="https://www.rankwit.ai/it/blog">Blog</a>
       <a href="https://gherybeans-rankwit.github.io/rankwit-meet/">Contatti</a>
       <span class="nav-menu-extra"><a class="btn btn-ghost" href="https://try.rankwit.ai/login">Accedi</a><a class="btn btn-primary" href="audit">Audit AI gratuito</a></span>
@@ -75,7 +75,7 @@
       <a class="btn btn-ghost" href="https://try.rankwit.ai/login">Accedi</a>
       <a class="btn btn-primary" href="audit">Audit AI gratuito</a>
     </div>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" data-toggle><svg><use href="#i-menu"/></svg></button>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" data-toggle><svg><use href="#i-menu"/></svg></button>
   </div>
 </header>
 
@@ -88,12 +88,12 @@
     <p class="lead">Dal capoluogo al borgo più piccolo: quali zone consigliano i motori, per cosa, in quale stagione, e su quali pagine si basano.</p>
     <div class="cta-row">
       <a class="btn btn-primary btn-lg" href="audit">Richiedi l'audit AI gratuito <svg><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-ghost btn-lg" href="https://osservatorio.rankwit.ai/it/" target="_blank" rel="noopener">Apri l'Osservatorio</a>
+      <a class="btn btn-ghost btn-lg" href="https://osservatorio.rankwit.ai/it" target="_blank" rel="noopener">Apri l'Osservatorio</a>
     </div>
   </div>
   <div class="app-stage" data-app-stage style="width:min(100% - 2 * var(--gutter), 860px)">
     <div class="app">
-      <div class="app-top"><span class="app-brand" aria-hidden="true"><svg viewBox="0 0 279.09 219.12"><use href="#mark" width="279.09" height="219.12"/></svg></span><span class="app-crumb">La tua destinazione<i>/</i>Area dei laghi</span><span class="app-center"><span class="app-label">Motori che consigliano ciascuna zona</span></span><span class="app-week">Settimana 43</span></div>
+      <div class="app-top"><span class="app-brand" aria-hidden="true"><svg viewBox="0 0 279.09 219.12"><use href="#mark" width="279.09" height="219.12"/></svg></span><span class="app-crumb">La tua destinazione<i>/</i>Area dei laghi</span><span class="app-center"><span class="app-label">Motori che consigliano ciascuna zona</span></span><span class="app-week">Questa settimana</span></div>
       <div class="panel-body">
         <div class="areas" style="gap:12px">
           <div class="area"><span class="name"><span>Centro storico</span><span class="mono muted" style="font-size:.76rem">5 / 5</span></span><span class="seg"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span></div><div class="area"><span class="name"><span>Lago e lungolago</span><span class="mono muted" style="font-size:.76rem">4 / 5</span></span><span class="seg"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i></span></div><div class="area"><span class="name"><span>Colline del vino</span><span class="mono muted" style="font-size:.76rem">3 / 5</span></span><span class="seg"><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i></span></div><div class="area"><span class="name"><span>Paese termale</span><span class="mono muted" style="font-size:.76rem">2 / 5</span></span><span class="seg"><i class="f"></i><i class="f"></i><i></i><i></i><i></i></span></div><div class="area"><span class="name"><span>Valli per il trekking</span><span class="mono muted" style="font-size:.76rem">1 / 5</span></span><span class="seg"><i class="f"></i><i></i><i></i><i></i><i></i></span></div><div class="area"><span class="name"><span>Borghi di montagna</span><span class="mono muted" style="font-size:.76rem">0 / 5</span></span><span class="seg"><i></i><i></i><i></i><i></i><i></i></span></div>
@@ -150,7 +150,7 @@
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:0">
       <h2>Quello che misuriamo, lo pubblichiamo</h2>
-      <p class="lead">Ogni mese l'Osservatorio Visibilità AI misura come gli assistenti AI raccontano le destinazioni italiane e i loro hotel, e pubblica i dati. <a class="link" href="https://osservatorio.rankwit.ai/it/" target="_blank" rel="noopener">Apri l'Osservatorio <svg><use href="#i-arrow"/></svg></a></p>
+      <p class="lead">Ogni mese l'Osservatorio Visibilità AI misura come gli assistenti AI raccontano le destinazioni italiane e i loro hotel, e pubblica i dati. <a class="link" href="https://osservatorio.rankwit.ai/it" target="_blank" rel="noopener">Apri l'Osservatorio <svg><use href="#i-arrow"/></svg></a></p>
     </div>
     <div class="stat-row">
       <div class="reveal"><span class="big"><span data-count="737">737</span></span><p class="what">destinazioni italiane monitorate, dalle regioni ai singoli borghi</p></div>
@@ -195,8 +195,8 @@
       <div class="col">
         <span class="h">Azienda</span>
         <a href="https://www.rankwit.ai/it/about">Chi siamo</a>
-        <a href="https://osservatorio.rankwit.ai/it/" target="_blank" rel="noopener">Osservatorio</a>
-        <a href="https://lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
+        <a href="https://osservatorio.rankwit.ai/it" target="_blank" rel="noopener">Osservatorio</a>
+        <a href="https://visibility-lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
         <a href="https://www.rankwit.ai/it/blog">Blog</a>
         <a href="https://www.linkedin.com/company/rankwit-ai/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://gherybeans-rankwit.github.io/rankwit-meet/">Contatti</a>
@@ -215,6 +215,6 @@
   </div>
 </footer>
 
-<script src="../assets/site.js?v=20261105f"></script>
+<script src="../assets/site.js?v=20261106a"></script>
 </body>
 </html>

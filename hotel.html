@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bukra-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=20261105f">
+<link rel="stylesheet" href="assets/site.css?v=20261106a">
 <meta property="og:title" content="Get your hotel recommended by ChatGPT and Gemini | RankWit">
 <meta property="og:description" content="Three or four names come back when a guest asks an AI engine for a hotel like yours. Is yours one of them?">
 <meta property="og:image" content="https://www.rankwit.ai/assets/og/hotels-en.png">
@@ -63,7 +63,7 @@
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="./" aria-label="RankWit home"><svg viewBox="0 0 1533 220"><use href="#wordmark"/></svg></a>
-    <nav class="nav-links" aria-label="Main">
+    <nav class="nav-links" id="site-nav" aria-label="Main">
       <a href="hotel" aria-current="page">Hotels</a>
       <a href="destinations">Destinations</a>
       <a href="https://osservatorio.rankwit.ai" target="_blank" rel="noopener">Observatory</a>
@@ -76,7 +76,7 @@
       <a class="btn btn-ghost" href="https://try.rankwit.ai/login">Log in</a>
       <a class="btn btn-primary" href="audit">Free AI audit</a>
     </div>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" data-toggle><svg><use href="#i-menu"/></svg></button>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" data-toggle><svg><use href="#i-menu"/></svg></button>
   </div>
 </header>
 
@@ -94,7 +94,7 @@
   </div>
   <div class="app-stage" data-app-stage>
     <div class="app">
-      <div class="app-top"><span class="app-brand" aria-hidden="true"><svg viewBox="0 0 279.09 219.12"><use href="#mark" width="279.09" height="219.12"/></svg></span><span class="app-crumb">Your hotel<i>/</i>Florence</span><span class="app-center"><span class="app-label">What three guests were told this week</span><span class="app-q">"Boutique hotel in Florence under 250 euro"</span></span><span class="app-week">Week 43</span></div>
+      <div class="app-top"><span class="app-brand" aria-hidden="true"><svg viewBox="0 0 279.09 219.12"><use href="#mark" width="279.09" height="219.12"/></svg></span><span class="app-crumb">Your hotel<i>/</i>Florence</span><span class="app-center"><span class="app-label">What three guests were told this week</span><span class="app-q">"Boutique hotel in Florence under 250 euro"</span></span><span class="app-week">This week</span></div>
       <div class="three-answers">
         <div class="ans-col">
           <div class="eng"><svg><use href="#m-openai"/></svg>ChatGPT<span class="q">this week</span></div>
@@ -262,7 +262,7 @@
         <span class="h">Company</span>
         <a href="https://www.rankwit.ai/about">About</a>
         <a href="https://osservatorio.rankwit.ai" target="_blank" rel="noopener">Observatory</a>
-        <a href="https://lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
+        <a href="https://visibility-lab.rankwit.ai" target="_blank" rel="noopener">AI Visibility Lab</a>
         <a href="https://www.rankwit.ai/blog">Blog</a>
         <a href="https://www.linkedin.com/company/rankwit-ai/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://gherybeans-rankwit.github.io/rankwit-meet/en/">Contact</a>
@@ -281,6 +281,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js?v=20261105f"></script>
+<script src="assets/site.js?v=20261106a"></script>
 </body>
 </html>
