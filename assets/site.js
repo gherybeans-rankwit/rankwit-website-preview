@@ -157,7 +157,7 @@
         pos: "3rd",
         posNote: "2nd last week",
         named: ["openai", "claude"],
-        namedNote: "3 engines sent them elsewhere",
+        namedNote: "3 gave other names",
       },
       {
         key: "dolomites",
@@ -172,17 +172,17 @@
         ],
         sources: [
           { d: "review site", hot: true },
-          { d: "official tourism site", hot: true },
+          { d: "guidebook", hot: true },
+          { d: "travel magazine" },
           { d: "forum thread" },
-          { d: "guidebook" },
         ],
-        loss: "You are named second. The guides the engines rely on describe the other valley in detail and give yours one line, so the answer follows them.",
+        loss: "You are named second. The words come from a review site and a guidebook: your official site is not among the sites this answer read.",
         vis: 58,
         delta: "-6 this week",
         pos: "2nd",
         posNote: "1st until June",
         named: ["openai", "gemini", "perplexity", "claude"],
-        namedNote: "1 engine sent them elsewhere",
+        namedNote: "1 gave other names",
       },
       {
         key: "amalfi",
@@ -201,13 +201,13 @@
           { d: "newspaper travel section" },
           { d: "booking platform" },
         ],
-        loss: "Four engines out of five sent this traveler to a competitor. The pages they relied on do not mention you, so next week's answer will be the same.",
+        loss: "Four AI assistants out of five sent this traveler to a competitor. The pages they read do not mention you, so next week's answer will be the same.",
         vis: 9,
         delta: "-3 this week",
         pos: "none",
         posNote: "not named this week",
         named: ["claude"],
-        namedNote: "4 engines sent them elsewhere",
+        namedNote: "4 gave other names",
       },
     ];
 
@@ -235,7 +235,7 @@
         pos: "3°",
         posNote: "era 2° la settimana scorsa",
         named: ["openai", "claude"],
-        namedNote: "3 motori hanno suggerito altri nomi",
+        namedNote: "3 hanno fatto altri nomi",
       },
       {
         key: "dolomites",
@@ -250,17 +250,17 @@
         ],
         sources: [
           { d: "sito di recensioni", hot: true },
-          { d: "sito turistico ufficiale", hot: true },
+          { d: "guida", hot: true },
+          { d: "rivista di viaggi" },
           { d: "forum di viaggio" },
-          { d: "guida" },
         ],
-        loss: "Sei citata per seconda. Le guide su cui si basano i motori descrivono l'altra valle nei dettagli e alla tua dedicano una riga, e la risposta fa lo stesso.",
+        loss: "Sei citata per seconda. A raccontarti sono un sito di recensioni e una guida: tra i siti letti per questa risposta il tuo sito ufficiale non c'è.",
         vis: 58,
         delta: "-6 in una settimana",
         pos: "2°",
         posNote: "prima fino a giugno",
         named: ["openai", "gemini", "perplexity", "claude"],
-        namedNote: "1 motore ha suggerito altri nomi",
+        namedNote: "1 ha fatto altri nomi",
       },
       {
         key: "amalfi",
@@ -279,16 +279,127 @@
           { d: "pagine viaggi di un quotidiano" },
           { d: "piattaforma di prenotazione" },
         ],
-        loss: "Quattro motori su cinque hanno mandato questo viaggiatore da un concorrente. Le pagine che usano non parlano di te, quindi anche la prossima settimana la risposta sarà la stessa.",
+        loss: "Quattro assistenti AI su cinque hanno mandato questo viaggiatore da un concorrente. Le pagine che leggono non parlano di te, quindi anche la prossima settimana la risposta sarà la stessa.",
         vis: 9,
         delta: "-3 in una settimana",
         pos: "nessuna",
         posNote: "non citato questa settimana",
         named: ["claude"],
-        namedNote: "4 motori hanno suggerito altri nomi",
+        namedNote: "4 hanno fatto altri nomi",
       },
     ];
     const scenes = IT ? scenesIT : scenesEN;
+
+    /* The answer card on the hero photo: three names and one line of verdict per scene. Example data. */
+    const CARD = IT
+      ? {
+          florence: {
+            picks: [
+              { n: "Un hotel in un palazzo d'Oltrarno", why: "terrazza e camere silenziose" },
+              { n: "Un hotel di design sul lungarno", why: "ristorante e late check-out" },
+              { n: "Il tuo hotel", why: "colazione e personale", you: true },
+            ],
+            kind: "warn",
+            verdict: "Citato per terzo, da 2 assistenti AI su 5. Gli altri tre hanno fatto altri tre nomi.",
+          },
+          dolomites: {
+            picks: [
+              { n: "Una valle con gli impianti aperti tutti i giorni", why: "la rete di sentieri" },
+              { n: "La tua destinazione", why: "rifugi e sentieri meno affollati", you: true },
+              { n: "Una valle più a est", why: "la scelta classica per le famiglie" },
+            ],
+            kind: "warn",
+            verdict: "Citata per seconda. A raccontarla sono un sito di recensioni e una guida, non il tuo sito ufficiale.",
+          },
+          amalfi: {
+            picks: [
+              { n: "Un hotel a strapiombo sul mare a Praiano", why: "piscina a sfioro e terrazza al tramonto" },
+              { n: "Una piccola locanda a Positano", why: "spesso consigliata alle coppie" },
+              { n: "Il tuo hotel non compare.", miss: true },
+            ],
+            kind: "bad",
+            verdict: "Fuori dalla risposta per 4 assistenti AI su 5. Le guide che leggono elencano quattro hotel, e il tuo non c'è.",
+          },
+        }
+      : {
+          florence: {
+            picks: [
+              { n: "A palazzo hotel in the Oltrarno", why: "rooftop and quiet rooms" },
+              { n: "A design hotel by the river", why: "restaurant and late checkout" },
+              { n: "Your hotel", why: "breakfast and staff", you: true },
+            ],
+            kind: "warn",
+            verdict: "Named third, by 2 AI assistants out of 5. The other three gave three other hotels.",
+          },
+          dolomites: {
+            picks: [
+              { n: "A valley with lifts running every day", why: "the trail network" },
+              { n: "Your destination", why: "mountain huts and quieter paths", you: true },
+              { n: "A valley further east", why: "the usual pick for families" },
+            ],
+            kind: "warn",
+            verdict: "Named second. The words come from a review site and a guidebook, not from your official site.",
+          },
+          amalfi: {
+            picks: [
+              { n: "A clifftop hotel in Praiano", why: "infinity pool and sunset terrace" },
+              { n: "A small inn in Positano", why: "often recommended for couples" },
+              { n: "Your hotel is not mentioned.", miss: true },
+            ],
+            kind: "bad",
+            verdict: "Left out by 4 AI assistants out of 5. The guides they read list four hotels, and yours is not there.",
+          },
+        };
+    const ENGINE_NAME = { openai: "ChatGPT", gemini: "Gemini", perplexity: "Perplexity", claude: "Claude", google: IT ? "Panoramiche AI" : "AI Overviews" };
+    const stage = document.querySelector("[data-stage]");
+    const acard = document.querySelector("[data-acard]");
+    let cardTimer = null;
+
+    /* Photos after the first one carry data-src and are fetched only when their scene is near */
+    function loadPhoto(img) {
+      if (!img || !img.dataset.src) return;
+      img.srcset = img.dataset.srcset;
+      img.src = img.dataset.src;
+      delete img.dataset.src;
+    }
+
+    function renderCard(sc, instant) {
+      if (acard) {
+        const c = CARD[sc.key];
+        const fill = () => {
+          acard.querySelector("[data-ac-mark] use").setAttribute("href", "#m-" + sc.engine);
+          acard.querySelector("[data-ac-engine]").textContent = ENGINE_NAME[sc.engine];
+          acard.querySelector("[data-ac-q]").textContent = sc.q;
+          acard.querySelector("[data-ac-picks]").innerHTML = c.picks
+            .map((pk, i) => `<li class="${pk.you ? "you" : pk.miss ? "miss" : ""}"><span class="pk-n">${i + 1}</span><span class="pk-t"><b>${pk.n}</b>${pk.why ? `<span>${pk.why}</span>` : ""}</span></li>`)
+            .join("");
+          const verdict = acard.querySelector("[data-ac-verdict]");
+          verdict.className = "acard-verdict " + c.kind;
+          verdict.querySelector("span").textContent = c.verdict;
+          acard.classList.remove("is-swap");
+        };
+        clearTimeout(cardTimer);
+        if (instant || reduce) fill();
+        else {
+          acard.classList.add("is-swap");
+          cardTimer = setTimeout(fill, 260);
+        }
+      }
+      if (stage) {
+        const imgs = stage.querySelectorAll("[data-stage-photo]");
+        const target = stage.querySelector(`[data-stage-photo="${sc.key}"]`);
+        const show = () => imgs.forEach((im) => im.classList.toggle("is-on", im === target));
+        if (target) {
+          loadPhoto(target);
+          if (target.complete && target.naturalWidth > 1) show();
+          else target.addEventListener("load", show, { once: true });
+        }
+        const place = stage.querySelector("[data-ac-place]");
+        if (place) place.textContent = PLACE[sc.key][1];
+        const next = scenes[(scenes.indexOf(sc) + 1) % scenes.length].key;
+        setTimeout(() => loadPhoto(stage.querySelector(`[data-stage-photo="${next}"]`)), 2500);
+      }
+    }
 
     const $ = (sel) => explorer.querySelector(sel);
     const qEl = $("[data-ex-q]");
@@ -402,7 +513,7 @@
       aEl.innerHTML = s.answer.map((p) => `<p>${p}</p>`).join("");
       if (sEl)
         sEl.innerHTML =
-          `<span class="lbl">${IT ? "Fonti" : "Sources"}</span>` +
+          `<span class="lbl">${IT ? "Siti letti" : "Sites it read"}</span>` +
           s.sources.map((x) => `<span class="src${x.hot ? " hot" : ""}"><i></i>${x.d}</span>`).join("");
       requestAnimationFrame(() => requestAnimationFrame(() => aEl.classList.add("is-live")));
       if (lossEl) {
@@ -437,6 +548,7 @@
       idx = i;
       markTab(i);
       const s = scenes[i];
+      renderCard(s);
       aEl.classList.remove("is-live");
       aEl.innerHTML = "";
       if (sEl) sEl.innerHTML = "";
@@ -460,12 +572,14 @@
       { threshold: 0.2 }
     );
     startIO.observe(explorer);
+    if (stage) startIO.observe(stage);
 
     /* First paint: show scene 0 statically so nothing is empty before the observer fires */
     renderSide(scenes[0]);
     renderAnswer(scenes[0]);
     qEl.textContent = scenes[0].q;
     markTab(0);
+    renderCard(scenes[0], true);
   }
 
   /* ---------- Answer line: a hotel answer, then a destination answer; "you" appears whole, then is usually struck out ---------- */
@@ -582,12 +696,78 @@
   }
 
   /* ---------- Giant answer: the third name becomes yours ---------- */
+  /* On a large screen the section pins and the scroll writes the sentence: words light up whole, the three
+     engine cards arrive, the last name becomes yours. Elsewhere it is a static section that plays once. */
   const giant = document.querySelector("[data-giant]");
   if (giant) {
+    const sentence = giant.querySelector(".giant-answer");
+    const words = [];
+    if (sentence) {
+      Array.from(sentence.childNodes).forEach((node) => {
+        if (node.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          node.textContent.split(/(\s+)/).forEach((part) => {
+            if (!part) return;
+            if (/^\s+$/.test(part)) {
+              frag.appendChild(document.createTextNode(" "));
+              return;
+            }
+            const w = document.createElement("span");
+            w.className = "gw";
+            w.textContent = part;
+            frag.appendChild(w);
+            words.push(w);
+          });
+          sentence.replaceChild(frag, node);
+        } else if (node.nodeType === 1) {
+          node.classList.add("gw");
+          words.push(node);
+        }
+      });
+    }
+    const cards = Array.from(giant.querySelectorAll(".scard"));
+    const canPin = giant.hasAttribute("data-scene") && window.matchMedia("(min-width: 1000px) and (min-height: 640px)");
+    let pinned = false;
+    let ticking = false;
+
+    const apply = () => {
+      ticking = false;
+      if (!pinned) return;
+      const r = giant.getBoundingClientRect();
+      const span = r.height - window.innerHeight;
+      const p = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 1;
+      const n = words.length || 1;
+      words.forEach((w, i) => w.classList.toggle("is-lit", p >= 0.03 + (i / n) * 0.45));
+      cards.forEach((c, i) => c.classList.toggle("is-in", p >= 0.14 + i * 0.19));
+      giant.classList.toggle("is-yours", p >= 0.66);
+      giant.classList.toggle("is-done", p >= 0.76);
+    };
+    const setMode = () => {
+      const want = !!canPin && canPin.matches && !reduce;
+      if (want === pinned) return;
+      pinned = want;
+      giant.classList.toggle("is-pinned", pinned);
+      if (!pinned) {
+        words.forEach((w) => w.classList.remove("is-lit"));
+        cards.forEach((c) => c.classList.remove("is-in"));
+        giant.classList.remove("is-done");
+      }
+      apply();
+    };
+    setMode();
+    if (canPin) canPin.addEventListener("change", setMode);
+    window.addEventListener("scroll", () => {
+      if (pinned && !ticking) {
+        ticking = true;
+        requestAnimationFrame(apply);
+      }
+    }, { passive: true });
+    window.addEventListener("resize", apply);
+
     const giantIO = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) setTimeout(() => giant.classList.add("is-yours"), reduce ? 0 : 500);
+          if (e.isIntersecting && !pinned) setTimeout(() => giant.classList.add("is-yours"), reduce ? 0 : 500);
         });
       },
       { rootMargin: "-35% 0px -35% 0px", threshold: 0 }
