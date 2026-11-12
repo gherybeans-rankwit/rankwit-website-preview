@@ -952,4 +952,32 @@
       auditForm.querySelector(".audit-done h2").focus({ preventScroll: true });
     });
   }
+
+  /* ---------- Media kit: copy a ready-made description ---------- */
+  document.querySelectorAll("[data-copy]").forEach((btn) => {
+    const label = btn.textContent;
+    btn.addEventListener("click", () => {
+      const box = btn.closest("[data-copy-box]");
+      const text = box && box.querySelector("[data-copy-text]");
+      if (!text) return;
+      const done = () => {
+        btn.textContent = IT ? "Copiato" : "Copied";
+        btn.classList.add("is-done");
+        setTimeout(() => {
+          btn.textContent = label;
+          btn.classList.remove("is-done");
+        }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text.textContent.trim()).then(done);
+      } else {
+        /* No clipboard access (an old browser, or a page not served over https): select the text instead */
+        const range = document.createRange();
+        range.selectNodeContents(text);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+      }
+    });
+  });
 })();
