@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "dmo-digital-spend-increase",
+  "label": "DMOs increasing digital marketing spend",
+  "question": "Are destinations spending more on digital marketing?",
+  "answer": "41% of DMOs increased digital spend, 41% held it flat and 13% cut it.",
+  "value": 41,
+  "display": "41%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "2026",
+  "period_iso": "2026",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "cut spend",
+    "display": "13%",
+    "value": 13
+  },
+  "geography": "Global",
+  "topics": [
+    "destinations-dmo",
+    "economics"
+  ],
+  "sample": "359 destination marketers worldwide",
+  "methodology": "Sojern State of Destination Marketing 2026, 359 destination marketers worldwide, fielded with Dynata. Remaining share did not report.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/reports/state-of-destination-marketing-2026",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/dmo-digital-spend-increase"
+}

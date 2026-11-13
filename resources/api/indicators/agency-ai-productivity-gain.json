@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "agency-ai-productivity-gain",
+  "label": "AI-adopting agencies reporting measurable productivity gains",
+  "question": "Does AI actually improve productivity in travel agencies?",
+  "answer": "40% of AI-adopting agencies report a measurable productivity impact, meaning three in five do not.",
+  "value": 40,
+  "display": "40%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April–May 2025",
+  "period_iso": "2025-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global (14 countries)",
+  "topics": [
+    "airlines-distribution",
+    "economics"
+  ],
+  "sample": "AI-adopting agencies across 14 countries",
+  "methodology": "Sabre Content Fragmentation study, 14 countries, April–May 2025, among the 80% of agencies that had adopted AI.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sabre",
+    "name": "Sabre",
+    "type": "vendor-research",
+    "url": "https://www.sabre.com/resources/research/content-fragmentation-what-i-see-vs-what-i-take/",
+    "homepage": "https://www.sabre.com/resources/research/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/agency-ai-productivity-gain"
+}

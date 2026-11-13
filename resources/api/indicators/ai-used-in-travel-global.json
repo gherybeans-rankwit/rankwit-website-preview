@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-used-in-travel-global",
+  "label": "Consumers who have used AI in some travel context",
+  "question": "How many people have used AI for travel?",
+  "answer": "67% of consumers have used AI in some travel context, from a Booking.com survey of 37,325 people across 33 markets.",
+  "value": 67,
+  "display": "67%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April–May 2025",
+  "period_iso": "2025-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global (33 markets)",
+  "topics": [
+    "traveler-adoption"
+  ],
+  "sample": "37,325 respondents across 33 markets",
+  "methodology": "Online survey of 37,325 respondents across 33 markets, fielded April–May 2025 for the Global AI Sentiment Report. Among those who had used AI in travel, 98% used it for planning or booking and 96% used it while travelling.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "booking",
+    "name": "Booking.com",
+    "type": "platform-data",
+    "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+    "homepage": "https://news.booking.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-used-in-travel-global"
+}

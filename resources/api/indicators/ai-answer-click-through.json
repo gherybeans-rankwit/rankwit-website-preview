@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-answer-click-through",
+  "label": "Travellers who still click through after an AI answer",
+  "question": "Do AI answers end the journey, or start it?",
+  "answer": "About half of travellers who see an AI answer in a search engine still click through to the source websites.",
+  "value": 50,
+  "display": "~50%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "First half of 2026",
+  "period_iso": "2026-03",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "United States",
+  "topics": [
+    "discovery-and-visibility"
+  ],
+  "sample": "US travellers who encounter AI answers in search engines",
+  "methodology": "Phocuswright, The AI Surge, March 2026. Covers travellers encountering AI answers inside search engines, not standalone assistants, where click-through behaviour differs.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "phocuswright",
+    "name": "Phocuswright",
+    "type": "industry-research",
+    "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/The-fastest-shift-in-travel-behavior-just-became-the-default",
+    "homepage": "https://www.phocuswright.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-answer-click-through"
+}

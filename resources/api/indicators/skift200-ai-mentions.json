@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "skift200-ai-mentions",
+  "label": "Largest travel companies mentioning AI in annual reports",
+  "question": "How fast did AI reach the travel industry's boardrooms?",
+  "answer": "35% of the Skift Travel 200 mentioned AI in their 2024 annual reports, up from about 4% in 2022.",
+  "value": 35,
+  "display": "35%",
+  "unit": "percent",
+  "evidence_type": "analysis",
+  "period": "2024 annual reports",
+  "period_iso": "2024",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "2022 annual reports",
+    "display": "4%",
+    "value": 4
+  },
+  "geography": "Global",
+  "topics": [
+    "discovery-and-visibility",
+    "airlines-distribution"
+  ],
+  "sample": "Skift Travel 200, the largest publicly traded travel companies",
+  "methodology": "Analysis of the Skift Travel 200, the largest publicly traded travel companies, in Remapping travel with agentic AI (McKinsey with Skift, September 2025). Counts any mention of AI, so it measures salience rather than deployment.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "mckinsey",
+    "name": "McKinsey & Company",
+    "type": "consultancy",
+    "url": "https://www.mckinsey.com/industries/travel/our-insights/remapping-travel-with-agentic-ai",
+    "homepage": "https://www.mckinsey.com/industries/travel/how-we-help-clients"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/skift200-ai-mentions"
+}

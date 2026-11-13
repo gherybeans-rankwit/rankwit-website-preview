@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "agencies-four-plus-booking-systems",
+  "label": "Agencies working across four or more booking systems",
+  "question": "Why is AI hard to deploy in travel distribution?",
+  "answer": "91% of travel agencies work across four or more booking systems, 50% across seven or more and 10% across ten or more.",
+  "value": 91,
+  "display": "91%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April–May 2025",
+  "period_iso": "2025-04",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "seven or more systems",
+    "display": "50%",
+    "value": 50
+  },
+  "geography": "Global (14 countries)",
+  "topics": [
+    "airlines-distribution"
+  ],
+  "sample": "Travel agencies across 14 countries",
+  "methodology": "Sabre Content Fragmentation study, 14 countries, April–May 2025. Nearly 90% also manage four or more API integrations.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sabre",
+    "name": "Sabre",
+    "type": "vendor-research",
+    "url": "https://www.sabre.com/resources/research/content-fragmentation-what-i-see-vs-what-i-take/",
+    "homepage": "https://www.sabre.com/resources/research/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/agencies-four-plus-booking-systems"
+}

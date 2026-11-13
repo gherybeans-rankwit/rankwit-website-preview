@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "italy-international-arrivals",
+  "label": "Italy international tourist arrivals",
+  "question": "How many international tourists visit Italy?",
+  "answer": "Italy recorded 74.0 million international arrivals in 2024, up 8.9% year on year.",
+  "value": 73951291,
+  "display": "74.0m",
+  "unit": "count",
+  "evidence_type": "official-statistic",
+  "period": "2024",
+  "period_iso": "2024",
+  "year_on_year_pct": 8.9,
+  "comparison": null,
+  "geography": "Italy",
+  "topics": [
+    "market-context"
+  ],
+  "sample": "OECD inbound tourism, international arrivals",
+  "methodology": "OECD inbound tourism statistics, dataset DSD_TOURISM_INTER@DF_INBOUND, 2024. Harmonised to the OECD definition of international arrivals, which can differ from national series.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "oecd",
+    "name": "OECD",
+    "type": "intergovernmental",
+    "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_TOURISM_INTER@DF_INBOUND&df[ag]=OECD.CFE.TOU&df[vs]=1.1",
+    "homepage": "https://www.oecd.org/en/topics/tourism.html"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/italy-international-arrivals"
+}

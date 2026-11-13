@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "received-outdated-ai-travel-info",
+  "label": "Travellers who received outdated or inaccurate AI travel information",
+  "question": "How often is AI travel information wrong?",
+  "answer": "25% of travellers report having received outdated or inaccurate travel information from AI.",
+  "value": 25,
+  "display": "25%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "2025",
+  "period_iso": "2025",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "trust-and-autonomy",
+    "governance-risk",
+    "discovery-and-visibility"
+  ],
+  "sample": "Amadeus traveller data, 2025",
+  "methodology": "Amadeus traveller data for 2025, reported in Travel Trends 2026. Self-reported, so it captures errors travellers noticed; the true rate is likely higher.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "amadeus",
+    "name": "Amadeus",
+    "type": "vendor-research",
+    "url": "https://amadeus.com/documents/resources/research-report/travel-trends-2026/amadeus-travel-trends-2026-report.pdf",
+    "homepage": "https://amadeus.com/en/blog"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/received-outdated-ai-travel-info"
+}

@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "google-no-extra-requirements-ai-overviews",
+  "label": "Extra technical requirements to appear in Google's AI Overviews",
+  "question": "What do I have to add to my site to appear in AI Overviews?",
+  "answer": "Nothing. Google states there are no additional technical requirements beyond ordinary Search eligibility, and no new file or markup to create.",
+  "value": null,
+  "display": "None",
+  "unit": "qualitative",
+  "evidence_type": "analysis",
+  "period": "December 2025",
+  "period_iso": "2025-12",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "generative-engines",
+    "discovery-and-visibility"
+  ],
+  "sample": "Google Search Central documentation on AI features. States no additional technical requirements beyond ordinary Search eligibility, and no new machine-readable file or schema",
+  "methodology": "Google Search Central, AI features documentation, last updated 10 December 2025. Verbatim: \"You don't need to create new machine readable files, AI text files, or markup to appear in these features.\" It covers AI Overviews and AI Mode in Google Search, and says nothing about other assistants, which publish their own rules.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "google",
+    "name": "Google",
+    "type": "platform-data",
+    "url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "homepage": "https://blog.google/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-03",
+  "page_url": "https://www.rankwit.ai/resources/data/google-no-extra-requirements-ai-overviews"
+}

@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "eu-nights-tourist-accommodation",
+  "label": "Nights spent in EU tourist accommodation, year to date",
+  "question": "How big is European tourism in 2026?",
+  "answer": "1.80 billion nights were spent in EU tourist accommodation in 2026 through July, up 1.93% year on year.",
+  "value": 1802454548,
+  "display": "1.80bn",
+  "unit": "count",
+  "evidence_type": "official-statistic",
+  "period": "2026 year to date, through July",
+  "period_iso": "2026-07",
+  "year_on_year_pct": 1.93,
+  "comparison": null,
+  "geography": "European Union",
+  "topics": [
+    "market-context"
+  ],
+  "sample": "Dataset tour_occ_nim: nights spent at tourist accommodation, monthly",
+  "methodology": "Eurostat dataset tour_occ_nim, nights spent at tourist accommodation, monthly, through July 2026. Official statistic subject to Eurostat's revision policy.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "eurostat",
+    "name": "Eurostat",
+    "type": "official-statistics",
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/tour_occ_nim/default/table",
+    "homepage": "https://ec.europa.eu/eurostat/web/tourism"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/eu-nights-tourist-accommodation"
+}

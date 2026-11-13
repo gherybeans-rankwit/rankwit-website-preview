@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-unlocked-travel-spend-growth",
+  "label": "Travel spending growth attributed to AI-unlocked potential",
+  "question": "How much is AI worth to the travel industry?",
+  "answer": "Euromonitor projects travel spending to grow by USD 1.4 trillion over five years, largely driven by AI-unlocked potential.",
+  "value": 1400000000000,
+  "display": "USD 1.4tn",
+  "unit": "currency-usd",
+  "evidence_type": "forecast",
+  "period": "Five years from 2025",
+  "period_iso": "2025",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "economics"
+  ],
+  "sample": "Euromonitor five-year travel spending forecast",
+  "methodology": "Euromonitor five-year travel spending forecast, published 12 November 2025. The attribution of growth to AI is the analyst's judgement; the decomposition is not published.",
+  "confidence": "medium",
+  "verified_against_primary": true,
+  "source": {
+    "id": "euromonitor",
+    "name": "Euromonitor International",
+    "type": "industry-research",
+    "url": "https://www.euromonitor.com/article/ai-a-turning-point-in-global-travel",
+    "homepage": "https://www.euromonitor.com/store/explore-reports/travel"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-unlocked-travel-spend-growth"
+}

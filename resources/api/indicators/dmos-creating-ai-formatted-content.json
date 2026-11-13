@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "dmos-creating-ai-formatted-content",
+  "label": "DMOs producing AI-formatted content",
+  "question": "Are destinations restructuring content for AI?",
+  "answer": "64% of destination organisations now create AI-formatted content (lists, FAQs and structured answers) to match how AI engines retrieve information.",
+  "value": 64,
+  "display": "64%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "2026",
+  "period_iso": "2026",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "discovery-and-visibility",
+    "destinations-dmo"
+  ],
+  "sample": "359 destination marketers worldwide, fielded with Dynata. Quoted from the publisher's summary; the full report is behind a download form",
+  "methodology": "Sojern State of Destination Marketing 2026, 359 destination marketers worldwide, fielded in partnership with Dynata.",
+  "confidence": "medium",
+  "verified_against_primary": false,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/reports/state-of-destination-marketing-2026",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/dmos-creating-ai-formatted-content"
+}

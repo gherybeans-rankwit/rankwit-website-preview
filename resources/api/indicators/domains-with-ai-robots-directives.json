@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "domains-with-ai-robots-directives",
+  "label": "Domains with AI-specific robots.txt directives",
+  "question": "How many sites have taken a position on AI crawlers?",
+  "answer": "About 14%, or 546 of the 3,816 top domains where a robots.txt file was found. GPTBot was both the most blocked and the most explicitly allowed.",
+  "value": 14,
+  "display": "~14%",
+  "unit": "percent",
+  "evidence_type": "analysis",
+  "period": "June 2025",
+  "period_iso": "2025-06",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "domains disallowing GPTBot",
+    "display": "312",
+    "value": 312
+  },
+  "geography": "Global",
+  "topics": [
+    "generative-engines",
+    "governance-risk"
+  ],
+  "sample": "546 of 3,816 domains that had a findable robots.txt, drawn from Cloudflare Radar's top 10,000. Counts allow as well as disallow directives",
+  "methodology": "Cloudflare Radar, point-in-time crawl of 6 June 2025, drawn from Radar's top 10,000 domains. 312 domains disallowed GPTBot, 250 fully and 62 partially; 61 explicitly allowed it. Cloudflare notes some robots.txt tokens, Google-Extended among them, are not user-agent substrings and so do not match request logs.",
+  "confidence": "high",
+  "verified_against_primary": false,
+  "source": {
+    "id": "cloudflare",
+    "name": "Cloudflare",
+    "type": "platform-data",
+    "url": "https://blog.cloudflare.com/from-googlebot-to-gptbot-whos-crawling-your-site-in-2025/",
+    "homepage": "https://radar.cloudflare.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-03",
+  "page_url": "https://www.rankwit.ai/resources/data/domains-with-ai-robots-directives"
+}

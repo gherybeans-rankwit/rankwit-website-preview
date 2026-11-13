@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "accommodation-cyber-readiness-gap",
+  "label": "Cybersecurity readiness gap by property size",
+  "question": "Are small hotels prepared for AI-era security risks?",
+  "answer": "94% of properties with 250+ staff feel prepared for cybersecurity threats, against 60% of those with fewer than ten.",
+  "value": 94,
+  "display": "94%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "February–March 2026",
+  "period_iso": "2026-02",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "properties with under 10 staff",
+    "display": "60%",
+    "value": 60
+  },
+  "geography": "Europe",
+  "topics": [
+    "hospitality",
+    "governance-risk"
+  ],
+  "sample": "European accommodation providers by size band",
+  "methodology": "Booking.com European Accommodation Barometer, February–March 2026. Self-assessed preparedness, which typically overstates readiness at both ends.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "booking",
+    "name": "Booking.com",
+    "type": "platform-data",
+    "url": "https://news.booking.com/2026-european-accommodation-barometer-challenges-concerns-and-diverging-outlooks/",
+    "homepage": "https://news.booking.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/accommodation-cyber-readiness-gap"
+}

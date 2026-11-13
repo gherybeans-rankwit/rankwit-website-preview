@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "nto-ai-adoption-europe",
+  "label": "European NTOs with dedicated AI teams or AI monitoring",
+  "question": "How far have Europe's national tourism organisations got with AI?",
+  "answer": "Around 40% of European national tourism organisations have dedicated AI teams or monitor AI use, per the European Travel Commission.",
+  "value": 40,
+  "display": "~40%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "March–April 2025",
+  "period_iso": "2025-03",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Europe",
+  "topics": [
+    "destinations-dmo"
+  ],
+  "sample": "29 of 36 ETC member national tourism organisations; the report's wording is \"around 40%\"",
+  "methodology": "European Travel Commission, Artificial Intelligence in Tourism: Assessing and Supporting NTOs' Research & Marketing Operations, Brussels, July 2025. The report's own wording is «around 40%», which we do not sharpen. Its adoption-stage chart uses a separate seven-point scale.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "etc",
+    "name": "European Travel Commission",
+    "type": "trade-association",
+    "url": "https://etc-corporate.org/uploads/2025/09/2025_AI-in-tourism_Supporting-NTO-Operations.pdf",
+    "homepage": "https://etc-corporate.org/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/nto-ai-adoption-europe"
+}

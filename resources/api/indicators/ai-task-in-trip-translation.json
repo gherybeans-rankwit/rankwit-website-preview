@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-task-in-trip-translation",
+  "label": "In-trip AI use for translation",
+  "question": "What do travellers use AI for during a trip?",
+  "answer": "Translation leads in-trip use at 45%, followed by activity suggestions at 44% and navigation at 40%.",
+  "value": 45,
+  "display": "45%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April–May 2025",
+  "period_iso": "2025-04",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "navigation",
+    "display": "40%",
+    "value": 40
+  },
+  "geography": "Global (33 markets)",
+  "topics": [
+    "planning-tasks"
+  ],
+  "sample": "In-trip use among AI users, 33 markets",
+  "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, among AI users in travel. 96% of AI users reported using it while travelling.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "booking",
+    "name": "Booking.com",
+    "type": "platform-data",
+    "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+    "homepage": "https://news.booking.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-task-in-trip-translation"
+}

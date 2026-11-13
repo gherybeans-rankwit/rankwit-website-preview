@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "llm-city-recommendations-off-index",
+  "label": "City recommendations falling outside the Euromonitor Top 100",
+  "question": "Do assistants only recommend the same famous destinations?",
+  "answer": "Less than you would expect. Half of ChatGPT's city recommendations fell outside Euromonitor's Top 100, and 57.9% of DeepSeek's did.",
+  "value": 50,
+  "display": "50.0%",
+  "unit": "percent",
+  "evidence_type": "analysis",
+  "period": "September 2025",
+  "period_iso": "2025-09",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "DeepSeek-V3",
+    "display": "57.9%",
+    "value": 57.9
+  },
+  "geography": "Global",
+  "topics": [
+    "generative-engines",
+    "destinations-dmo"
+  ],
+  "sample": "1,020 valid ChatGPT-4o city recommendations from 6,480 generated across 216 traveller personas, scored against Euromonitor's Top 100 City Destinations 2024",
+  "methodology": "Peer-reviewed, AI (MDPI), published 19 September 2025. 6,480 recommendations generated from 216 traveller personas against ChatGPT-4o and DeepSeek-V3, fresh session per persona and prompt, no retrieval tools. Scored against Euromonitor's Top 100 City Destinations 2024. Models without retrieval answer from training data, so this measures the model rather than an AI search product.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "mdpi",
+    "name": "MDPI",
+    "type": "academic",
+    "url": "https://doi.org/10.3390/ai6090236",
+    "homepage": "https://www.mdpi.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-03",
+  "page_url": "https://www.rankwit.ai/resources/data/llm-city-recommendations-off-index"
+}

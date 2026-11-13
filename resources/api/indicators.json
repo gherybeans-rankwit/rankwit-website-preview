@@ -1,0 +1,2849 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Travel AI Monitor — AI in travel indicators",
+  "description": "Every indicator in the observatory, with its publisher, reference period, sample, evidence type and a link to the original document.",
+  "url": "https://www.rankwit.ai/resources",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "dateModified": "2026-10-02",
+  "creator": {
+    "@type": "Organization",
+    "name": "RankWit",
+    "url": "https://www.rankwit.ai"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://www.rankwit.ai/resources/api/indicators.json"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/markdown",
+      "contentUrl": "https://www.rankwit.ai/llms.txt"
+    }
+  ],
+  "meta": {
+    "indicator_count": 71,
+    "source_count": 36,
+    "last_reviewed": "2026-10-02",
+    "usage": "Free to quote and redistribute with attribution to the original publisher named in each record, and a link to the source URL."
+  },
+  "sources": [
+    {
+      "id": "oecd",
+      "name": "OECD",
+      "full_name": "Organisation for Economic Co-operation and Development",
+      "type": "intergovernmental",
+      "homepage": "https://www.oecd.org/en/topics/tourism.html",
+      "methodology_url": "https://www.oecd.org/en/data/dashboards/oecd-tourism-trends.html",
+      "scope": "38 member countries and partner economies",
+      "summary": "Intergovernmental body publishing the Tourism Trends and Policies series, harmonised inbound and domestic tourism statistics, and policy papers on AI adoption in tourism.",
+      "page_url": "https://www.rankwit.ai/resources/sources/oecd"
+    },
+    {
+      "id": "eurostat",
+      "name": "Eurostat",
+      "full_name": "Statistical Office of the European Union",
+      "type": "official-statistics",
+      "homepage": "https://ec.europa.eu/eurostat/web/tourism",
+      "methodology_url": "https://ec.europa.eu/eurostat/cache/metadata/en/tour_occ_esms.htm",
+      "scope": "EU-27, EFTA and candidate countries",
+      "summary": "The EU statistical authority. Source of the monthly accommodation series (tour_occ_nim) and of the experimental platform-economy statistics covering Airbnb, Booking, Expedia and TripAdvisor (tour_ce_omr).",
+      "page_url": "https://www.rankwit.ai/resources/sources/eurostat"
+    },
+    {
+      "id": "un-tourism",
+      "name": "UN Tourism",
+      "full_name": "World Tourism Organization (UNWTO)",
+      "type": "intergovernmental",
+      "homepage": "https://www.untourism.int/",
+      "methodology_url": "https://www.untourism.int/tourism-statistics/un-standards-for-measuring-tourism",
+      "scope": "Global, 160 member states",
+      "summary": "The United Nations agency for tourism. Custodian of the International Recommendations for Tourism Statistics and publisher of guidance on responsible AI adoption across the sector.",
+      "page_url": "https://www.rankwit.ai/resources/sources/un-tourism"
+    },
+    {
+      "id": "istat",
+      "name": "ISTAT",
+      "full_name": "Istituto Nazionale di Statistica",
+      "type": "official-statistics",
+      "homepage": "https://www.istat.it/en/",
+      "methodology_url": null,
+      "scope": "Italy, regional and provincial detail",
+      "summary": "Italy's national statistical institute. Monthly arrivals and nights by region and province, and the reference series behind Italian destination reporting.",
+      "page_url": "https://www.rankwit.ai/resources/sources/istat"
+    },
+    {
+      "id": "banca-italia",
+      "name": "Banca d'Italia",
+      "full_name": null,
+      "type": "official-statistics",
+      "homepage": "https://www.bancaditalia.it/statistiche/tematiche/rapporti-estero/turismo-internazionale/",
+      "methodology_url": null,
+      "scope": "Italy, international tourism receipts and expenditure",
+      "summary": "Italy's central bank runs the international tourism survey at border crossings, the authoritative series for inbound and outbound travel spending.",
+      "page_url": "https://www.rankwit.ai/resources/sources/banca-italia"
+    },
+    {
+      "id": "wef",
+      "name": "World Economic Forum",
+      "full_name": null,
+      "type": "intergovernmental",
+      "homepage": "https://www.weforum.org/",
+      "methodology_url": null,
+      "scope": "Global",
+      "summary": "Publisher of the Future of Jobs, Global Risks and Travel & Tourism Development series, with executive surveys on AI-driven workforce change.",
+      "page_url": "https://www.rankwit.ai/resources/sources/wef"
+    },
+    {
+      "id": "iata",
+      "name": "IATA",
+      "full_name": "International Air Transport Association",
+      "type": "trade-association",
+      "homepage": "https://www.iata.org/en/publications/",
+      "methodology_url": null,
+      "scope": "Global aviation, ~340 member airlines",
+      "summary": "The airline trade association. Monthly air passenger and cargo market analysis, the Global Passenger Survey, and industry financial outlooks.",
+      "page_url": "https://www.rankwit.ai/resources/sources/iata"
+    },
+    {
+      "id": "wttc",
+      "name": "WTTC",
+      "full_name": "World Travel & Tourism Council",
+      "type": "trade-association",
+      "homepage": "https://researchhub.wttc.org/",
+      "methodology_url": null,
+      "scope": "Global, 185 countries",
+      "summary": "Industry body producing the Economic Impact Research satellite-account estimates and technology foresight reports, several co-authored with Microsoft.",
+      "page_url": "https://www.rankwit.ai/resources/sources/wttc"
+    },
+    {
+      "id": "etc",
+      "name": "European Travel Commission",
+      "full_name": null,
+      "type": "trade-association",
+      "homepage": "https://etc-corporate.org/",
+      "methodology_url": null,
+      "scope": "Europe, 36 national tourism organisations",
+      "summary": "The association of European national tourism organisations. Runs the recurring survey of NTO digital and AI maturity and the quarterly European Tourism Trends & Prospects.",
+      "page_url": "https://www.rankwit.ai/resources/sources/etc"
+    },
+    {
+      "id": "phocuswright",
+      "name": "Phocuswright",
+      "full_name": null,
+      "type": "industry-research",
+      "homepage": "https://www.phocuswright.com/",
+      "methodology_url": null,
+      "scope": "Global travel distribution and technology",
+      "summary": "The reference research house for travel distribution. Consumer travel trackers and the Travel Forward and State of Distribution series.",
+      "page_url": "https://www.rankwit.ai/resources/sources/phocuswright"
+    },
+    {
+      "id": "skift-research",
+      "name": "Skift Research",
+      "full_name": null,
+      "type": "industry-research",
+      "homepage": "https://research.skift.com/",
+      "methodology_url": null,
+      "scope": "Global travel",
+      "summary": "Research arm of the travel trade publication Skift. Executive surveys on AI adoption, several produced jointly with McKinsey.",
+      "page_url": "https://www.rankwit.ai/resources/sources/skift-research"
+    },
+    {
+      "id": "mckinsey",
+      "name": "McKinsey & Company",
+      "full_name": null,
+      "type": "consultancy",
+      "homepage": "https://www.mckinsey.com/industries/travel/how-we-help-clients",
+      "methodology_url": null,
+      "scope": "Global",
+      "summary": "Management consultancy publishing travel practice research on generative and agentic AI, often with Skift Research.",
+      "page_url": "https://www.rankwit.ai/resources/sources/mckinsey"
+    },
+    {
+      "id": "deloitte",
+      "name": "Deloitte",
+      "full_name": null,
+      "type": "consultancy",
+      "homepage": "https://www.deloitte.com/us/en/insights/industry/transportation/2026-summer-travel-trends-survey.html",
+      "methodology_url": null,
+      "scope": "United States",
+      "summary": "Runs the annual US Summer Travel Survey, one of the few repeated instruments that measures AI-assisted trip planning year over year on a consistent question wording.",
+      "page_url": "https://www.rankwit.ai/resources/sources/deloitte"
+    },
+    {
+      "id": "euromonitor",
+      "name": "Euromonitor International",
+      "full_name": null,
+      "type": "industry-research",
+      "homepage": "https://www.euromonitor.com/store/explore-reports/travel",
+      "methodology_url": null,
+      "scope": "Global, 40+ markets",
+      "summary": "Market research firm. The Voice of the Consumer: Travel Survey is fielded annually across tens of thousands of respondents.",
+      "page_url": "https://www.rankwit.ai/resources/sources/euromonitor"
+    },
+    {
+      "id": "amadeus",
+      "name": "Amadeus",
+      "full_name": null,
+      "type": "vendor-research",
+      "homepage": "https://amadeus.com/en/blog",
+      "methodology_url": null,
+      "scope": "Global travel technology",
+      "summary": "Global distribution system and travel technology provider. Annual Travel Trends report and traveller surveys, plus white papers on agentic AI for airlines.",
+      "page_url": "https://www.rankwit.ai/resources/sources/amadeus"
+    },
+    {
+      "id": "sabre",
+      "name": "Sabre",
+      "full_name": null,
+      "type": "vendor-research",
+      "homepage": "https://www.sabre.com/resources/research/",
+      "methodology_url": null,
+      "scope": "Global travel technology",
+      "summary": "Travel technology provider. Research on conversational commerce, content fragmentation across agencies, and practical agentic AI deployment.",
+      "page_url": "https://www.rankwit.ai/resources/sources/sabre"
+    },
+    {
+      "id": "booking",
+      "name": "Booking.com",
+      "full_name": null,
+      "type": "platform-data",
+      "homepage": "https://news.booking.com/",
+      "methodology_url": null,
+      "scope": "Global, 33 markets",
+      "summary": "Online travel agency. Publishes the Global AI Sentiment Report and the European Accommodation Barometer, both with disclosed sample sizes and field periods.",
+      "page_url": "https://www.rankwit.ai/resources/sources/booking"
+    },
+    {
+      "id": "expedia",
+      "name": "Expedia Group",
+      "full_name": null,
+      "type": "platform-data",
+      "homepage": "https://partner.expediagroup.com/en-us/resources/research-insights",
+      "methodology_url": null,
+      "scope": "Global",
+      "summary": "Online travel group. Traveler Value Index and the Path to Purchase studies on how travellers research and book.",
+      "page_url": "https://www.rankwit.ai/resources/sources/expedia"
+    },
+    {
+      "id": "sojern",
+      "name": "Sojern",
+      "full_name": null,
+      "type": "vendor-research",
+      "homepage": "https://www.sojern.com/reports/",
+      "methodology_url": null,
+      "scope": "Global, with US traveller panels",
+      "summary": "Travel marketing platform. Runs paired surveys of travellers and destination marketing organisations, which makes the adoption gap between the two directly measurable.",
+      "page_url": "https://www.rankwit.ai/resources/sources/sojern"
+    },
+    {
+      "id": "travelport",
+      "name": "Travelport",
+      "full_name": null,
+      "type": "vendor-research",
+      "homepage": "https://www.travelport.com/reports",
+      "methodology_url": null,
+      "scope": "Global",
+      "summary": "Travel retailing platform. The annual State of Modern Retailing report covers consumer trust in AI and in travel pricing.",
+      "page_url": "https://www.rankwit.ai/resources/sources/travelport"
+    },
+    {
+      "id": "mastercard",
+      "name": "Mastercard Economics Institute",
+      "full_name": null,
+      "type": "platform-data",
+      "homepage": "https://mbi.mastercardservices.com/economic-insights/mastercard-economics-institute/",
+      "methodology_url": null,
+      "scope": "Global, aggregated and anonymised card spend",
+      "summary": "Economics unit analysing anonymised, aggregated transaction data. Useful because it measures spend rather than stated intent.",
+      "page_url": "https://www.rankwit.ai/resources/sources/mastercard"
+    },
+    {
+      "id": "oxford-economics",
+      "name": "Tourism Economics (Oxford Economics)",
+      "full_name": null,
+      "type": "industry-research",
+      "homepage": "https://www.tourismeconomics.com/",
+      "methodology_url": null,
+      "scope": "Global, country-level forecasts",
+      "summary": "Forecasting house producing inbound and outbound travel projections used by national tourism boards.",
+      "page_url": "https://www.rankwit.ai/resources/sources/oxford-economics"
+    },
+    {
+      "id": "oag",
+      "name": "OAG",
+      "full_name": null,
+      "type": "industry-research",
+      "homepage": "https://www.oag.com/",
+      "methodology_url": null,
+      "scope": "Global air travel schedules and capacity",
+      "summary": "Air travel data provider. Schedules, capacity and connectivity data, plus foresight analysis on AI in distribution.",
+      "page_url": "https://www.rankwit.ai/resources/sources/oag"
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "full_name": null,
+      "type": "platform-data",
+      "homepage": "https://www.anthropic.com/economic-index",
+      "methodology_url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "scope": "121 countries",
+      "summary": "AI developer. The Economic Index publishes privacy-preserving aggregate statistics on how Claude is actually used, by task and by geography, rare first-party telemetry on AI usage.",
+      "page_url": "https://www.rankwit.ai/resources/sources/anthropic"
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "full_name": null,
+      "type": "platform-data",
+      "homepage": "https://blog.google/",
+      "methodology_url": null,
+      "scope": "Global",
+      "summary": "Operator of Search, AI Overviews and Gemini. Publishes the ATLAS study on AI tool usage and periodic travel-search research.",
+      "page_url": "https://www.rankwit.ai/resources/sources/google"
+    },
+    {
+      "id": "data-appeal",
+      "name": "The Data Appeal Company",
+      "full_name": null,
+      "type": "industry-research",
+      "homepage": "https://www.datappeal.io/",
+      "methodology_url": null,
+      "scope": "Europe and Mediterranean destinations",
+      "summary": "Location-intelligence company, part of Almawave, founded by Mirko Lalli. Sentiment, demand and flow data for destinations; official research partner of the European Travel Commission together with Mabrian.",
+      "page_url": "https://www.rankwit.ai/resources/sources/data-appeal"
+    },
+    {
+      "id": "mabrian",
+      "name": "Mabrian",
+      "full_name": null,
+      "type": "industry-research",
+      "homepage": "https://mabrian.com/",
+      "methodology_url": null,
+      "scope": "Global destinations",
+      "summary": "Travel intelligence platform measuring demand, connectivity and perception indexes for destinations. Official research partner of the European Travel Commission.",
+      "page_url": "https://www.rankwit.ai/resources/sources/mabrian"
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "full_name": null,
+      "type": "platform-data",
+      "homepage": "https://openai.com/",
+      "methodology_url": "https://developers.openai.com/api/docs/bots",
+      "scope": "ChatGPT crawlers and retrieval",
+      "summary": "Publishes its crawler documentation directly: four declared bots with separate robots.txt controls, full user-agent strings and per-bot IP ranges. On its own crawling behaviour it is the primary source.",
+      "page_url": "https://www.rankwit.ai/resources/sources/openai"
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "full_name": null,
+      "type": "platform-data",
+      "homepage": "https://radar.cloudflare.com/",
+      "methodology_url": null,
+      "scope": "Global web traffic seen by Cloudflare",
+      "summary": "Server-side measurement of crawler traffic across its customer base, published through Radar. The only party with this visibility, and it sells bot blocking, so figures are read with that interest in view.",
+      "page_url": "https://www.rankwit.ai/resources/sources/cloudflare"
+    },
+    {
+      "id": "data-provenance",
+      "name": "Data Provenance Initiative",
+      "full_name": null,
+      "type": "academic",
+      "homepage": "https://www.dataprovenance.org/",
+      "methodology_url": "https://arxiv.org/abs/2407.14933",
+      "scope": "Training corpora and web data consent",
+      "summary": "Multi-institution audit of the domains behind C4, RefinedWeb and Dolma, with longitudinal robots.txt and terms-of-service collection. The one non-commercial measurement of AI crawler restriction.",
+      "page_url": "https://www.rankwit.ai/resources/sources/data-provenance"
+    },
+    {
+      "id": "mdpi",
+      "name": "MDPI",
+      "full_name": null,
+      "type": "academic",
+      "homepage": "https://www.mdpi.com/",
+      "methodology_url": null,
+      "scope": "Open-access journals, here Tourism and Hospitality and AI",
+      "summary": "Open-access publisher. Peer-reviewed, which separates it from vendor research, though review standards vary by journal and each paper is judged on its own disclosed method.",
+      "page_url": "https://www.rankwit.ai/resources/sources/mdpi"
+    },
+    {
+      "id": "arxiv",
+      "name": "arXiv",
+      "full_name": null,
+      "type": "academic",
+      "homepage": "https://arxiv.org/",
+      "methodology_url": null,
+      "scope": "Preprints, chiefly computer science",
+      "summary": "Preprint server. Papers here have not been peer-reviewed, so a figure from arXiv carries its method and nothing else; the observatory labels them as preprints wherever they appear.",
+      "page_url": "https://www.rankwit.ai/resources/sources/arxiv"
+    },
+    {
+      "id": "tourismintel",
+      "name": "TourismIntel",
+      "full_name": null,
+      "type": "aggregator",
+      "homepage": "https://tourismintel.ai/",
+      "methodology_url": "https://tourismintel.ai/llms.txt",
+      "scope": "Global travel industry intelligence",
+      "summary": "Curated intelligence platform founded by Mirko Lalli, aggregating industry reports and official tourism statistics (OECD, Eurostat, UN Tourism, ISTAT, Banca d'Italia) with per-report editorial briefs and a public MCP server. Used here to locate primary documents, which we then cite directly.",
+      "page_url": "https://www.rankwit.ai/resources/sources/tourismintel"
+    },
+    {
+      "id": "officina-turistica",
+      "name": "Officina Turistica",
+      "full_name": null,
+      "type": "aggregator",
+      "homepage": "https://www.officinaturistica.com/author/mirko-lalli/",
+      "methodology_url": null,
+      "scope": "Italy and Europe",
+      "summary": "Italian tourism industry publication. Mirko Lalli's column covers AI adoption by hotels and destination marketing organisations, including European Travel Commission findings on national tourism organisations.",
+      "page_url": "https://www.rankwit.ai/resources/sources/officina-turistica"
+    },
+    {
+      "id": "italia-it",
+      "name": "Italia.it / ENIT",
+      "full_name": "Agenzia Nazionale del Turismo",
+      "type": "official-statistics",
+      "homepage": "https://www.italia.it/",
+      "methodology_url": null,
+      "scope": "Italy",
+      "summary": "Italy's national tourism agency and official destination portal. The reference model for sourcing discipline: every claim attributed, dated and traceable to an institutional source.",
+      "page_url": "https://www.rankwit.ai/resources/sources/italia-it"
+    },
+    {
+      "id": "rankwit",
+      "name": "RankWit",
+      "full_name": null,
+      "type": "platform-data",
+      "homepage": "https://www.rankwit.ai/",
+      "methodology_url": null,
+      "scope": "Travel brands tracked across generative engines",
+      "summary": "AI search visibility platform for travel. Runs travel prompts daily across ChatGPT, Gemini, Claude, Perplexity and AI Overviews, and audits which AI crawlers a site actually admits. Publisher of this observatory.",
+      "page_url": "https://www.rankwit.ai/resources/sources/rankwit"
+    }
+  ],
+  "indicators": [
+    {
+      "id": "ai-trip-planning-us-travellers",
+      "label": "US travellers who have used AI to plan a trip",
+      "question": "How many US travellers have used AI to plan a trip?",
+      "answer": "54% of US travellers had used AI to plan travel as of April 2026, according to Sojern's survey of 1,006 US adults.",
+      "value": 54,
+      "display": "54%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "United States",
+      "topics": [
+        "traveler-adoption"
+      ],
+      "sample": "1,006 US adults who travelled in the past 12 months",
+      "methodology": "Online survey of 1,006 US adults who had travelled in the previous twelve months, fielded in April 2026 and published alongside a parallel survey of 103 DMO leaders. Self-reported past behaviour, so it captures any use of AI at any point, not habitual use.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-trip-planning-us-travellers"
+    },
+    {
+      "id": "ai-trip-planning-intent-us",
+      "label": "US travellers who intend to use AI for future trips",
+      "question": "Will travellers keep using AI to plan trips?",
+      "answer": "75% of US travellers say they intend to use AI for future trips, against 54% who have already done so.",
+      "value": 75,
+      "display": "75%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "United States",
+      "topics": [
+        "traveler-adoption"
+      ],
+      "sample": "1,006 US adults",
+      "methodology": "Same instrument as the adoption figure: 1,006 US adults, April 2026. Stated intent is a weaker signal than reported behaviour and systematically overstates future action, which is why we show it next to the behavioural number rather than instead of it.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-trip-planning-intent-us"
+    },
+    {
+      "id": "ai-trip-planning-global-consumers",
+      "label": "Consumers using AI for trip planning",
+      "question": "What share of consumers worldwide use AI for trip planning?",
+      "answer": "51% of consumers said they use AI for trip planning in Euromonitor's Voice of the Consumer: Travel Survey, fielded January–February 2025.",
+      "value": 51,
+      "display": "51%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "January–February 2025",
+      "period_iso": "2025-01",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "traveler-adoption"
+      ],
+      "sample": "Voice of the Consumer: Travel Survey",
+      "methodology": "Euromonitor's Voice of the Consumer: Travel Survey, fielded January to February 2025 across its standard multi-market consumer panel. The question asks about AI broadly rather than generative AI specifically.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "euromonitor",
+        "name": "Euromonitor International",
+        "type": "industry-research",
+        "url": "https://www.euromonitor.com/article/ai-a-turning-point-in-global-travel",
+        "homepage": "https://www.euromonitor.com/store/explore-reports/travel"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-trip-planning-global-consumers"
+    },
+    {
+      "id": "ai-used-in-travel-global",
+      "label": "Consumers who have used AI in some travel context",
+      "question": "How many people have used AI for travel?",
+      "answer": "67% of consumers have used AI in some travel context, from a Booking.com survey of 37,325 people across 33 markets.",
+      "value": 67,
+      "display": "67%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global (33 markets)",
+      "topics": [
+        "traveler-adoption"
+      ],
+      "sample": "37,325 respondents across 33 markets",
+      "methodology": "Online survey of 37,325 respondents across 33 markets, fielded April–May 2025 for the Global AI Sentiment Report. Among those who had used AI in travel, 98% used it for planning or booking and 96% used it while travelling.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-used-in-travel-global"
+    },
+    {
+      "id": "ai-future-travel-planning-intent-global",
+      "label": "Consumers who want to use AI in future travel planning",
+      "question": "Do travellers want AI in their travel planning?",
+      "answer": "89% of consumers want to use AI in future travel planning, from the same 33-market Booking.com survey.",
+      "value": 89,
+      "display": "89%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global (33 markets)",
+      "topics": [
+        "traveler-adoption"
+      ],
+      "sample": "37,325 respondents across 33 markets",
+      "methodology": "Booking.com Global AI Sentiment Report, 37,325 respondents across 33 markets, April–May 2025. Stated preference, not observed behaviour.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-future-travel-planning-intent-global"
+    },
+    {
+      "id": "genai-travel-planning-share-amadeus",
+      "label": "Travellers using generative AI to plan travel",
+      "question": "How fast is generative AI adoption growing in travel planning?",
+      "answer": "18% of global travellers used generative AI for travel planning in 2025, up from 11% the year before (a 64% increase).",
+      "value": 18,
+      "display": "18%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "2025",
+      "period_iso": "2025",
+      "year_on_year_pct": 64,
+      "comparison": {
+        "label": "2024",
+        "display": "11%",
+        "value": 11
+      },
+      "geography": "Global",
+      "topics": [
+        "traveler-adoption"
+      ],
+      "sample": "Amadeus global traveller survey",
+      "methodology": "Amadeus global traveller survey reported in Travel Trends 2026. Repeated question wording across 2024 and 2025 waves, which makes the year-on-year change more reliable than either level on its own.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "amadeus",
+        "name": "Amadeus",
+        "type": "vendor-research",
+        "url": "https://amadeus.com/documents/resources/research-report/travel-trends-2026/amadeus-travel-trends-2026-report.pdf",
+        "homepage": "https://amadeus.com/en/blog"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/genai-travel-planning-share-amadeus"
+    },
+    {
+      "id": "ai-trip-planning-amadeus-2026",
+      "label": "Travellers who have used AI for trip planning or management",
+      "question": "What is the highest published estimate of AI use in travel planning?",
+      "answer": "Around 79% of travellers have used AI for trip planning or trip management, per Amadeus research conducted in March 2026.",
+      "value": 79,
+      "display": "~79%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "March 2026",
+      "period_iso": "2026-03",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "traveler-adoption",
+        "airlines-distribution"
+      ],
+      "sample": "Amadeus traveller research, March 2026",
+      "methodology": "Amadeus traveller research conducted March 2026, reported in the airlines agentic AI white paper. The same study found only around 6% comfortable letting AI handle most of their planning.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "amadeus",
+        "name": "Amadeus",
+        "type": "vendor-research",
+        "url": "https://amadeus.com/en/resources/white-paper/agentic-ai-airlines",
+        "homepage": "https://amadeus.com/en/blog"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-trip-planning-amadeus-2026"
+    },
+    {
+      "id": "frequent-travellers-comfort-ai-planning",
+      "label": "Frequent travellers comfortable using AI for trip planning",
+      "question": "Are frequent travellers more comfortable with AI?",
+      "answer": "80% of frequent travellers say they are comfortable using AI for trip planning, per Travelport's State of Modern Retailing.",
+      "value": 80,
+      "display": "80%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "2024",
+      "period_iso": "2024",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "traveler-adoption",
+        "trust-and-autonomy"
+      ],
+      "sample": "State of Modern Retailing consumer survey",
+      "methodology": "Travelport's second annual State of Modern Retailing consumer survey, published January 2025. The frequent-traveller subset is self-defined, and the question measures comfort rather than use.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "travelport",
+        "name": "Travelport",
+        "type": "vendor-research",
+        "url": "https://www.travelport.com/press-releases/travelport-releases-second-annual-state-of-modern-retailing-report-travels-tipping-point",
+        "homepage": "https://www.travelport.com/reports"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/frequent-travellers-comfort-ai-planning"
+    },
+    {
+      "id": "genai-trip-planning-deloitte",
+      "label": "US travellers using generative AI for trip planning",
+      "question": "How fast has generative AI trip planning grown in the US?",
+      "answer": "Nearly a quarter of US travellers used generative AI tools for trip planning in late 2025, three times the 2022 level, per Deloitte.",
+      "value": 25,
+      "display": "~25%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "Late 2025",
+      "period_iso": "2025",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "versus 2022",
+        "display": "3x lower",
+        "value": null
+      },
+      "geography": "United States",
+      "topics": [
+        "traveler-adoption"
+      ],
+      "sample": "Synthesis of Deloitte's 2025 Summer Travel, Holiday Travel and Corporate Travel surveys, fielded March to October 2025",
+      "methodology": "Deloitte 2026 Travel Industry Outlook, synthesising its 2025 Summer Travel, Holiday Travel and Corporate Travel surveys, fielded March to October 2025. 'Nearly a quarter' is Deloitte's own wording; we do not sharpen it.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "deloitte",
+        "name": "Deloitte",
+        "type": "consultancy",
+        "url": "https://www.deloitte.com/us/en/insights/industry/transportation/travel-hospitality-industry-outlook.html",
+        "homepage": "https://www.deloitte.com/us/en/insights/industry/transportation/2026-summer-travel-trends-survey.html"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/genai-trip-planning-deloitte"
+    },
+    {
+      "id": "genai-helpful-planning-phocuswright",
+      "label": "Travellers who find generative AI results helpful",
+      "question": "Do travellers find AI answers useful for travel?",
+      "answer": "78% of travellers found generative AI results somewhat or very helpful, for planning and in destination alike.",
+      "value": 78,
+      "display": "78%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "2025",
+      "period_iso": "2025",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "traveler-adoption"
+      ],
+      "sample": "Phocuswright, Chat, Plan, Book: GenAI Goes Mainstream",
+      "methodology": "Phocuswright, Chat, Plan, Book: GenAI Goes Mainstream, 2025. The figure covers both trip planning and in-destination use.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "phocuswright",
+        "name": "Phocuswright",
+        "type": "industry-research",
+        "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2025/From-hype-to-habit-78-percent-of-travelers-say-GenAI-improves-trip-planning",
+        "homepage": "https://www.phocuswright.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/genai-helpful-planning-phocuswright"
+    },
+    {
+      "id": "millennials-ai-as-often-as-social",
+      "label": "Millennials using AI as often as social media for trip planning",
+      "question": "Which generation uses AI most for travel planning?",
+      "answer": "69% of Millennials and 63% of Gen Z use AI as often as social media when planning a trip.",
+      "value": 69,
+      "display": "69%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "Gen Z",
+        "display": "63%",
+        "value": 63
+      },
+      "geography": "United States",
+      "topics": [
+        "traveler-adoption",
+        "discovery-and-visibility"
+      ],
+      "sample": "Millennial subset of 1,006 US adults",
+      "methodology": "Sojern traveller survey, April 2026, generational subsets of 1,006 US adults. Subsample sizes are not disclosed, so the generational splits carry wider uncertainty than the headline figure.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/millennials-ai-as-often-as-social"
+    },
+    {
+      "id": "genz-ai-as-often-as-social",
+      "label": "Gen Z using AI as often as social media for trip planning",
+      "question": "How much does Gen Z use AI for travel planning?",
+      "answer": "63% of Gen Z travellers use AI as often as social media for trip planning, slightly below Millennials at 69%.",
+      "value": 63,
+      "display": "63%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "United States",
+      "topics": [
+        "traveler-adoption",
+        "discovery-and-visibility"
+      ],
+      "sample": "Gen Z subset of 1,006 US adults",
+      "methodology": "Sojern traveller survey, April 2026, Gen Z subset of 1,006 US adults. Subsample size not disclosed.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/genz-ai-as-often-as-social"
+    },
+    {
+      "id": "full-trust-in-ai-global",
+      "label": "Consumers who fully trust AI",
+      "question": "Do people trust AI?",
+      "answer": "Only 6% of consumers fully trust AI, even though 91% say they are excited about it.",
+      "value": 6,
+      "display": "6%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global (33 markets)",
+      "topics": [
+        "trust-and-autonomy"
+      ],
+      "sample": "37,325 respondents across 33 markets",
+      "methodology": "Booking.com Global AI Sentiment Report, 37,325 respondents across 33 markets, April–May 2025. The same survey also records 91% expressing at least one concern about AI's implications. The two 91% figures are separate findings from separate questions, not a transcription error: the report's own wording is that an equal proportion of the 91% who are excited also report at least one concern.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/full-trust-in-ai-global"
+    },
+    {
+      "id": "comfort-ai-independent-decisions",
+      "label": "Consumers comfortable with AI making independent decisions",
+      "question": "Will people let AI make decisions for them?",
+      "answer": "12% of consumers are comfortable with AI making independent decisions; 25% are unsure and 10% feel very uncomfortable.",
+      "value": 12,
+      "display": "12%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global (33 markets)",
+      "topics": [
+        "trust-and-autonomy"
+      ],
+      "sample": "37,325 respondents across 33 markets",
+      "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, 37,325 respondents across 33 markets.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/comfort-ai-independent-decisions"
+    },
+    {
+      "id": "comfort-ai-handles-most-planning",
+      "label": "Travellers comfortable letting AI handle most of their planning",
+      "question": "How many travellers would hand their whole trip to an AI?",
+      "answer": "Around 6% of travellers are comfortable letting AI handle most of their travel planning, even though about 79% have used AI for travel.",
+      "value": 6,
+      "display": "~6%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "March 2026",
+      "period_iso": "2026-03",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "trust-and-autonomy"
+      ],
+      "sample": "Amadeus traveller research, March 2026",
+      "methodology": "Amadeus traveller research conducted March 2026, reported in the airlines agentic AI white paper. Both figures come from the same instrument.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "amadeus",
+        "name": "Amadeus",
+        "type": "vendor-research",
+        "url": "https://amadeus.com/en/resources/white-paper/agentic-ai-airlines",
+        "homepage": "https://amadeus.com/en/blog"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/comfort-ai-handles-most-planning"
+    },
+    {
+      "id": "would-let-ai-complete-booking",
+      "label": "Travellers ready to let AI handle a booking",
+      "question": "Would travellers let an AI book for them?",
+      "answer": "Between a quarter and a third of travellers, depending on the market, are ready to book inside a generative AI platform or let an assistant book for them.",
+      "value": 25,
+      "display": "25–33%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "2025",
+      "period_iso": "2025",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "trust-and-autonomy"
+      ],
+      "sample": "Phocuswright, Chat, Plan, Book: GenAI Goes Mainstream; range across surveyed markets",
+      "methodology": "Phocuswright, Chat, Plan, Book: GenAI Goes Mainstream, 2025. Range reported across surveyed countries. The same study finds only about a third fully trust generative AI responses.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "phocuswright",
+        "name": "Phocuswright",
+        "type": "industry-research",
+        "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2025/From-hype-to-habit-78-percent-of-travelers-say-GenAI-improves-trip-planning",
+        "homepage": "https://www.phocuswright.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/would-let-ai-complete-booking"
+    },
+    {
+      "id": "always-fact-check-ai",
+      "label": "Consumers who always fact-check AI outputs",
+      "question": "Do people check what AI tells them about travel?",
+      "answer": "42% of consumers always fact-check AI outputs and a further 29% do so sometimes.",
+      "value": 42,
+      "display": "42%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "sometimes fact-check",
+        "display": "29%",
+        "value": 29
+      },
+      "geography": "Global (33 markets)",
+      "topics": [
+        "trust-and-autonomy",
+        "governance-risk"
+      ],
+      "sample": "37,325 respondents across 33 markets",
+      "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, 37,325 respondents across 33 markets.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/always-fact-check-ai"
+    },
+    {
+      "id": "trust-travel-brands-ai-responsible",
+      "label": "Consumers who trust travel brands to use AI responsibly",
+      "question": "Do consumers trust travel companies with AI?",
+      "answer": "42% of consumers trust travel brands to use AI responsibly, placing travel in the top three industries for AI trust.",
+      "value": 42,
+      "display": "42%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "2024",
+      "period_iso": "2024",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "trust-and-autonomy"
+      ],
+      "sample": "State of Modern Retailing consumer survey",
+      "methodology": "Travelport State of Modern Retailing, published January 2025. Cross-industry comparison within the same instrument.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "travelport",
+        "name": "Travelport",
+        "type": "vendor-research",
+        "url": "https://www.travelport.com/press-releases/travelport-releases-second-annual-state-of-modern-retailing-report-travels-tipping-point",
+        "homepage": "https://www.travelport.com/reports"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/trust-travel-brands-ai-responsible"
+    },
+    {
+      "id": "received-outdated-ai-travel-info",
+      "label": "Travellers who received outdated or inaccurate AI travel information",
+      "question": "How often is AI travel information wrong?",
+      "answer": "25% of travellers report having received outdated or inaccurate travel information from AI.",
+      "value": 25,
+      "display": "25%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "2025",
+      "period_iso": "2025",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "trust-and-autonomy",
+        "governance-risk",
+        "discovery-and-visibility"
+      ],
+      "sample": "Amadeus traveller data, 2025",
+      "methodology": "Amadeus traveller data for 2025, reported in Travel Trends 2026. Self-reported, so it captures errors travellers noticed; the true rate is likely higher.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "amadeus",
+        "name": "Amadeus",
+        "type": "vendor-research",
+        "url": "https://amadeus.com/documents/resources/research-report/travel-trends-2026/amadeus-travel-trends-2026-report.pdf",
+        "homepage": "https://amadeus.com/en/blog"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/received-outdated-ai-travel-info"
+    },
+    {
+      "id": "ai-enthusiast-cohort-share",
+      "label": "Share of consumers classified as AI enthusiasts",
+      "question": "How is consumer sentiment towards AI distributed?",
+      "answer": "36% of consumers are AI Enthusiasts and 25% are Detractors, with Advocates at 13%, Cautious at 13% and Sceptics at 9%.",
+      "value": 36,
+      "display": "36%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "detractors",
+        "display": "25%",
+        "value": 25
+      },
+      "geography": "Global (33 markets)",
+      "topics": [
+        "trust-and-autonomy"
+      ],
+      "sample": "37,325 respondents across 33 markets",
+      "methodology": "Booking.com Global AI Sentiment Report, April–May 2025. Full split: Enthusiasts 36%, Advocates 13%, Cautious 13%, Sceptics 9%, Detractors 25%. The five published shares sum to 96%; the report does not say what the remaining 4% is, so the cohorts are not a complete partition of the sample.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-enthusiast-cohort-share"
+    },
+    {
+      "id": "ai-distrust-north-america",
+      "label": "North Americans who rarely or never trust AI-generated information",
+      "question": "Which regions trust AI least for travel?",
+      "answer": "32% in North America and 29% in Europe and the Middle East rarely or never trust AI-generated information, against 15% in Latin America and 16% in Asia Pacific.",
+      "value": 32,
+      "display": "32%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "Latin America",
+        "display": "15%",
+        "value": 15
+      },
+      "geography": "North America",
+      "topics": [
+        "trust-and-autonomy"
+      ],
+      "sample": "Regional breakdown of 37,325 respondents",
+      "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, regional breakdown of 37,325 respondents across 33 markets. The report's regions are its own: the 29% comparison figure is reported for Europe and the Middle East together, not for Europe alone.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-distrust-north-america"
+    },
+    {
+      "id": "latam-ai-enthusiasm",
+      "label": "Latin American respondents excited about AI",
+      "question": "Where is AI enthusiasm highest in travel?",
+      "answer": "98% of Latin American respondents are excited about AI, with 89% familiar with it, the highest of any region.",
+      "value": 98,
+      "display": "98%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "Asia Pacific",
+        "display": "95%",
+        "value": 95
+      },
+      "geography": "Latin America",
+      "topics": [
+        "trust-and-autonomy"
+      ],
+      "sample": "Regional breakdown of 37,325 respondents",
+      "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, regional breakdown. Excitement is a softer measure than trust and the two diverge sharply by region.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/latam-ai-enthusiasm"
+    },
+    {
+      "id": "ai-assistants-more-trusted-than-influencers",
+      "label": "AI assistants as a trusted travel planning source",
+      "question": "Are AI assistants more trusted than travel influencers?",
+      "answer": "Yes. AI assistants rank as a trusted travel planning source for 24% of consumers, against 19% for travel bloggers and 14% for social media influencers.",
+      "value": 24,
+      "display": "24%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "influencers",
+        "display": "14%",
+        "value": 14
+      },
+      "geography": "Global (33 markets)",
+      "topics": [
+        "discovery-and-visibility"
+      ],
+      "sample": "37,325 respondents across 33 markets",
+      "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, 37,325 respondents across 33 markets. Respondents selected trusted sources from a fixed list. One caveat on the labels: the release's summary names the 19% comparator 'travel bloggers' and its body text names the same figure 'colleagues'. We follow the summary, because Booking.com's Canadian edition of the same release reports travel bloggers and colleagues as separate options with different values (15% and 13%), which makes the body wording the looser of the two.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-assistants-more-trusted-than-influencers"
+    },
+    {
+      "id": "discovered-destination-via-ai",
+      "label": "Travellers who discovered a destination via AI",
+      "question": "Does AI influence where people decide to travel?",
+      "answer": "40% of travellers say they discovered a destination through AI, and 29% changed their plans based on an AI recommendation.",
+      "value": 40,
+      "display": "40%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "United States",
+      "topics": [
+        "discovery-and-visibility"
+      ],
+      "sample": "1,006 US adults",
+      "methodology": "Sojern traveller survey, April 2026, 1,006 US adults. Self-reported attribution, which tends to understate influence travellers did not consciously register.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/discovered-destination-via-ai"
+    },
+    {
+      "id": "changed-plans-due-to-ai",
+      "label": "Travellers who changed plans based on AI recommendations",
+      "question": "Do AI recommendations actually change travel plans?",
+      "answer": "29% of travellers changed their travel plans based on an AI recommendation.",
+      "value": 29,
+      "display": "29%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "United States",
+      "topics": [
+        "discovery-and-visibility"
+      ],
+      "sample": "1,006 US adults",
+      "methodology": "Sojern traveller survey, April 2026, 1,006 US adults. Self-reported behaviour change.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/changed-plans-due-to-ai"
+    },
+    {
+      "id": "skift200-ai-mentions",
+      "label": "Largest travel companies mentioning AI in annual reports",
+      "question": "How fast did AI reach the travel industry's boardrooms?",
+      "answer": "35% of the Skift Travel 200 mentioned AI in their 2024 annual reports, up from about 4% in 2022.",
+      "value": 35,
+      "display": "35%",
+      "unit": "percent",
+      "evidence_type": "analysis",
+      "period": "2024 annual reports",
+      "period_iso": "2024",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "2022 annual reports",
+        "display": "4%",
+        "value": 4
+      },
+      "geography": "Global",
+      "topics": [
+        "discovery-and-visibility",
+        "airlines-distribution"
+      ],
+      "sample": "Skift Travel 200, the largest publicly traded travel companies",
+      "methodology": "Analysis of the Skift Travel 200, the largest publicly traded travel companies, in Remapping travel with agentic AI (McKinsey with Skift, September 2025). Counts any mention of AI, so it measures salience rather than deployment.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "mckinsey",
+        "name": "McKinsey & Company",
+        "type": "consultancy",
+        "url": "https://www.mckinsey.com/industries/travel/our-insights/remapping-travel-with-agentic-ai",
+        "homepage": "https://www.mckinsey.com/industries/travel/how-we-help-clients"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/skift200-ai-mentions"
+    },
+    {
+      "id": "ai-travel-vc-funding-share",
+      "label": "Share of travel venture funding going to AI-enabled startups",
+      "question": "Where is travel technology investment going?",
+      "answer": "45% of travel venture capital funding went to AI-enabled startups in the first half of 2025, up from about 10% in 2023.",
+      "value": 45,
+      "display": "45%",
+      "unit": "percent",
+      "evidence_type": "analysis",
+      "period": "First half of 2025",
+      "period_iso": "2025",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "2023",
+        "display": "10%",
+        "value": 10
+      },
+      "geography": "Global",
+      "topics": [
+        "economics",
+        "airlines-distribution"
+      ],
+      "sample": "Skift venture capital tracking of travel-industry funding",
+      "methodology": "Skift venture capital tracking, reported in Remapping travel with agentic AI (McKinsey with Skift, September 2025). Share of disclosed travel-industry venture funding.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "mckinsey",
+        "name": "McKinsey & Company",
+        "type": "consultancy",
+        "url": "https://www.mckinsey.com/industries/travel/our-insights/remapping-travel-with-agentic-ai",
+        "homepage": "https://www.mckinsey.com/industries/travel/how-we-help-clients"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-travel-vc-funding-share"
+    },
+    {
+      "id": "us-travellers-ai-any-trip",
+      "label": "US travellers who used AI on at least one trip",
+      "question": "Have most travellers now used AI for a trip?",
+      "answer": "56% of US travellers used AI for planning, booking or in-destination help on at least one trip in the past twelve months, up from 43% six months earlier and 33% the half-year before that.",
+      "value": 56,
+      "display": "56%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "First half of 2026",
+      "period_iso": "2026-03",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "second half of 2025",
+        "display": "43%",
+        "value": 43
+      },
+      "geography": "United States",
+      "topics": [
+        "traveler-adoption",
+        "discovery-and-visibility"
+      ],
+      "sample": "US travellers; The AI Surge: Travel's Fastest Behavioral Shift in a Decade, published March 2026",
+      "methodology": "Phocuswright, The AI Surge: Travel's Fastest Behavioral Shift in a Decade, published March 2026. US travellers; waves 1H25, 2H25 and 1H26. Among travellers who have used AI at all, 94% have used it for travel.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "phocuswright",
+        "name": "Phocuswright",
+        "type": "industry-research",
+        "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/The-fastest-shift-in-travel-behavior-just-became-the-default",
+        "homepage": "https://www.phocuswright.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/us-travellers-ai-any-trip"
+    },
+    {
+      "id": "ai-answer-click-through",
+      "label": "Travellers who still click through after an AI answer",
+      "question": "Do AI answers end the journey, or start it?",
+      "answer": "About half of travellers who see an AI answer in a search engine still click through to the source websites.",
+      "value": 50,
+      "display": "~50%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "First half of 2026",
+      "period_iso": "2026-03",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "United States",
+      "topics": [
+        "discovery-and-visibility"
+      ],
+      "sample": "US travellers who encounter AI answers in search engines",
+      "methodology": "Phocuswright, The AI Surge, March 2026. Covers travellers encountering AI answers inside search engines, not standalone assistants, where click-through behaviour differs.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "phocuswright",
+        "name": "Phocuswright",
+        "type": "industry-research",
+        "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/The-fastest-shift-in-travel-behavior-just-became-the-default",
+        "homepage": "https://www.phocuswright.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-answer-click-through"
+    },
+    {
+      "id": "dmos-creating-ai-formatted-content",
+      "label": "DMOs producing AI-formatted content",
+      "question": "Are destinations restructuring content for AI?",
+      "answer": "64% of destination organisations now create AI-formatted content (lists, FAQs and structured answers) to match how AI engines retrieve information.",
+      "value": 64,
+      "display": "64%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "2026",
+      "period_iso": "2026",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "discovery-and-visibility",
+        "destinations-dmo"
+      ],
+      "sample": "359 destination marketers worldwide, fielded with Dynata. Quoted from the publisher's summary; the full report is behind a download form",
+      "methodology": "Sojern State of Destination Marketing 2026, 359 destination marketers worldwide, fielded in partnership with Dynata.",
+      "confidence": "medium",
+      "verified_against_primary": false,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/reports/state-of-destination-marketing-2026",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/dmos-creating-ai-formatted-content"
+    },
+    {
+      "id": "would-use-ai-planner-on-destination-site",
+      "label": "Travellers who would use an AI trip planner on a destination website",
+      "question": "Do travellers want AI tools on destination websites?",
+      "answer": "63% of travellers would use an AI trip planner on a destination website, while only 22% of DMOs offer one.",
+      "value": 63,
+      "display": "63%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "United States",
+      "topics": [
+        "discovery-and-visibility",
+        "destinations-dmo"
+      ],
+      "sample": "1,006 US adults",
+      "methodology": "Sojern paired surveys, April 2026: 1,006 US travellers and 103 DMO leaders, fielded concurrently.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/would-use-ai-planner-on-destination-site"
+    },
+    {
+      "id": "less-likely-to-visit-site-without-ai",
+      "label": "Travellers less likely to visit a destination site without AI features",
+      "question": "Does a missing AI feature cost destination websites traffic?",
+      "answer": "25% of travellers say they are less likely to visit a destination website that has no AI features.",
+      "value": 25,
+      "display": "25%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "United States",
+      "topics": [
+        "discovery-and-visibility",
+        "destinations-dmo"
+      ],
+      "sample": "1,006 US adults",
+      "methodology": "Sojern traveller survey, April 2026, 1,006 US adults. Stated preference.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/less-likely-to-visit-site-without-ai"
+    },
+    {
+      "id": "ai-task-destination-research",
+      "label": "Pre-trip AI use for destination research",
+      "question": "What do travellers use AI for before a trip?",
+      "answer": "38% use AI for destination research, 37% for local experiences and 36% for restaurant recommendations.",
+      "value": 38,
+      "display": "38%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global (33 markets)",
+      "topics": [
+        "planning-tasks",
+        "discovery-and-visibility"
+      ],
+      "sample": "Pre-trip use among AI users, 33 markets",
+      "methodology": "Booking.com Global AI Sentiment Report, April–May 2025. Shares are of consumers who use AI in travel, not of all consumers.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-task-destination-research"
+    },
+    {
+      "id": "ai-task-local-experiences",
+      "label": "Pre-trip AI use for local experiences",
+      "question": "Do travellers use AI to find things to do?",
+      "answer": "37% of AI users research local experiences with it before travelling.",
+      "value": 37,
+      "display": "37%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global (33 markets)",
+      "topics": [
+        "planning-tasks"
+      ],
+      "sample": "Pre-trip use among AI users, 33 markets",
+      "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, among AI users in travel.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-task-local-experiences"
+    },
+    {
+      "id": "ai-task-restaurant-recommendations",
+      "label": "Pre-trip AI use for restaurant recommendations",
+      "question": "Do people ask AI where to eat?",
+      "answer": "36% of AI users ask it for restaurant recommendations before travelling.",
+      "value": 36,
+      "display": "36%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global (33 markets)",
+      "topics": [
+        "planning-tasks"
+      ],
+      "sample": "Pre-trip use among AI users, 33 markets",
+      "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, among AI users in travel.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-task-restaurant-recommendations"
+    },
+    {
+      "id": "ai-task-in-trip-translation",
+      "label": "In-trip AI use for translation",
+      "question": "What do travellers use AI for during a trip?",
+      "answer": "Translation leads in-trip use at 45%, followed by activity suggestions at 44% and navigation at 40%.",
+      "value": 45,
+      "display": "45%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "navigation",
+        "display": "40%",
+        "value": 40
+      },
+      "geography": "Global (33 markets)",
+      "topics": [
+        "planning-tasks"
+      ],
+      "sample": "In-trip use among AI users, 33 markets",
+      "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, among AI users in travel. 96% of AI users reported using it while travelling.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-task-in-trip-translation"
+    },
+    {
+      "id": "ai-task-attractions-and-restaurants",
+      "label": "AI use for researching attractions, restaurants and transport",
+      "question": "What is the single most common travel use of AI?",
+      "answer": "60% of AI users research attractions, restaurants and transport options with it (the most common travel task in the Sojern study).",
+      "value": 60,
+      "display": "60%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "United States",
+      "topics": [
+        "planning-tasks"
+      ],
+      "sample": "AI users among 1,006 US adults. The source's scope is attractions, restaurants and transportation",
+      "methodology": "Sojern traveller survey, April 2026, AI users among 1,006 US adults. The published wording is 'sixty percent use it to research attractions, restaurants, and transportation', so the figure covers all three and should not be quoted as an attractions-and-restaurants number.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-task-attractions-and-restaurants"
+    },
+    {
+      "id": "ai-task-price-comparison",
+      "label": "AI use for comparing prices",
+      "question": "Do travellers use AI to compare prices?",
+      "answer": "56% of AI users compare prices with it, though only 32% use it to compare flights and hotels specifically.",
+      "value": 56,
+      "display": "56%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "United States",
+      "topics": [
+        "planning-tasks"
+      ],
+      "sample": "AI users among 1,006 US adults",
+      "methodology": "Sojern traveller survey, April 2026, AI users among 1,006 US adults.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-task-price-comparison"
+    },
+    {
+      "id": "ai-task-itinerary-building",
+      "label": "AI use for building and organising itineraries",
+      "question": "Do travellers use AI to build itineraries?",
+      "answer": "43% of AI users build and organise itineraries with it; 42% use it to research itineraries.",
+      "value": 43,
+      "display": "43%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "United States",
+      "topics": [
+        "planning-tasks"
+      ],
+      "sample": "AI users among 1,006 US adults",
+      "methodology": "Sojern paired surveys, April 2026. The traveller and DMO figures were fielded concurrently and published together, but they are two questionnaires: 1,006 US adults on one side, 103 destination leaders worldwide on the other.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-task-itinerary-building"
+    },
+    {
+      "id": "nto-ai-adoption-europe",
+      "label": "European NTOs with dedicated AI teams or AI monitoring",
+      "question": "How far have Europe's national tourism organisations got with AI?",
+      "answer": "Around 40% of European national tourism organisations have dedicated AI teams or monitor AI use, per the European Travel Commission.",
+      "value": 40,
+      "display": "~40%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "March–April 2025",
+      "period_iso": "2025-03",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Europe",
+      "topics": [
+        "destinations-dmo"
+      ],
+      "sample": "29 of 36 ETC member national tourism organisations; the report's wording is \"around 40%\"",
+      "methodology": "European Travel Commission, Artificial Intelligence in Tourism: Assessing and Supporting NTOs' Research & Marketing Operations, Brussels, July 2025. The report's own wording is «around 40%», which we do not sharpen. Its adoption-stage chart uses a separate seven-point scale.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "etc",
+        "name": "European Travel Commission",
+        "type": "trade-association",
+        "url": "https://etc-corporate.org/uploads/2025/09/2025_AI-in-tourism_Supporting-NTO-Operations.pdf",
+        "homepage": "https://etc-corporate.org/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/nto-ai-adoption-europe"
+    },
+    {
+      "id": "dmo-ai-trip-planning-on-site",
+      "label": "DMOs offering AI trip planning on their website",
+      "question": "How many destinations offer AI trip planning?",
+      "answer": "Only 22% of destination organisations offer AI trip-planning capability on their own website.",
+      "value": 22,
+      "display": "22%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "destinations-dmo",
+        "discovery-and-visibility"
+      ],
+      "sample": "103 DMO leaders",
+      "methodology": "Sojern survey of 103 DMO leaders, April 2026, fielded alongside the traveller survey. Small sample, so treat as indicative of direction rather than precise.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/dmo-ai-trip-planning-on-site"
+    },
+    {
+      "id": "dmo-documented-ai-strategy",
+      "label": "DMOs with a documented AI strategy",
+      "question": "Do destination organisations have an AI strategy?",
+      "answer": "26% of destination organisations have a documented AI strategy.",
+      "value": 26,
+      "display": "26%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "destinations-dmo"
+      ],
+      "sample": "103 DMO leaders",
+      "methodology": "Sojern survey of 103 DMO leaders, April 2026. 'Documented' is self-assessed. The 64% content figure comes from Sojern's State of Destination Marketing 2026 and its 359-marketer panel, which is why the two are not expressed as shares of one another.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/dmo-documented-ai-strategy"
+    },
+    {
+      "id": "dmo-irrelevance-risk-two-years",
+      "label": "DMO leaders who see irrelevance risk within two years",
+      "question": "Do destination leaders think AI is urgent?",
+      "answer": "72% of DMO leaders believe that failing to adopt AI within two years risks their destination becoming irrelevant.",
+      "value": 72,
+      "display": "72%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April 2026",
+      "period_iso": "2026-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "destinations-dmo"
+      ],
+      "sample": "103 DMO leaders",
+      "methodology": "Sojern survey of 103 DMO leaders, April 2026. Attitudinal measure.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/dmo-irrelevance-risk-two-years"
+    },
+    {
+      "id": "dmo-digital-spend-increase",
+      "label": "DMOs increasing digital marketing spend",
+      "question": "Are destinations spending more on digital marketing?",
+      "answer": "41% of DMOs increased digital spend, 41% held it flat and 13% cut it.",
+      "value": 41,
+      "display": "41%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "2026",
+      "period_iso": "2026",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "cut spend",
+        "display": "13%",
+        "value": 13
+      },
+      "geography": "Global",
+      "topics": [
+        "destinations-dmo",
+        "economics"
+      ],
+      "sample": "359 destination marketers worldwide",
+      "methodology": "Sojern State of Destination Marketing 2026, 359 destination marketers worldwide, fielded with Dynata. Remaining share did not report.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sojern",
+        "name": "Sojern",
+        "type": "vendor-research",
+        "url": "https://www.sojern.com/reports/state-of-destination-marketing-2026",
+        "homepage": "https://www.sojern.com/reports/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/dmo-digital-spend-increase"
+    },
+    {
+      "id": "tourism-businesses-using-ai",
+      "label": "Tourism businesses already using AI",
+      "question": "How many tourism businesses use AI?",
+      "answer": "70% of tourism businesses already use AI technologies, principally chatbots, dynamic pricing and demand forecasting.",
+      "value": 70,
+      "display": "70%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "2025",
+      "period_iso": "2025",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "hospitality",
+        "governance-risk"
+      ],
+      "sample": "UN Tourism survey with Saxion University of Applied Sciences",
+      "methodology": "UN Tourism report produced with Saxion University of Applied Sciences, 2025. Global survey of tourism businesses; the report does not disclose sample size, which is why we treat the level as indicative. The publisher serves the document behind an access check, so we have verified the DOI and the report, not the figure inside it.",
+      "confidence": "medium",
+      "verified_against_primary": true,
+      "source": {
+        "id": "un-tourism",
+        "name": "UN Tourism",
+        "type": "intergovernmental",
+        "url": "https://doi.org/10.18111/9789284426065",
+        "homepage": "https://www.untourism.int/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/tourism-businesses-using-ai"
+    },
+    {
+      "id": "tourism-ai-adoption-growth-5y",
+      "label": "Projected growth in tourism AI adoption over five years",
+      "question": "How much will AI adoption in tourism grow?",
+      "answer": "UN Tourism projects a 25% growth rate in tourism AI adoption over five years.",
+      "value": 25,
+      "display": "+25%",
+      "unit": "percent",
+      "evidence_type": "forecast",
+      "period": "2025–2030",
+      "period_iso": "2025",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "hospitality",
+        "economics"
+      ],
+      "sample": "Five-year projection in the UN Tourism report",
+      "methodology": "UN Tourism, 2025. Five-year projection; the underlying model and assumptions are not published in the summary, so confidence is medium.",
+      "confidence": "medium",
+      "verified_against_primary": true,
+      "source": {
+        "id": "un-tourism",
+        "name": "UN Tourism",
+        "type": "intergovernmental",
+        "url": "https://doi.org/10.18111/9789284426065",
+        "homepage": "https://www.untourism.int/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/tourism-ai-adoption-growth-5y"
+    },
+    {
+      "id": "eu-accommodation-positive-outlook",
+      "label": "European accommodations expecting positive development",
+      "question": "How confident is European accommodation about the year ahead?",
+      "answer": "66% of European accommodations expect positive development in the coming season. On a separate question (how they rate their situation today), 72% of chains answer positively against 55% of independents.",
+      "value": 66,
+      "display": "66%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "February–March 2026",
+      "period_iso": "2026-02",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "chains vs independents, current economic situation",
+        "display": "72% / 55%",
+        "value": 72
+      },
+      "geography": "Europe",
+      "topics": [
+        "hospitality"
+      ],
+      "sample": "European accommodation providers. The 72%/55% split answers a separate question from the 66% outlook",
+      "methodology": "Booking.com European Accommodation Barometer, fielded February–March 2026 across European accommodation providers. The 66% measures expectations for the coming season; the 72% and 55% measure how chains and independents rate their current situation. An earlier version of this page presented them as a single comparison.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/2026-european-accommodation-barometer-challenges-concerns-and-diverging-outlooks/",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/eu-accommodation-positive-outlook"
+    },
+    {
+      "id": "accommodation-cyber-readiness-gap",
+      "label": "Cybersecurity readiness gap by property size",
+      "question": "Are small hotels prepared for AI-era security risks?",
+      "answer": "94% of properties with 250+ staff feel prepared for cybersecurity threats, against 60% of those with fewer than ten.",
+      "value": 94,
+      "display": "94%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "February–March 2026",
+      "period_iso": "2026-02",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "properties with under 10 staff",
+        "display": "60%",
+        "value": 60
+      },
+      "geography": "Europe",
+      "topics": [
+        "hospitality",
+        "governance-risk"
+      ],
+      "sample": "European accommodation providers by size band",
+      "methodology": "Booking.com European Accommodation Barometer, February–March 2026. Self-assessed preparedness, which typically overstates readiness at both ends.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "booking",
+        "name": "Booking.com",
+        "type": "platform-data",
+        "url": "https://news.booking.com/2026-european-accommodation-barometer-challenges-concerns-and-diverging-outlooks/",
+        "homepage": "https://news.booking.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/accommodation-cyber-readiness-gap"
+    },
+    {
+      "id": "travel-agencies-adopting-ai",
+      "label": "Travel agencies adopting AI",
+      "question": "Are travel agencies using AI?",
+      "answer": "80% of travel agencies have already implemented AI solutions, and the remaining 20% say they plan to.",
+      "value": 80,
+      "display": "80%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global (14 countries)",
+      "topics": [
+        "airlines-distribution"
+      ],
+      "sample": "Travel agencies across 14 countries",
+      "methodology": "Sabre Content Fragmentation study, surveying travel agencies across 14 countries, April–May 2025. The report's own wording is 'nearly 80% of agencies already implementing AI solutions, and the remaining 20% outlining plans to do so', so the 80% is adoption rather than adoption-or-intent, which is also the denominator the productivity figure is taken from.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sabre",
+        "name": "Sabre",
+        "type": "vendor-research",
+        "url": "https://www.sabre.com/resources/research/content-fragmentation-what-i-see-vs-what-i-take/",
+        "homepage": "https://www.sabre.com/resources/research/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/travel-agencies-adopting-ai"
+    },
+    {
+      "id": "agency-ai-productivity-gain",
+      "label": "AI-adopting agencies reporting measurable productivity gains",
+      "question": "Does AI actually improve productivity in travel agencies?",
+      "answer": "40% of AI-adopting agencies report a measurable productivity impact, meaning three in five do not.",
+      "value": 40,
+      "display": "40%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global (14 countries)",
+      "topics": [
+        "airlines-distribution",
+        "economics"
+      ],
+      "sample": "AI-adopting agencies across 14 countries",
+      "methodology": "Sabre Content Fragmentation study, 14 countries, April–May 2025, among the 80% of agencies that had adopted AI.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sabre",
+        "name": "Sabre",
+        "type": "vendor-research",
+        "url": "https://www.sabre.com/resources/research/content-fragmentation-what-i-see-vs-what-i-take/",
+        "homepage": "https://www.sabre.com/resources/research/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/agency-ai-productivity-gain"
+    },
+    {
+      "id": "agencies-four-plus-booking-systems",
+      "label": "Agencies working across four or more booking systems",
+      "question": "Why is AI hard to deploy in travel distribution?",
+      "answer": "91% of travel agencies work across four or more booking systems, 50% across seven or more and 10% across ten or more.",
+      "value": 91,
+      "display": "91%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "April–May 2025",
+      "period_iso": "2025-04",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "seven or more systems",
+        "display": "50%",
+        "value": 50
+      },
+      "geography": "Global (14 countries)",
+      "topics": [
+        "airlines-distribution"
+      ],
+      "sample": "Travel agencies across 14 countries",
+      "methodology": "Sabre Content Fragmentation study, 14 countries, April–May 2025. Nearly 90% also manage four or more API integrations.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "sabre",
+        "name": "Sabre",
+        "type": "vendor-research",
+        "url": "https://www.sabre.com/resources/research/content-fragmentation-what-i-see-vs-what-i-take/",
+        "homepage": "https://www.sabre.com/resources/research/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/agencies-four-plus-booking-systems"
+    },
+    {
+      "id": "executives-ai-agents-in-production",
+      "label": "Executives reporting AI agents in production",
+      "question": "Are AI agents actually running in production?",
+      "answer": "52% of executives report their organisations have deployed AI agents in production, per a Google Cloud study from September 2025.",
+      "value": 52,
+      "display": "52%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "September 2025",
+      "period_iso": "2025-09",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global (24 countries)",
+      "topics": [
+        "airlines-distribution",
+        "governance-risk"
+      ],
+      "sample": "3,466 senior leaders across 24 countries at enterprises above USD 10m revenue that already deploy generative AI, fielded April–June 2025. The figure is a share of gen-AI-adopting enterprises, not of all enterprises",
+      "methodology": "Google Cloud's ROI of AI study, September 2025: 3,466 senior leaders across 24 countries at enterprises above USD 10m revenue, fielded April–June 2025. Cross-industry sample rather than travel-specific, which is the main caveat on reading it next to travel's own figures.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "google",
+        "name": "Google",
+        "type": "platform-data",
+        "url": "https://services.google.com/fh/files/misc/google_cloud_roi_of_ai_2025.pdf",
+        "homepage": "https://blog.google/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/executives-ai-agents-in-production"
+    },
+    {
+      "id": "exec-ai-improves-personalisation",
+      "label": "US travel executives reporting AI improves personalisation",
+      "question": "What returns do travel executives report from AI?",
+      "answer": "33% of US travel executives say AI improves customer personalisation and 36% report higher-quality outputs.",
+      "value": 33,
+      "display": "33%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "September 2025",
+      "period_iso": "2025-09",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "higher-quality outputs",
+        "display": "36%",
+        "value": 36
+      },
+      "geography": "United States",
+      "topics": [
+        "airlines-distribution",
+        "economics"
+      ],
+      "sample": "86 mostly US-based travel executives, surveyed for Remapping travel with agentic AI (McKinsey with Skift)",
+      "methodology": "McKinsey with Skift, Remapping travel with agentic AI, September 2025. Sample of 86 mostly US-based travel executives, small enough that the levels are directional rather than precise.",
+      "confidence": "medium",
+      "verified_against_primary": true,
+      "source": {
+        "id": "mckinsey",
+        "name": "McKinsey & Company",
+        "type": "consultancy",
+        "url": "https://www.mckinsey.com/industries/travel/our-insights/remapping-travel-with-agentic-ai",
+        "homepage": "https://www.mckinsey.com/industries/travel/how-we-help-clients"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/exec-ai-improves-personalisation"
+    },
+    {
+      "id": "ai-unlocked-travel-spend-growth",
+      "label": "Travel spending growth attributed to AI-unlocked potential",
+      "question": "How much is AI worth to the travel industry?",
+      "answer": "Euromonitor projects travel spending to grow by USD 1.4 trillion over five years, largely driven by AI-unlocked potential.",
+      "value": 1400000000000,
+      "display": "USD 1.4tn",
+      "unit": "currency-usd",
+      "evidence_type": "forecast",
+      "period": "Five years from 2025",
+      "period_iso": "2025",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "economics"
+      ],
+      "sample": "Euromonitor five-year travel spending forecast",
+      "methodology": "Euromonitor five-year travel spending forecast, published 12 November 2025. The attribution of growth to AI is the analyst's judgement; the decomposition is not published.",
+      "confidence": "medium",
+      "verified_against_primary": true,
+      "source": {
+        "id": "euromonitor",
+        "name": "Euromonitor International",
+        "type": "industry-research",
+        "url": "https://www.euromonitor.com/article/ai-a-turning-point-in-global-travel",
+        "homepage": "https://www.euromonitor.com/store/explore-reports/travel"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-unlocked-travel-spend-growth"
+    },
+    {
+      "id": "oecd-apec-priority-areas",
+      "label": "OECD priority areas for responsible AI adoption in tourism",
+      "question": "What does the OECD recommend on AI in tourism?",
+      "answer": "The OECD identifies six priority areas for responsible AI adoption in tourism across APEC economies.",
+      "value": 6,
+      "display": "6",
+      "unit": "count",
+      "evidence_type": "analysis",
+      "period": "September 2026",
+      "period_iso": "2026-09",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "APEC economies",
+      "topics": [
+        "governance-risk",
+        "destinations-dmo"
+      ],
+      "sample": "OECD policy paper on AI and tourism in APEC economies",
+      "methodology": "OECD policy paper 'Artificial Intelligence and tourism in APEC economies', published 9 September 2026. Qualitative policy analysis rather than a survey.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "oecd",
+        "name": "OECD",
+        "type": "intergovernmental",
+        "url": "https://www.oecd.org/en/publications/artificial-intelligence-and-tourism-in-apec-economies_4549486a-en.html",
+        "homepage": "https://www.oecd.org/en/topics/tourism.html"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/oecd-apec-priority-areas"
+    },
+    {
+      "id": "google-no-extra-requirements-ai-overviews",
+      "label": "Extra technical requirements to appear in Google's AI Overviews",
+      "question": "What do I have to add to my site to appear in AI Overviews?",
+      "answer": "Nothing. Google states there are no additional technical requirements beyond ordinary Search eligibility, and no new file or markup to create.",
+      "value": null,
+      "display": "None",
+      "unit": "qualitative",
+      "evidence_type": "analysis",
+      "period": "December 2025",
+      "period_iso": "2025-12",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Global",
+      "topics": [
+        "generative-engines",
+        "discovery-and-visibility"
+      ],
+      "sample": "Google Search Central documentation on AI features. States no additional technical requirements beyond ordinary Search eligibility, and no new machine-readable file or schema",
+      "methodology": "Google Search Central, AI features documentation, last updated 10 December 2025. Verbatim: \"You don't need to create new machine readable files, AI text files, or markup to appear in these features.\" It covers AI Overviews and AI Mode in Google Search, and says nothing about other assistants, which publish their own rules.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "google",
+        "name": "Google",
+        "type": "platform-data",
+        "url": "https://developers.google.com/search/docs/appearance/ai-features",
+        "homepage": "https://blog.google/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-03",
+      "page_url": "https://www.rankwit.ai/resources/data/google-no-extra-requirements-ai-overviews"
+    },
+    {
+      "id": "robots-txt-user-triggered-disagreement",
+      "label": "Assistant makers whose docs say user-triggered fetches may ignore robots.txt",
+      "question": "Does robots.txt stop an AI assistant from reading my page?",
+      "answer": "For automatic crawling, yes. For a fetch a user triggered, three of the four major assistant makers publish that robots.txt may not apply.",
+      "value": 3,
+      "display": "3 of 4",
+      "unit": "count",
+      "evidence_type": "analysis",
+      "period": "October 2026",
+      "period_iso": "2026-10",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "state no such exception",
+        "display": "1 of 4",
+        "value": 1
+      },
+      "geography": "Global",
+      "topics": [
+        "generative-engines",
+        "governance-risk"
+      ],
+      "sample": "OpenAI, Google and Perplexity each publish that user-initiated fetches may ignore robots.txt; Anthropic's documentation states no equivalent exception",
+      "methodology": "Read from each publisher's own crawler documentation in October 2026. OpenAI: \"Because these actions are initiated by a user, robots.txt rules may not apply.\" Google: \"these fetchers generally ignore robots.txt rules.\" Perplexity: \"Since a user requested the fetch, this fetcher generally ignores robots.txt rules.\" Anthropic states its bots honour robots.txt and names no exception. Silence is not a commitment, so read the fourth as undocumented rather than as a guarantee.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "openai",
+        "name": "OpenAI",
+        "type": "platform-data",
+        "url": "https://developers.openai.com/api/docs/bots",
+        "homepage": "https://openai.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-03",
+      "page_url": "https://www.rankwit.ai/resources/data/robots-txt-user-triggered-disagreement"
+    },
+    {
+      "id": "ai-bots-share-of-html-requests",
+      "label": "AI bots as a share of HTML requests",
+      "question": "How much of web traffic is AI crawlers?",
+      "answer": "AI bots averaged 4.2% of HTML requests across 2025, ranging from 2.4% to 6.4%. Googlebot alone accounted for 4.5%.",
+      "value": 4.2,
+      "display": "4.2%",
+      "unit": "percent",
+      "evidence_type": "platform-telemetry",
+      "period": "2025",
+      "period_iso": "2025",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "Googlebot alone",
+        "display": "4.5%",
+        "value": 4.5
+      },
+      "geography": "Global",
+      "topics": [
+        "generative-engines",
+        "discovery-and-visibility"
+      ],
+      "sample": "HTML content requests across Cloudflare's customer base, 1 January to 2 December 2025. Ranged from 2.4% to 6.4% through the year",
+      "methodology": "Cloudflare Radar 2025 Year in Review, published 15 December 2025, covering 1 January to 2 December 2025. Population is Cloudflare's own customer base, HTML content requests only, which Cloudflare states explicitly because the shares differ from its all-content figures. Cloudflare sells bot blocking, so it has an interest in the salience of this measure.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "cloudflare",
+        "name": "Cloudflare",
+        "type": "platform-data",
+        "url": "https://blog.cloudflare.com/radar-2025-year-in-review/",
+        "homepage": "https://radar.cloudflare.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-03",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-bots-share-of-html-requests"
+    },
+    {
+      "id": "domains-with-ai-robots-directives",
+      "label": "Domains with AI-specific robots.txt directives",
+      "question": "How many sites have taken a position on AI crawlers?",
+      "answer": "About 14%, or 546 of the 3,816 top domains where a robots.txt file was found. GPTBot was both the most blocked and the most explicitly allowed.",
+      "value": 14,
+      "display": "~14%",
+      "unit": "percent",
+      "evidence_type": "analysis",
+      "period": "June 2025",
+      "period_iso": "2025-06",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "domains disallowing GPTBot",
+        "display": "312",
+        "value": 312
+      },
+      "geography": "Global",
+      "topics": [
+        "generative-engines",
+        "governance-risk"
+      ],
+      "sample": "546 of 3,816 domains that had a findable robots.txt, drawn from Cloudflare Radar's top 10,000. Counts allow as well as disallow directives",
+      "methodology": "Cloudflare Radar, point-in-time crawl of 6 June 2025, drawn from Radar's top 10,000 domains. 312 domains disallowed GPTBot, 250 fully and 62 partially; 61 explicitly allowed it. Cloudflare notes some robots.txt tokens, Google-Extended among them, are not user-agent substrings and so do not match request logs.",
+      "confidence": "high",
+      "verified_against_primary": false,
+      "source": {
+        "id": "cloudflare",
+        "name": "Cloudflare",
+        "type": "platform-data",
+        "url": "https://blog.cloudflare.com/from-googlebot-to-gptbot-whos-crawling-your-site-in-2025/",
+        "homepage": "https://radar.cloudflare.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-03",
+      "page_url": "https://www.rankwit.ai/resources/data/domains-with-ai-robots-directives"
+    },
+    {
+      "id": "openai-crawler-restriction-head-c4",
+      "label": "Share of high-value training tokens restricted to OpenAI crawlers",
+      "question": "How much of the good web has been closed to AI training?",
+      "answer": "25.9% of tokens in the head of the C4 corpus were restricted to OpenAI's crawlers by April 2024, against 13.3% for Anthropic and Common Crawl.",
+      "value": 25.9,
+      "display": "25.9%",
+      "unit": "percent",
+      "evidence_type": "analysis",
+      "period": "April 2024",
+      "period_iso": "2024-04",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "Anthropic and Common Crawl",
+        "display": "13.3%",
+        "value": 13.3
+      },
+      "geography": "Global",
+      "topics": [
+        "generative-engines",
+        "governance-risk"
+      ],
+      "sample": "Tokens in Head C4, the 3,950 highest-token domains of the C4 corpus. Audit of 14,000 web domains with longitudinal robots.txt collection",
+      "methodology": "Data Provenance Initiative, \"Consent in Crisis\", audit of 14,000 web domains underlying C4, RefinedWeb and Dolma, with longitudinal robots.txt collection from archived snapshots and human annotation. Head C4 is the 3,950 highest-token domains. Data ends April 2024, so treat it as the historical inflection rather than current state. The paper's forward projections are forecasts and are not used here.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "data-provenance",
+        "name": "Data Provenance Initiative",
+        "type": "academic",
+        "url": "https://arxiv.org/abs/2407.14933",
+        "homepage": "https://www.dataprovenance.org/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-03",
+      "page_url": "https://www.rankwit.ai/resources/data/openai-crawler-restriction-head-c4"
+    },
+    {
+      "id": "ai-crawling-for-training-share",
+      "label": "Share of AI crawling that is for training rather than retrieval",
+      "question": "Are AI crawlers collecting training data or answering questions?",
+      "answer": "Training accounted for close to 80% of AI bot activity by July 2025, up from 72% a year earlier.",
+      "value": 80,
+      "display": "~80%",
+      "unit": "percent",
+      "evidence_type": "platform-telemetry",
+      "period": "July 2025",
+      "period_iso": "2025-07",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "a year earlier",
+        "display": "72%",
+        "value": 72
+      },
+      "geography": "Global",
+      "topics": [
+        "generative-engines"
+      ],
+      "sample": "Share of AI bot activity Cloudflare classifies as training rather than search or user action. Dominated by one bot, OpenAI's GPTBot",
+      "methodology": "Cloudflare, to roughly July 2025. The split rests on Cloudflare's own classification of each user agent's declared purpose, the taxonomy carries an undeclared bucket, and the aggregate is dominated by one bot, OpenAI's GPTBot. It is therefore closer to a statement about OpenAI than about AI crawling in general.",
+      "confidence": "medium",
+      "verified_against_primary": false,
+      "source": {
+        "id": "cloudflare",
+        "name": "Cloudflare",
+        "type": "platform-data",
+        "url": "https://blog.cloudflare.com/crawlers-click-ai-bots-training/",
+        "homepage": "https://radar.cloudflare.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-03",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-crawling-for-training-share"
+    },
+    {
+      "id": "ota-share-of-gemini-hotel-citations",
+      "label": "Online travel agency share of Gemini's hotel citations",
+      "question": "Which sources does an AI assistant cite when asked about hotels?",
+      "answer": "55.3% of citations went to online travel agencies in an audit of 1,357 grounding citations across 156 Tokyo hotel queries.",
+      "value": 55.3,
+      "display": "55.3%",
+      "unit": "percent",
+      "evidence_type": "analysis",
+      "period": "March 2026",
+      "period_iso": "2026-03",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "Japan (Tokyo)",
+      "topics": [
+        "generative-engines",
+        "hospitality",
+        "discovery-and-visibility"
+      ],
+      "sample": "1,357 grounding citations across 156 paired hotel queries in Tokyo, Gemini 2.5 Flash with Google Search grounding, English and Japanese. Preprint, not peer-reviewed",
+      "methodology": "Preprint, not peer-reviewed. Gemini 2.5 Flash with Google Search grounding, March 2026, 156 paired queries across four categories, two intents, nine Tokyo wards and two languages. One city, one model, one month, so read it as a measurement of that setting rather than of assistants generally.",
+      "confidence": "medium",
+      "verified_against_primary": true,
+      "source": {
+        "id": "arxiv",
+        "name": "arXiv",
+        "type": "academic",
+        "url": "https://arxiv.org/abs/2603.20062",
+        "homepage": "https://arxiv.org/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-03",
+      "page_url": "https://www.rankwit.ai/resources/data/ota-share-of-gemini-hotel-citations"
+    },
+    {
+      "id": "non-ota-citations-by-query-intent",
+      "label": "Non-OTA citation share: experiential against transactional queries",
+      "question": "Does the kind of question change which sources get cited?",
+      "answer": "Sharply. Non-OTA sources took 55.9% of citations on experiential queries against 30.8% on transactional ones, a gap of 25.1 points.",
+      "value": 55.9,
+      "display": "55.9%",
+      "unit": "percent",
+      "evidence_type": "analysis",
+      "period": "March 2026",
+      "period_iso": "2026-03",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "transactional queries",
+        "display": "30.8%",
+        "value": 30.8
+      },
+      "geography": "Japan (Tokyo)",
+      "topics": [
+        "generative-engines",
+        "discovery-and-visibility",
+        "destinations-dmo"
+      ],
+      "sample": "Non-OTA share of citations on experiential queries (419 of 750) against transactional queries (187 of 607). Same Tokyo Gemini audit. Preprint, not peer-reviewed",
+      "methodology": "Same Tokyo Gemini audit, March 2026. 419 of 750 experiential citations were non-OTA, against 187 of 607 transactional. Reported as statistically significant. Preprint, not peer-reviewed, and the OTA classification rests on curated domain matching.",
+      "confidence": "medium",
+      "verified_against_primary": true,
+      "source": {
+        "id": "arxiv",
+        "name": "arXiv",
+        "type": "academic",
+        "url": "https://arxiv.org/abs/2603.20062",
+        "homepage": "https://arxiv.org/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-03",
+      "page_url": "https://www.rankwit.ai/resources/data/non-ota-citations-by-query-intent"
+    },
+    {
+      "id": "ai-referral-conversion-destination-portal",
+      "label": "Conversion rate of assistant traffic on a destination portal",
+      "question": "Does traffic from AI assistants behave differently once it arrives?",
+      "answer": "It converted at 8.26% against 3.88% for organic search, on 1.6 million sessions over nearly four years.",
+      "value": 8.26,
+      "display": "8.26%",
+      "unit": "percent",
+      "evidence_type": "platform-telemetry",
+      "period": "April 2022 to January 2026",
+      "period_iso": "2026-01",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "organic search",
+        "display": "3.88%",
+        "value": 3.88
+      },
+      "geography": "Mediterranean (one destination)",
+      "topics": [
+        "generative-engines",
+        "destinations-dmo"
+      ],
+      "sample": "1.6 million sessions on one Mediterranean destination portal. The portal is not named, and the measure is a booking-intent click rather than a confirmed booking",
+      "methodology": "Peer-reviewed, Tourism and Hospitality, published 9 April 2026. One Mediterranean destination portal, April 2022 to January 2026. The portal is not named, the conversion measure is a booking-intent click rather than a confirmed booking, and the share of total sessions arriving from assistants is not stated in the abstract we could retrieve.",
+      "confidence": "medium",
+      "verified_against_primary": false,
+      "source": {
+        "id": "mdpi",
+        "name": "MDPI",
+        "type": "academic",
+        "url": "https://doi.org/10.3390/tourhosp7040107",
+        "homepage": "https://www.mdpi.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-03",
+      "page_url": "https://www.rankwit.ai/resources/data/ai-referral-conversion-destination-portal"
+    },
+    {
+      "id": "llm-city-recommendations-off-index",
+      "label": "City recommendations falling outside the Euromonitor Top 100",
+      "question": "Do assistants only recommend the same famous destinations?",
+      "answer": "Less than you would expect. Half of ChatGPT's city recommendations fell outside Euromonitor's Top 100, and 57.9% of DeepSeek's did.",
+      "value": 50,
+      "display": "50.0%",
+      "unit": "percent",
+      "evidence_type": "analysis",
+      "period": "September 2025",
+      "period_iso": "2025-09",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "DeepSeek-V3",
+        "display": "57.9%",
+        "value": 57.9
+      },
+      "geography": "Global",
+      "topics": [
+        "generative-engines",
+        "destinations-dmo"
+      ],
+      "sample": "1,020 valid ChatGPT-4o city recommendations from 6,480 generated across 216 traveller personas, scored against Euromonitor's Top 100 City Destinations 2024",
+      "methodology": "Peer-reviewed, AI (MDPI), published 19 September 2025. 6,480 recommendations generated from 216 traveller personas against ChatGPT-4o and DeepSeek-V3, fresh session per persona and prompt, no retrieval tools. Scored against Euromonitor's Top 100 City Destinations 2024. Models without retrieval answer from training data, so this measures the model rather than an AI search product.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "mdpi",
+        "name": "MDPI",
+        "type": "academic",
+        "url": "https://doi.org/10.3390/ai6090236",
+        "homepage": "https://www.mdpi.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-03",
+      "page_url": "https://www.rankwit.ai/resources/data/llm-city-recommendations-off-index"
+    },
+    {
+      "id": "eu-nights-tourist-accommodation",
+      "label": "Nights spent in EU tourist accommodation, year to date",
+      "question": "How big is European tourism in 2026?",
+      "answer": "1.80 billion nights were spent in EU tourist accommodation in 2026 through July, up 1.93% year on year.",
+      "value": 1802454548,
+      "display": "1.80bn",
+      "unit": "count",
+      "evidence_type": "official-statistic",
+      "period": "2026 year to date, through July",
+      "period_iso": "2026-07",
+      "year_on_year_pct": 1.93,
+      "comparison": null,
+      "geography": "European Union",
+      "topics": [
+        "market-context"
+      ],
+      "sample": "Dataset tour_occ_nim: nights spent at tourist accommodation, monthly",
+      "methodology": "Eurostat dataset tour_occ_nim, nights spent at tourist accommodation, monthly, through July 2026. Official statistic subject to Eurostat's revision policy.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "eurostat",
+        "name": "Eurostat",
+        "type": "official-statistics",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/tour_occ_nim/default/table",
+        "homepage": "https://ec.europa.eu/eurostat/web/tourism"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/eu-nights-tourist-accommodation"
+    },
+    {
+      "id": "eu-platform-guest-nights",
+      "label": "EU guest nights booked via Airbnb, Booking and Expedia",
+      "question": "How many European nights are booked through platforms?",
+      "answer": "951.6 million EU guest nights were booked via Airbnb, Booking and Expedia in 2025, per Eurostat's experimental statistics.",
+      "value": 951611862,
+      "display": "951.6m",
+      "unit": "count",
+      "evidence_type": "official-statistic",
+      "period": "2025",
+      "period_iso": "2025",
+      "year_on_year_pct": null,
+      "comparison": null,
+      "geography": "European Union",
+      "topics": [
+        "market-context",
+        "economics"
+      ],
+      "sample": "Dataset tour_ce_omr: experimental statistics on nights booked via Airbnb, Booking and Expedia",
+      "methodology": "Eurostat dataset tour_ce_omr, collected under the short-term rental data-sharing regulation. Flagged experimental by Eurostat: methods are still being consolidated and figures may be revised. On the denominator: this is a full-year 2025 figure and the comparable EU full-year total is close to 3 billion nights, which is where the one-third share comes from. The 1.80 billion figure elsewhere in this dataset covers January to July 2026 only and is not the denominator for it.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "eurostat",
+        "name": "Eurostat",
+        "type": "official-statistics",
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/tour_ce_omr/default/table",
+        "homepage": "https://ec.europa.eu/eurostat/web/tourism"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/eu-platform-guest-nights"
+    },
+    {
+      "id": "spain-international-arrivals",
+      "label": "Spain, international tourist arrivals",
+      "question": "Which country had the most international arrivals in 2024?",
+      "answer": "Spain recorded 93.8 million international arrivals in 2024, up 10.09%. It is the highest 2024 figure in this dataset, but not the world's highest: UN Tourism ranks France first at roughly 102 million, and France has no 2024 entry in the series used here.",
+      "value": 93759300,
+      "display": "93.8m",
+      "unit": "count",
+      "evidence_type": "official-statistic",
+      "period": "2024",
+      "period_iso": "2024",
+      "year_on_year_pct": 10.09,
+      "comparison": null,
+      "geography": "Spain",
+      "topics": [
+        "market-context"
+      ],
+      "sample": "UN Tourism international tourist arrivals, via Our World in Data. France has no 2024 entry in this series",
+      "methodology": "UN Tourism international tourist arrivals, accessed via Our World in Data, 2024. Arrivals count trips, not people: one traveller making three trips counts three times. France is absent from the 2024 cut of this dataset, so any 'most-visited' ranking derived from it alone is incomplete.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "un-tourism",
+        "name": "UN Tourism",
+        "type": "intergovernmental",
+        "url": "https://ourworldindata.org/grapher/international-tourist-trips",
+        "homepage": "https://www.untourism.int/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/spain-international-arrivals"
+    },
+    {
+      "id": "italy-international-arrivals",
+      "label": "Italy international tourist arrivals",
+      "question": "How many international tourists visit Italy?",
+      "answer": "Italy recorded 74.0 million international arrivals in 2024, up 8.9% year on year.",
+      "value": 73951291,
+      "display": "74.0m",
+      "unit": "count",
+      "evidence_type": "official-statistic",
+      "period": "2024",
+      "period_iso": "2024",
+      "year_on_year_pct": 8.9,
+      "comparison": null,
+      "geography": "Italy",
+      "topics": [
+        "market-context"
+      ],
+      "sample": "OECD inbound tourism, international arrivals",
+      "methodology": "OECD inbound tourism statistics, dataset DSD_TOURISM_INTER@DF_INBOUND, 2024. Harmonised to the OECD definition of international arrivals, which can differ from national series.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "oecd",
+        "name": "OECD",
+        "type": "intergovernmental",
+        "url": "https://data-explorer.oecd.org/vis?df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_TOURISM_INTER@DF_INBOUND&df[ag]=OECD.CFE.TOU&df[vs]=1.1",
+        "homepage": "https://www.oecd.org/en/topics/tourism.html"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/italy-international-arrivals"
+    },
+    {
+      "id": "claude-usage-index-australia",
+      "label": "Claude usage index, Australia",
+      "question": "Where is AI use most concentrated, relative to population?",
+      "answer": "Australia leads global Claude usage at 6.40 times the expected baseline across 121 countries, where 1.00 is population-proportional.",
+      "value": 6.4,
+      "display": "6.40×",
+      "unit": "multiplier",
+      "evidence_type": "platform-telemetry",
+      "period": "June 2026",
+      "period_iso": "2026-06",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "baseline expectation",
+        "display": "1.00×",
+        "value": 1
+      },
+      "geography": "Australia",
+      "topics": [
+        "market-context",
+        "traveler-adoption"
+      ],
+      "sample": "Privacy-preserving aggregate usage across 121 countries",
+      "methodology": "Anthropic Economic Index, June 2026. Privacy-preserving aggregate statistics across 121 countries; the index is usage share divided by working-age population share. Measures one assistant, not all AI use.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "anthropic",
+        "name": "Anthropic",
+        "type": "platform-data",
+        "url": "https://www.anthropic.com/economic-index",
+        "homepage": "https://www.anthropic.com/economic-index"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-02",
+      "page_url": "https://www.rankwit.ai/resources/data/claude-usage-index-australia"
+    },
+    {
+      "id": "general-search-primary-travel-resource",
+      "label": "General search as the most-used travel research resource",
+      "question": "Is AI replacing search engines for travel research?",
+      "answer": "General search engines fell from 51% to 36% as the most-used resource for researching travel, between mid-2024 and late 2025.",
+      "value": 36,
+      "display": "36%",
+      "unit": "percent",
+      "evidence_type": "survey",
+      "period": "Late 2025",
+      "period_iso": "2025",
+      "year_on_year_pct": null,
+      "comparison": {
+        "label": "mid-2024",
+        "display": "51%",
+        "value": 51
+      },
+      "geography": "United States",
+      "topics": [
+        "discovery-and-visibility",
+        "generative-engines"
+      ],
+      "sample": "Phocuswright consumer research, stated in the preview of Travel Innovation and Technology Trends 2026",
+      "methodology": "Phocuswright, Travel Innovation and Technology Trends 2026, report preview. The figure appears only in the preview; the full report sits behind Open Access, and neither sample size nor fielding dates are disclosed. The preview names its US consumer base once, for the adoption figure in the same paragraph, and does not restate it here. It is the only Phocuswright document that quantifies the decline — The AI Surge, from the same publisher, gives the direction but not the number.",
+      "confidence": "high",
+      "verified_against_primary": true,
+      "source": {
+        "id": "phocuswright",
+        "name": "Phocuswright",
+        "type": "industry-research",
+        "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Report-Preview-Phocuswrights-Travel-Innovation-and-Technology-Trends-2026",
+        "homepage": "https://www.phocuswright.com/"
+      },
+      "located_via": null,
+      "last_checked": "2026-10-05",
+      "page_url": "https://www.rankwit.ai/resources/data/general-search-primary-travel-resource"
+    }
+  ]
+}

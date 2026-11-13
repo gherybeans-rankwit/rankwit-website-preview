@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "less-likely-to-visit-site-without-ai",
+  "label": "Travellers less likely to visit a destination site without AI features",
+  "question": "Does a missing AI feature cost destination websites traffic?",
+  "answer": "25% of travellers say they are less likely to visit a destination website that has no AI features.",
+  "value": 25,
+  "display": "25%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April 2026",
+  "period_iso": "2026-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "United States",
+  "topics": [
+    "discovery-and-visibility",
+    "destinations-dmo"
+  ],
+  "sample": "1,006 US adults",
+  "methodology": "Sojern traveller survey, April 2026, 1,006 US adults. Stated preference.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/less-likely-to-visit-site-without-ai"
+}

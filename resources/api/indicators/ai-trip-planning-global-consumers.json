@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-trip-planning-global-consumers",
+  "label": "Consumers using AI for trip planning",
+  "question": "What share of consumers worldwide use AI for trip planning?",
+  "answer": "51% of consumers said they use AI for trip planning in Euromonitor's Voice of the Consumer: Travel Survey, fielded January–February 2025.",
+  "value": 51,
+  "display": "51%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "January–February 2025",
+  "period_iso": "2025-01",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "traveler-adoption"
+  ],
+  "sample": "Voice of the Consumer: Travel Survey",
+  "methodology": "Euromonitor's Voice of the Consumer: Travel Survey, fielded January to February 2025 across its standard multi-market consumer panel. The question asks about AI broadly rather than generative AI specifically.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "euromonitor",
+    "name": "Euromonitor International",
+    "type": "industry-research",
+    "url": "https://www.euromonitor.com/article/ai-a-turning-point-in-global-travel",
+    "homepage": "https://www.euromonitor.com/store/explore-reports/travel"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-trip-planning-global-consumers"
+}

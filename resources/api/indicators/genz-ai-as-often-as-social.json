@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "genz-ai-as-often-as-social",
+  "label": "Gen Z using AI as often as social media for trip planning",
+  "question": "How much does Gen Z use AI for travel planning?",
+  "answer": "63% of Gen Z travellers use AI as often as social media for trip planning, slightly below Millennials at 69%.",
+  "value": 63,
+  "display": "63%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April 2026",
+  "period_iso": "2026-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "United States",
+  "topics": [
+    "traveler-adoption",
+    "discovery-and-visibility"
+  ],
+  "sample": "Gen Z subset of 1,006 US adults",
+  "methodology": "Sojern traveller survey, April 2026, Gen Z subset of 1,006 US adults. Subsample size not disclosed.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/genz-ai-as-often-as-social"
+}

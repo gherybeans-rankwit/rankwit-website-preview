@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "millennials-ai-as-often-as-social",
+  "label": "Millennials using AI as often as social media for trip planning",
+  "question": "Which generation uses AI most for travel planning?",
+  "answer": "69% of Millennials and 63% of Gen Z use AI as often as social media when planning a trip.",
+  "value": 69,
+  "display": "69%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April 2026",
+  "period_iso": "2026-04",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "Gen Z",
+    "display": "63%",
+    "value": 63
+  },
+  "geography": "United States",
+  "topics": [
+    "traveler-adoption",
+    "discovery-and-visibility"
+  ],
+  "sample": "Millennial subset of 1,006 US adults",
+  "methodology": "Sojern traveller survey, April 2026, generational subsets of 1,006 US adults. Subsample sizes are not disclosed, so the generational splits carry wider uncertainty than the headline figure.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/millennials-ai-as-often-as-social"
+}

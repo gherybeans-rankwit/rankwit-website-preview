@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-trip-planning-intent-us",
+  "label": "US travellers who intend to use AI for future trips",
+  "question": "Will travellers keep using AI to plan trips?",
+  "answer": "75% of US travellers say they intend to use AI for future trips, against 54% who have already done so.",
+  "value": 75,
+  "display": "75%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April 2026",
+  "period_iso": "2026-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "United States",
+  "topics": [
+    "traveler-adoption"
+  ],
+  "sample": "1,006 US adults",
+  "methodology": "Same instrument as the adoption figure: 1,006 US adults, April 2026. Stated intent is a weaker signal than reported behaviour and systematically overstates future action, which is why we show it next to the behavioural number rather than instead of it.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-trip-planning-intent-us"
+}

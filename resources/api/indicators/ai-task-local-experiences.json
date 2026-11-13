@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-task-local-experiences",
+  "label": "Pre-trip AI use for local experiences",
+  "question": "Do travellers use AI to find things to do?",
+  "answer": "37% of AI users research local experiences with it before travelling.",
+  "value": 37,
+  "display": "37%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April–May 2025",
+  "period_iso": "2025-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global (33 markets)",
+  "topics": [
+    "planning-tasks"
+  ],
+  "sample": "Pre-trip use among AI users, 33 markets",
+  "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, among AI users in travel.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "booking",
+    "name": "Booking.com",
+    "type": "platform-data",
+    "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+    "homepage": "https://news.booking.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-task-local-experiences"
+}

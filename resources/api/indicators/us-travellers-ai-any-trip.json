@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "us-travellers-ai-any-trip",
+  "label": "US travellers who used AI on at least one trip",
+  "question": "Have most travellers now used AI for a trip?",
+  "answer": "56% of US travellers used AI for planning, booking or in-destination help on at least one trip in the past twelve months, up from 43% six months earlier and 33% the half-year before that.",
+  "value": 56,
+  "display": "56%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "First half of 2026",
+  "period_iso": "2026-03",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "second half of 2025",
+    "display": "43%",
+    "value": 43
+  },
+  "geography": "United States",
+  "topics": [
+    "traveler-adoption",
+    "discovery-and-visibility"
+  ],
+  "sample": "US travellers; The AI Surge: Travel's Fastest Behavioral Shift in a Decade, published March 2026",
+  "methodology": "Phocuswright, The AI Surge: Travel's Fastest Behavioral Shift in a Decade, published March 2026. US travellers; waves 1H25, 2H25 and 1H26. Among travellers who have used AI at all, 94% have used it for travel.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "phocuswright",
+    "name": "Phocuswright",
+    "type": "industry-research",
+    "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/The-fastest-shift-in-travel-behavior-just-became-the-default",
+    "homepage": "https://www.phocuswright.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/us-travellers-ai-any-trip"
+}

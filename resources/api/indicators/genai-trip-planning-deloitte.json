@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "genai-trip-planning-deloitte",
+  "label": "US travellers using generative AI for trip planning",
+  "question": "How fast has generative AI trip planning grown in the US?",
+  "answer": "Nearly a quarter of US travellers used generative AI tools for trip planning in late 2025, three times the 2022 level, per Deloitte.",
+  "value": 25,
+  "display": "~25%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "Late 2025",
+  "period_iso": "2025",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "versus 2022",
+    "display": "3x lower",
+    "value": null
+  },
+  "geography": "United States",
+  "topics": [
+    "traveler-adoption"
+  ],
+  "sample": "Synthesis of Deloitte's 2025 Summer Travel, Holiday Travel and Corporate Travel surveys, fielded March to October 2025",
+  "methodology": "Deloitte 2026 Travel Industry Outlook, synthesising its 2025 Summer Travel, Holiday Travel and Corporate Travel surveys, fielded March to October 2025. 'Nearly a quarter' is Deloitte's own wording; we do not sharpen it.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "deloitte",
+    "name": "Deloitte",
+    "type": "consultancy",
+    "url": "https://www.deloitte.com/us/en/insights/industry/transportation/travel-hospitality-industry-outlook.html",
+    "homepage": "https://www.deloitte.com/us/en/insights/industry/transportation/2026-summer-travel-trends-survey.html"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/genai-trip-planning-deloitte"
+}

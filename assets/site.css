@@ -5936,3 +5936,12 @@ html:not(.js) .kit-copy {
     grid-column: 1 / -1;
   }
 }
+
+/* Home, Resources band: three figures from the dataset, each a link to its own page (written by cms/resources.py) */
+.res-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 8px; }
+.res-card { display: flex; flex-direction: column; gap: 10px; padding: 26px 26px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); color: var(--ink); text-decoration: none; transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+.res-card:hover { border-color: var(--line-2); box-shadow: var(--shadow); transform: translateY(-2px); }
+.res-fig { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.6rem, 5vw, 4rem); line-height: 0.95; letter-spacing: -0.04em; color: #5f5cf0; }
+.res-card b { font-weight: 600; font-size: 1.05rem; line-height: 1.35; }
+.res-src { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; line-height: 1.5; color: var(--ink-3); }
+@media (max-width: 860px) { .res-cards { grid-template-columns: 1fr; } }

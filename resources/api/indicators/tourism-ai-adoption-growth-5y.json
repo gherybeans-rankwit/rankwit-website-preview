@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "tourism-ai-adoption-growth-5y",
+  "label": "Projected growth in tourism AI adoption over five years",
+  "question": "How much will AI adoption in tourism grow?",
+  "answer": "UN Tourism projects a 25% growth rate in tourism AI adoption over five years.",
+  "value": 25,
+  "display": "+25%",
+  "unit": "percent",
+  "evidence_type": "forecast",
+  "period": "2025–2030",
+  "period_iso": "2025",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "hospitality",
+    "economics"
+  ],
+  "sample": "Five-year projection in the UN Tourism report",
+  "methodology": "UN Tourism, 2025. Five-year projection; the underlying model and assumptions are not published in the summary, so confidence is medium.",
+  "confidence": "medium",
+  "verified_against_primary": true,
+  "source": {
+    "id": "un-tourism",
+    "name": "UN Tourism",
+    "type": "intergovernmental",
+    "url": "https://doi.org/10.18111/9789284426065",
+    "homepage": "https://www.untourism.int/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/tourism-ai-adoption-growth-5y"
+}

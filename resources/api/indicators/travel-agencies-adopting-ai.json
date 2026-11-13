@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "travel-agencies-adopting-ai",
+  "label": "Travel agencies adopting AI",
+  "question": "Are travel agencies using AI?",
+  "answer": "80% of travel agencies have already implemented AI solutions, and the remaining 20% say they plan to.",
+  "value": 80,
+  "display": "80%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April–May 2025",
+  "period_iso": "2025-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global (14 countries)",
+  "topics": [
+    "airlines-distribution"
+  ],
+  "sample": "Travel agencies across 14 countries",
+  "methodology": "Sabre Content Fragmentation study, surveying travel agencies across 14 countries, April–May 2025. The report's own wording is 'nearly 80% of agencies already implementing AI solutions, and the remaining 20% outlining plans to do so', so the 80% is adoption rather than adoption-or-intent, which is also the denominator the productivity figure is taken from.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sabre",
+    "name": "Sabre",
+    "type": "vendor-research",
+    "url": "https://www.sabre.com/resources/research/content-fragmentation-what-i-see-vs-what-i-take/",
+    "homepage": "https://www.sabre.com/resources/research/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/travel-agencies-adopting-ai"
+}

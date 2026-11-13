@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "robots-txt-user-triggered-disagreement",
+  "label": "Assistant makers whose docs say user-triggered fetches may ignore robots.txt",
+  "question": "Does robots.txt stop an AI assistant from reading my page?",
+  "answer": "For automatic crawling, yes. For a fetch a user triggered, three of the four major assistant makers publish that robots.txt may not apply.",
+  "value": 3,
+  "display": "3 of 4",
+  "unit": "count",
+  "evidence_type": "analysis",
+  "period": "October 2026",
+  "period_iso": "2026-10",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "state no such exception",
+    "display": "1 of 4",
+    "value": 1
+  },
+  "geography": "Global",
+  "topics": [
+    "generative-engines",
+    "governance-risk"
+  ],
+  "sample": "OpenAI, Google and Perplexity each publish that user-initiated fetches may ignore robots.txt; Anthropic's documentation states no equivalent exception",
+  "methodology": "Read from each publisher's own crawler documentation in October 2026. OpenAI: \"Because these actions are initiated by a user, robots.txt rules may not apply.\" Google: \"these fetchers generally ignore robots.txt rules.\" Perplexity: \"Since a user requested the fetch, this fetcher generally ignores robots.txt rules.\" Anthropic states its bots honour robots.txt and names no exception. Silence is not a commitment, so read the fourth as undocumented rather than as a guarantee.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "openai",
+    "name": "OpenAI",
+    "type": "platform-data",
+    "url": "https://developers.openai.com/api/docs/bots",
+    "homepage": "https://openai.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-03",
+  "page_url": "https://www.rankwit.ai/resources/data/robots-txt-user-triggered-disagreement"
+}

@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "would-let-ai-complete-booking",
+  "label": "Travellers ready to let AI handle a booking",
+  "question": "Would travellers let an AI book for them?",
+  "answer": "Between a quarter and a third of travellers, depending on the market, are ready to book inside a generative AI platform or let an assistant book for them.",
+  "value": 25,
+  "display": "25–33%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "2025",
+  "period_iso": "2025",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "trust-and-autonomy"
+  ],
+  "sample": "Phocuswright, Chat, Plan, Book: GenAI Goes Mainstream; range across surveyed markets",
+  "methodology": "Phocuswright, Chat, Plan, Book: GenAI Goes Mainstream, 2025. Range reported across surveyed countries. The same study finds only about a third fully trust generative AI responses.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "phocuswright",
+    "name": "Phocuswright",
+    "type": "industry-research",
+    "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2025/From-hype-to-habit-78-percent-of-travelers-say-GenAI-improves-trip-planning",
+    "homepage": "https://www.phocuswright.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/would-let-ai-complete-booking"
+}

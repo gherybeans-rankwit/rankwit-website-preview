@@ -1,0 +1,104 @@
+/* Resources (the former Travel AI Monitor) inside the site. The body keeps the Monitor's markup and its own
+   stylesheet (monitor.css, scoped to .rw-monitor); this file makes it look like the rest of the site: the site's
+   colours, fonts, buttons, labels, card shapes and page width. It loads after monitor.css. */
+.rw-monitor {
+  /* the Monitor's design tokens, pointed at the site's */
+  --font-sans: var(--font);
+  --font-inter: var(--font);
+  --font-display: "29LT Bukra", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --color-canvas: var(--page);
+  --color-surface: var(--surface);
+  --color-sunken: var(--page);
+  --color-ink: var(--ink);
+  --color-body: var(--ink-2);
+  --color-muted: var(--ink-3);
+  --color-faint: #625c99;
+  --color-line: var(--line);
+  --color-line-soft: #efedfb;
+  --color-indigo: var(--accent);
+  --color-purple: var(--accent);
+  --color-purple-600: var(--accent-ink);
+  --color-purple-soft: #b5b1fa;
+  --color-purple-tint: var(--line-2);
+  --color-purple-wash: var(--accent-soft);
+  --radius-card: var(--r);
+  --container-site: calc(var(--wrap) + 2 * var(--gutter));
+  font-family: var(--font);
+  padding-top: var(--nav-h);
+  line-height: 1.5;
+  background: var(--page);
+  color: var(--ink-2);
+}
+.rw-monitor .shell { padding-inline: var(--gutter); }
+
+/* type: the site's display face on headings and big figures, its mono face on small labels */
+.rw-monitor h1, .rw-monitor h2, .rw-monitor h3, .rw-monitor h4, .rw-monitor .stat-figure {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.rw-monitor h1 { letter-spacing: -0.02em; line-height: 1.04; }
+.rw-monitor h2 { letter-spacing: -0.02em; line-height: 1.08; }
+.rw-monitor .uppercase {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+.rw-monitor h2.uppercase, .rw-monitor h3.uppercase, .rw-monitor h4.uppercase { font-family: var(--font-mono); font-weight: 500; }
+.rw-monitor .font-mono { font-family: var(--font-mono); }
+
+/* buttons: the site's pills */
+.rw-monitor .btn {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  gap: 10px;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.rw-monitor .btn-sm { min-height: 40px; padding: 0 16px; font-size: 0.9rem; }
+.rw-monitor .btn-wrap { min-height: 46px; padding: 12px 20px; line-height: 1.3; border-radius: 22px; }
+.rw-monitor .btn-primary { background: #5f5cf0; color: #fff; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25); }
+.rw-monitor .btn-primary:hover { background: #5350d6; box-shadow: 0 10px 30px -8px rgba(112, 110, 248, 0.6); }
+.rw-monitor .btn-ghost { background: transparent; border-color: var(--line-2); color: var(--ink); }
+.rw-monitor .btn-ghost:hover { border-color: var(--ink-3); background: var(--surface); }
+.rw-monitor .btn-invert { background: #fff; color: var(--ink); }
+.rw-monitor .btn-invert:hover { background: var(--accent-soft); }
+
+/* surfaces: the site's page colour, hairlines and corner radius */
+.rw-monitor .hero-wash { background: var(--page); }
+.rw-monitor .hero-wash:before { display: none; }
+.rw-monitor .card, .rw-monitor .ind-card, .rw-monitor .infographic { border-color: var(--line); border-radius: var(--r); }
+.rw-monitor .ind-card:hover, .rw-monitor .card-link:hover { border-color: var(--line-2); box-shadow: var(--shadow); }
+.rw-monitor .pill, .rw-monitor .source-mark { border-color: var(--line); }
+.rw-monitor a { text-underline-offset: 3px; }
+.rw-monitor input:not([type="checkbox"]):not([type="file"]), .rw-monitor textarea {
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  background: var(--surface);
+  font: inherit;
+  color: var(--ink);
+}
+.rw-monitor input:focus, .rw-monitor textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+/* the section's sub-menu, under the site header */
+.res-nav { background: var(--surface); border-bottom: 1px solid var(--line); }
+.res-nav .shell { display: flex; align-items: center; gap: 4px; height: 46px; overflow-x: auto; }
+.res-nav a { flex: none; padding: 6px 10px; border-radius: 999px; font-size: 14px; color: var(--ink-2); text-decoration: none; }
+.res-nav a:hover { background: var(--page); color: var(--ink); }
+.res-nav a[aria-current="page"] { color: var(--ink); font-weight: 600; background: var(--accent-soft); }
+.res-nav .res-nav-name { margin-right: 8px; padding-left: 0; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-ink); }
+.res-nav .res-nav-name:hover { background: none; }
+
+/* the line that closed every page of the Monitor: dataset review, licence, machine-readable files */
+.res-foot { border-top: 1px solid var(--line); padding: 22px 0 28px; font-size: 13px; line-height: 1.6; color: var(--ink-3); }
+.res-foot p { margin: 0 0 6px; }
+.res-foot p:last-child { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0; }
+.res-foot span { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); align-self: center; }
+.res-foot a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.res-foot a:hover { color: var(--ink); }

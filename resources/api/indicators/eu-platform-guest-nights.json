@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "eu-platform-guest-nights",
+  "label": "EU guest nights booked via Airbnb, Booking and Expedia",
+  "question": "How many European nights are booked through platforms?",
+  "answer": "951.6 million EU guest nights were booked via Airbnb, Booking and Expedia in 2025, per Eurostat's experimental statistics.",
+  "value": 951611862,
+  "display": "951.6m",
+  "unit": "count",
+  "evidence_type": "official-statistic",
+  "period": "2025",
+  "period_iso": "2025",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "European Union",
+  "topics": [
+    "market-context",
+    "economics"
+  ],
+  "sample": "Dataset tour_ce_omr: experimental statistics on nights booked via Airbnb, Booking and Expedia",
+  "methodology": "Eurostat dataset tour_ce_omr, collected under the short-term rental data-sharing regulation. Flagged experimental by Eurostat: methods are still being consolidated and figures may be revised. On the denominator: this is a full-year 2025 figure and the comparable EU full-year total is close to 3 billion nights, which is where the one-third share comes from. The 1.80 billion figure elsewhere in this dataset covers January to July 2026 only and is not the denominator for it.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "eurostat",
+    "name": "Eurostat",
+    "type": "official-statistics",
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/tour_ce_omr/default/table",
+    "homepage": "https://ec.europa.eu/eurostat/web/tourism"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/eu-platform-guest-nights"
+}

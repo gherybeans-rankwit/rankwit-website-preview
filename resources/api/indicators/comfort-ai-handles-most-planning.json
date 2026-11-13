@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "comfort-ai-handles-most-planning",
+  "label": "Travellers comfortable letting AI handle most of their planning",
+  "question": "How many travellers would hand their whole trip to an AI?",
+  "answer": "Around 6% of travellers are comfortable letting AI handle most of their travel planning, even though about 79% have used AI for travel.",
+  "value": 6,
+  "display": "~6%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "March 2026",
+  "period_iso": "2026-03",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "trust-and-autonomy"
+  ],
+  "sample": "Amadeus traveller research, March 2026",
+  "methodology": "Amadeus traveller research conducted March 2026, reported in the airlines agentic AI white paper. Both figures come from the same instrument.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "amadeus",
+    "name": "Amadeus",
+    "type": "vendor-research",
+    "url": "https://amadeus.com/en/resources/white-paper/agentic-ai-airlines",
+    "homepage": "https://amadeus.com/en/blog"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/comfort-ai-handles-most-planning"
+}

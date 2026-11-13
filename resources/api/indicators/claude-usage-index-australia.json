@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "claude-usage-index-australia",
+  "label": "Claude usage index, Australia",
+  "question": "Where is AI use most concentrated, relative to population?",
+  "answer": "Australia leads global Claude usage at 6.40 times the expected baseline across 121 countries, where 1.00 is population-proportional.",
+  "value": 6.4,
+  "display": "6.40×",
+  "unit": "multiplier",
+  "evidence_type": "platform-telemetry",
+  "period": "June 2026",
+  "period_iso": "2026-06",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "baseline expectation",
+    "display": "1.00×",
+    "value": 1
+  },
+  "geography": "Australia",
+  "topics": [
+    "market-context",
+    "traveler-adoption"
+  ],
+  "sample": "Privacy-preserving aggregate usage across 121 countries",
+  "methodology": "Anthropic Economic Index, June 2026. Privacy-preserving aggregate statistics across 121 countries; the index is usage share divided by working-age population share. Measures one assistant, not all AI use.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "type": "platform-data",
+    "url": "https://www.anthropic.com/economic-index",
+    "homepage": "https://www.anthropic.com/economic-index"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/claude-usage-index-australia"
+}

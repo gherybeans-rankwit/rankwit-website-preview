@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "non-ota-citations-by-query-intent",
+  "label": "Non-OTA citation share: experiential against transactional queries",
+  "question": "Does the kind of question change which sources get cited?",
+  "answer": "Sharply. Non-OTA sources took 55.9% of citations on experiential queries against 30.8% on transactional ones, a gap of 25.1 points.",
+  "value": 55.9,
+  "display": "55.9%",
+  "unit": "percent",
+  "evidence_type": "analysis",
+  "period": "March 2026",
+  "period_iso": "2026-03",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "transactional queries",
+    "display": "30.8%",
+    "value": 30.8
+  },
+  "geography": "Japan (Tokyo)",
+  "topics": [
+    "generative-engines",
+    "discovery-and-visibility",
+    "destinations-dmo"
+  ],
+  "sample": "Non-OTA share of citations on experiential queries (419 of 750) against transactional queries (187 of 607). Same Tokyo Gemini audit. Preprint, not peer-reviewed",
+  "methodology": "Same Tokyo Gemini audit, March 2026. 419 of 750 experiential citations were non-OTA, against 187 of 607 transactional. Reported as statistically significant. Preprint, not peer-reviewed, and the OTA classification rests on curated domain matching.",
+  "confidence": "medium",
+  "verified_against_primary": true,
+  "source": {
+    "id": "arxiv",
+    "name": "arXiv",
+    "type": "academic",
+    "url": "https://arxiv.org/abs/2603.20062",
+    "homepage": "https://arxiv.org/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-03",
+  "page_url": "https://www.rankwit.ai/resources/data/non-ota-citations-by-query-intent"
+}

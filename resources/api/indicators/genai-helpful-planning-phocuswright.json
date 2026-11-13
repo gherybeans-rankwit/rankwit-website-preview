@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "genai-helpful-planning-phocuswright",
+  "label": "Travellers who find generative AI results helpful",
+  "question": "Do travellers find AI answers useful for travel?",
+  "answer": "78% of travellers found generative AI results somewhat or very helpful, for planning and in destination alike.",
+  "value": 78,
+  "display": "78%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "2025",
+  "period_iso": "2025",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "traveler-adoption"
+  ],
+  "sample": "Phocuswright, Chat, Plan, Book: GenAI Goes Mainstream",
+  "methodology": "Phocuswright, Chat, Plan, Book: GenAI Goes Mainstream, 2025. The figure covers both trip planning and in-destination use.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "phocuswright",
+    "name": "Phocuswright",
+    "type": "industry-research",
+    "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2025/From-hype-to-habit-78-percent-of-travelers-say-GenAI-improves-trip-planning",
+    "homepage": "https://www.phocuswright.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/genai-helpful-planning-phocuswright"
+}

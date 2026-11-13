@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-assistants-more-trusted-than-influencers",
+  "label": "AI assistants as a trusted travel planning source",
+  "question": "Are AI assistants more trusted than travel influencers?",
+  "answer": "Yes. AI assistants rank as a trusted travel planning source for 24% of consumers, against 19% for travel bloggers and 14% for social media influencers.",
+  "value": 24,
+  "display": "24%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April–May 2025",
+  "period_iso": "2025-04",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "influencers",
+    "display": "14%",
+    "value": 14
+  },
+  "geography": "Global (33 markets)",
+  "topics": [
+    "discovery-and-visibility"
+  ],
+  "sample": "37,325 respondents across 33 markets",
+  "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, 37,325 respondents across 33 markets. Respondents selected trusted sources from a fixed list. One caveat on the labels: the release's summary names the 19% comparator 'travel bloggers' and its body text names the same figure 'colleagues'. We follow the summary, because Booking.com's Canadian edition of the same release reports travel bloggers and colleagues as separate options with different values (15% and 13%), which makes the body wording the looser of the two.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "booking",
+    "name": "Booking.com",
+    "type": "platform-data",
+    "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+    "homepage": "https://news.booking.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-assistants-more-trusted-than-influencers"
+}

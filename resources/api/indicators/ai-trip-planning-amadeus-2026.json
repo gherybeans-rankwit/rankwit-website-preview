@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-trip-planning-amadeus-2026",
+  "label": "Travellers who have used AI for trip planning or management",
+  "question": "What is the highest published estimate of AI use in travel planning?",
+  "answer": "Around 79% of travellers have used AI for trip planning or trip management, per Amadeus research conducted in March 2026.",
+  "value": 79,
+  "display": "~79%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "March 2026",
+  "period_iso": "2026-03",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "traveler-adoption",
+    "airlines-distribution"
+  ],
+  "sample": "Amadeus traveller research, March 2026",
+  "methodology": "Amadeus traveller research conducted March 2026, reported in the airlines agentic AI white paper. The same study found only around 6% comfortable letting AI handle most of their planning.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "amadeus",
+    "name": "Amadeus",
+    "type": "vendor-research",
+    "url": "https://amadeus.com/en/resources/white-paper/agentic-ai-airlines",
+    "homepage": "https://amadeus.com/en/blog"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-trip-planning-amadeus-2026"
+}

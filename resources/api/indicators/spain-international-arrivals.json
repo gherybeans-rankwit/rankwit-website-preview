@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "spain-international-arrivals",
+  "label": "Spain, international tourist arrivals",
+  "question": "Which country had the most international arrivals in 2024?",
+  "answer": "Spain recorded 93.8 million international arrivals in 2024, up 10.09%. It is the highest 2024 figure in this dataset, but not the world's highest: UN Tourism ranks France first at roughly 102 million, and France has no 2024 entry in the series used here.",
+  "value": 93759300,
+  "display": "93.8m",
+  "unit": "count",
+  "evidence_type": "official-statistic",
+  "period": "2024",
+  "period_iso": "2024",
+  "year_on_year_pct": 10.09,
+  "comparison": null,
+  "geography": "Spain",
+  "topics": [
+    "market-context"
+  ],
+  "sample": "UN Tourism international tourist arrivals, via Our World in Data. France has no 2024 entry in this series",
+  "methodology": "UN Tourism international tourist arrivals, accessed via Our World in Data, 2024. Arrivals count trips, not people: one traveller making three trips counts three times. France is absent from the 2024 cut of this dataset, so any 'most-visited' ranking derived from it alone is incomplete.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "un-tourism",
+    "name": "UN Tourism",
+    "type": "intergovernmental",
+    "url": "https://ourworldindata.org/grapher/international-tourist-trips",
+    "homepage": "https://www.untourism.int/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/spain-international-arrivals"
+}

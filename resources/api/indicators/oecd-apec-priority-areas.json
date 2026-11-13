@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "oecd-apec-priority-areas",
+  "label": "OECD priority areas for responsible AI adoption in tourism",
+  "question": "What does the OECD recommend on AI in tourism?",
+  "answer": "The OECD identifies six priority areas for responsible AI adoption in tourism across APEC economies.",
+  "value": 6,
+  "display": "6",
+  "unit": "count",
+  "evidence_type": "analysis",
+  "period": "September 2026",
+  "period_iso": "2026-09",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "APEC economies",
+  "topics": [
+    "governance-risk",
+    "destinations-dmo"
+  ],
+  "sample": "OECD policy paper on AI and tourism in APEC economies",
+  "methodology": "OECD policy paper 'Artificial Intelligence and tourism in APEC economies', published 9 September 2026. Qualitative policy analysis rather than a survey.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "oecd",
+    "name": "OECD",
+    "type": "intergovernmental",
+    "url": "https://www.oecd.org/en/publications/artificial-intelligence-and-tourism-in-apec-economies_4549486a-en.html",
+    "homepage": "https://www.oecd.org/en/topics/tourism.html"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/oecd-apec-priority-areas"
+}

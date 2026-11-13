@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "executives-ai-agents-in-production",
+  "label": "Executives reporting AI agents in production",
+  "question": "Are AI agents actually running in production?",
+  "answer": "52% of executives report their organisations have deployed AI agents in production, per a Google Cloud study from September 2025.",
+  "value": 52,
+  "display": "52%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "September 2025",
+  "period_iso": "2025-09",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global (24 countries)",
+  "topics": [
+    "airlines-distribution",
+    "governance-risk"
+  ],
+  "sample": "3,466 senior leaders across 24 countries at enterprises above USD 10m revenue that already deploy generative AI, fielded April–June 2025. The figure is a share of gen-AI-adopting enterprises, not of all enterprises",
+  "methodology": "Google Cloud's ROI of AI study, September 2025: 3,466 senior leaders across 24 countries at enterprises above USD 10m revenue, fielded April–June 2025. Cross-industry sample rather than travel-specific, which is the main caveat on reading it next to travel's own figures.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "google",
+    "name": "Google",
+    "type": "platform-data",
+    "url": "https://services.google.com/fh/files/misc/google_cloud_roi_of_ai_2025.pdf",
+    "homepage": "https://blog.google/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/executives-ai-agents-in-production"
+}

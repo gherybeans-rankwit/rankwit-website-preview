@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "tourism-businesses-using-ai",
+  "label": "Tourism businesses already using AI",
+  "question": "How many tourism businesses use AI?",
+  "answer": "70% of tourism businesses already use AI technologies, principally chatbots, dynamic pricing and demand forecasting.",
+  "value": 70,
+  "display": "70%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "2025",
+  "period_iso": "2025",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "hospitality",
+    "governance-risk"
+  ],
+  "sample": "UN Tourism survey with Saxion University of Applied Sciences",
+  "methodology": "UN Tourism report produced with Saxion University of Applied Sciences, 2025. Global survey of tourism businesses; the report does not disclose sample size, which is why we treat the level as indicative. The publisher serves the document behind an access check, so we have verified the DOI and the report, not the figure inside it.",
+  "confidence": "medium",
+  "verified_against_primary": true,
+  "source": {
+    "id": "un-tourism",
+    "name": "UN Tourism",
+    "type": "intergovernmental",
+    "url": "https://doi.org/10.18111/9789284426065",
+    "homepage": "https://www.untourism.int/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/tourism-businesses-using-ai"
+}

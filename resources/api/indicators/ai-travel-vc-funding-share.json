@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-travel-vc-funding-share",
+  "label": "Share of travel venture funding going to AI-enabled startups",
+  "question": "Where is travel technology investment going?",
+  "answer": "45% of travel venture capital funding went to AI-enabled startups in the first half of 2025, up from about 10% in 2023.",
+  "value": 45,
+  "display": "45%",
+  "unit": "percent",
+  "evidence_type": "analysis",
+  "period": "First half of 2025",
+  "period_iso": "2025",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "2023",
+    "display": "10%",
+    "value": 10
+  },
+  "geography": "Global",
+  "topics": [
+    "economics",
+    "airlines-distribution"
+  ],
+  "sample": "Skift venture capital tracking of travel-industry funding",
+  "methodology": "Skift venture capital tracking, reported in Remapping travel with agentic AI (McKinsey with Skift, September 2025). Share of disclosed travel-industry venture funding.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "mckinsey",
+    "name": "McKinsey & Company",
+    "type": "consultancy",
+    "url": "https://www.mckinsey.com/industries/travel/our-insights/remapping-travel-with-agentic-ai",
+    "homepage": "https://www.mckinsey.com/industries/travel/how-we-help-clients"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-travel-vc-funding-share"
+}

@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "dmo-irrelevance-risk-two-years",
+  "label": "DMO leaders who see irrelevance risk within two years",
+  "question": "Do destination leaders think AI is urgent?",
+  "answer": "72% of DMO leaders believe that failing to adopt AI within two years risks their destination becoming irrelevant.",
+  "value": 72,
+  "display": "72%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April 2026",
+  "period_iso": "2026-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "destinations-dmo"
+  ],
+  "sample": "103 DMO leaders",
+  "methodology": "Sojern survey of 103 DMO leaders, April 2026. Attitudinal measure.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/dmo-irrelevance-risk-two-years"
+}

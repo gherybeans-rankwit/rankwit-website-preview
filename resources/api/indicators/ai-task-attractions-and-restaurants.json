@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-task-attractions-and-restaurants",
+  "label": "AI use for researching attractions, restaurants and transport",
+  "question": "What is the single most common travel use of AI?",
+  "answer": "60% of AI users research attractions, restaurants and transport options with it (the most common travel task in the Sojern study).",
+  "value": 60,
+  "display": "60%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April 2026",
+  "period_iso": "2026-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "United States",
+  "topics": [
+    "planning-tasks"
+  ],
+  "sample": "AI users among 1,006 US adults. The source's scope is attractions, restaurants and transportation",
+  "methodology": "Sojern traveller survey, April 2026, AI users among 1,006 US adults. The published wording is 'sixty percent use it to research attractions, restaurants, and transportation', so the figure covers all three and should not be quoted as an attractions-and-restaurants number.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-task-attractions-and-restaurants"
+}

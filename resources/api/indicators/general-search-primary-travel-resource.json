@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "general-search-primary-travel-resource",
+  "label": "General search as the most-used travel research resource",
+  "question": "Is AI replacing search engines for travel research?",
+  "answer": "General search engines fell from 51% to 36% as the most-used resource for researching travel, between mid-2024 and late 2025.",
+  "value": 36,
+  "display": "36%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "Late 2025",
+  "period_iso": "2025",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "mid-2024",
+    "display": "51%",
+    "value": 51
+  },
+  "geography": "United States",
+  "topics": [
+    "discovery-and-visibility",
+    "generative-engines"
+  ],
+  "sample": "Phocuswright consumer research, stated in the preview of Travel Innovation and Technology Trends 2026",
+  "methodology": "Phocuswright, Travel Innovation and Technology Trends 2026, report preview. The figure appears only in the preview; the full report sits behind Open Access, and neither sample size nor fielding dates are disclosed. The preview names its US consumer base once, for the adoption figure in the same paragraph, and does not restate it here. It is the only Phocuswright document that quantifies the decline — The AI Surge, from the same publisher, gives the direction but not the number.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "phocuswright",
+    "name": "Phocuswright",
+    "type": "industry-research",
+    "url": "https://www.phocuswright.com/Travel-Research/Research-Updates/2026/Report-Preview-Phocuswrights-Travel-Innovation-and-Technology-Trends-2026",
+    "homepage": "https://www.phocuswright.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-05",
+  "page_url": "https://www.rankwit.ai/resources/data/general-search-primary-travel-resource"
+}

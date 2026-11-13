@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-enthusiast-cohort-share",
+  "label": "Share of consumers classified as AI enthusiasts",
+  "question": "How is consumer sentiment towards AI distributed?",
+  "answer": "36% of consumers are AI Enthusiasts and 25% are Detractors, with Advocates at 13%, Cautious at 13% and Sceptics at 9%.",
+  "value": 36,
+  "display": "36%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April–May 2025",
+  "period_iso": "2025-04",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "detractors",
+    "display": "25%",
+    "value": 25
+  },
+  "geography": "Global (33 markets)",
+  "topics": [
+    "trust-and-autonomy"
+  ],
+  "sample": "37,325 respondents across 33 markets",
+  "methodology": "Booking.com Global AI Sentiment Report, April–May 2025. Full split: Enthusiasts 36%, Advocates 13%, Cautious 13%, Sceptics 9%, Detractors 25%. The five published shares sum to 96%; the report does not say what the remaining 4% is, so the cohorts are not a complete partition of the sample.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "booking",
+    "name": "Booking.com",
+    "type": "platform-data",
+    "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+    "homepage": "https://news.booking.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-enthusiast-cohort-share"
+}

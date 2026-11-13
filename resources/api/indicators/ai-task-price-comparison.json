@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-task-price-comparison",
+  "label": "AI use for comparing prices",
+  "question": "Do travellers use AI to compare prices?",
+  "answer": "56% of AI users compare prices with it, though only 32% use it to compare flights and hotels specifically.",
+  "value": 56,
+  "display": "56%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April 2026",
+  "period_iso": "2026-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "United States",
+  "topics": [
+    "planning-tasks"
+  ],
+  "sample": "AI users among 1,006 US adults",
+  "methodology": "Sojern traveller survey, April 2026, AI users among 1,006 US adults.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-task-price-comparison"
+}

@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-crawling-for-training-share",
+  "label": "Share of AI crawling that is for training rather than retrieval",
+  "question": "Are AI crawlers collecting training data or answering questions?",
+  "answer": "Training accounted for close to 80% of AI bot activity by July 2025, up from 72% a year earlier.",
+  "value": 80,
+  "display": "~80%",
+  "unit": "percent",
+  "evidence_type": "platform-telemetry",
+  "period": "July 2025",
+  "period_iso": "2025-07",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "a year earlier",
+    "display": "72%",
+    "value": 72
+  },
+  "geography": "Global",
+  "topics": [
+    "generative-engines"
+  ],
+  "sample": "Share of AI bot activity Cloudflare classifies as training rather than search or user action. Dominated by one bot, OpenAI's GPTBot",
+  "methodology": "Cloudflare, to roughly July 2025. The split rests on Cloudflare's own classification of each user agent's declared purpose, the taxonomy carries an undeclared bucket, and the aggregate is dominated by one bot, OpenAI's GPTBot. It is therefore closer to a statement about OpenAI than about AI crawling in general.",
+  "confidence": "medium",
+  "verified_against_primary": false,
+  "source": {
+    "id": "cloudflare",
+    "name": "Cloudflare",
+    "type": "platform-data",
+    "url": "https://blog.cloudflare.com/crawlers-click-ai-bots-training/",
+    "homepage": "https://radar.cloudflare.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-03",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-crawling-for-training-share"
+}

@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "trust-travel-brands-ai-responsible",
+  "label": "Consumers who trust travel brands to use AI responsibly",
+  "question": "Do consumers trust travel companies with AI?",
+  "answer": "42% of consumers trust travel brands to use AI responsibly, placing travel in the top three industries for AI trust.",
+  "value": 42,
+  "display": "42%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "2024",
+  "period_iso": "2024",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "trust-and-autonomy"
+  ],
+  "sample": "State of Modern Retailing consumer survey",
+  "methodology": "Travelport State of Modern Retailing, published January 2025. Cross-industry comparison within the same instrument.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "travelport",
+    "name": "Travelport",
+    "type": "vendor-research",
+    "url": "https://www.travelport.com/press-releases/travelport-releases-second-annual-state-of-modern-retailing-report-travels-tipping-point",
+    "homepage": "https://www.travelport.com/reports"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/trust-travel-brands-ai-responsible"
+}

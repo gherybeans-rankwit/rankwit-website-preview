@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "dmo-documented-ai-strategy",
+  "label": "DMOs with a documented AI strategy",
+  "question": "Do destination organisations have an AI strategy?",
+  "answer": "26% of destination organisations have a documented AI strategy.",
+  "value": 26,
+  "display": "26%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April 2026",
+  "period_iso": "2026-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "destinations-dmo"
+  ],
+  "sample": "103 DMO leaders",
+  "methodology": "Sojern survey of 103 DMO leaders, April 2026. 'Documented' is self-assessed. The 64% content figure comes from Sojern's State of Destination Marketing 2026 and its 359-marketer panel, which is why the two are not expressed as shares of one another.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/dmo-documented-ai-strategy"
+}

@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-task-destination-research",
+  "label": "Pre-trip AI use for destination research",
+  "question": "What do travellers use AI for before a trip?",
+  "answer": "38% use AI for destination research, 37% for local experiences and 36% for restaurant recommendations.",
+  "value": 38,
+  "display": "38%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April–May 2025",
+  "period_iso": "2025-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global (33 markets)",
+  "topics": [
+    "planning-tasks",
+    "discovery-and-visibility"
+  ],
+  "sample": "Pre-trip use among AI users, 33 markets",
+  "methodology": "Booking.com Global AI Sentiment Report, April–May 2025. Shares are of consumers who use AI in travel, not of all consumers.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "booking",
+    "name": "Booking.com",
+    "type": "platform-data",
+    "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+    "homepage": "https://news.booking.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-task-destination-research"
+}

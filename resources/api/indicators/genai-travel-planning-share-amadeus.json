@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "genai-travel-planning-share-amadeus",
+  "label": "Travellers using generative AI to plan travel",
+  "question": "How fast is generative AI adoption growing in travel planning?",
+  "answer": "18% of global travellers used generative AI for travel planning in 2025, up from 11% the year before (a 64% increase).",
+  "value": 18,
+  "display": "18%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "2025",
+  "period_iso": "2025",
+  "year_on_year_pct": 64,
+  "comparison": {
+    "label": "2024",
+    "display": "11%",
+    "value": 11
+  },
+  "geography": "Global",
+  "topics": [
+    "traveler-adoption"
+  ],
+  "sample": "Amadeus global traveller survey",
+  "methodology": "Amadeus global traveller survey reported in Travel Trends 2026. Repeated question wording across 2024 and 2025 waves, which makes the year-on-year change more reliable than either level on its own.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "amadeus",
+    "name": "Amadeus",
+    "type": "vendor-research",
+    "url": "https://amadeus.com/documents/resources/research-report/travel-trends-2026/amadeus-travel-trends-2026-report.pdf",
+    "homepage": "https://amadeus.com/en/blog"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/genai-travel-planning-share-amadeus"
+}

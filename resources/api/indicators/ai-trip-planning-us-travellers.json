@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-trip-planning-us-travellers",
+  "label": "US travellers who have used AI to plan a trip",
+  "question": "How many US travellers have used AI to plan a trip?",
+  "answer": "54% of US travellers had used AI to plan travel as of April 2026, according to Sojern's survey of 1,006 US adults.",
+  "value": 54,
+  "display": "54%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April 2026",
+  "period_iso": "2026-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "United States",
+  "topics": [
+    "traveler-adoption"
+  ],
+  "sample": "1,006 US adults who travelled in the past 12 months",
+  "methodology": "Online survey of 1,006 US adults who had travelled in the previous twelve months, fielded in April 2026 and published alongside a parallel survey of 103 DMO leaders. Self-reported past behaviour, so it captures any use of AI at any point, not habitual use.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-trip-planning-us-travellers"
+}

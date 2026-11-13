@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "ai-referral-conversion-destination-portal",
+  "label": "Conversion rate of assistant traffic on a destination portal",
+  "question": "Does traffic from AI assistants behave differently once it arrives?",
+  "answer": "It converted at 8.26% against 3.88% for organic search, on 1.6 million sessions over nearly four years.",
+  "value": 8.26,
+  "display": "8.26%",
+  "unit": "percent",
+  "evidence_type": "platform-telemetry",
+  "period": "April 2022 to January 2026",
+  "period_iso": "2026-01",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "organic search",
+    "display": "3.88%",
+    "value": 3.88
+  },
+  "geography": "Mediterranean (one destination)",
+  "topics": [
+    "generative-engines",
+    "destinations-dmo"
+  ],
+  "sample": "1.6 million sessions on one Mediterranean destination portal. The portal is not named, and the measure is a booking-intent click rather than a confirmed booking",
+  "methodology": "Peer-reviewed, Tourism and Hospitality, published 9 April 2026. One Mediterranean destination portal, April 2022 to January 2026. The portal is not named, the conversion measure is a booking-intent click rather than a confirmed booking, and the share of total sessions arriving from assistants is not stated in the abstract we could retrieve.",
+  "confidence": "medium",
+  "verified_against_primary": false,
+  "source": {
+    "id": "mdpi",
+    "name": "MDPI",
+    "type": "academic",
+    "url": "https://doi.org/10.3390/tourhosp7040107",
+    "homepage": "https://www.mdpi.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-03",
+  "page_url": "https://www.rankwit.ai/resources/data/ai-referral-conversion-destination-portal"
+}

@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "latam-ai-enthusiasm",
+  "label": "Latin American respondents excited about AI",
+  "question": "Where is AI enthusiasm highest in travel?",
+  "answer": "98% of Latin American respondents are excited about AI, with 89% familiar with it, the highest of any region.",
+  "value": 98,
+  "display": "98%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April–May 2025",
+  "period_iso": "2025-04",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "Asia Pacific",
+    "display": "95%",
+    "value": 95
+  },
+  "geography": "Latin America",
+  "topics": [
+    "trust-and-autonomy"
+  ],
+  "sample": "Regional breakdown of 37,325 respondents",
+  "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, regional breakdown. Excitement is a softer measure than trust and the two diverge sharply by region.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "booking",
+    "name": "Booking.com",
+    "type": "platform-data",
+    "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+    "homepage": "https://news.booking.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/latam-ai-enthusiasm"
+}

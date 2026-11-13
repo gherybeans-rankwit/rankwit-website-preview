@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "dmo-ai-trip-planning-on-site",
+  "label": "DMOs offering AI trip planning on their website",
+  "question": "How many destinations offer AI trip planning?",
+  "answer": "Only 22% of destination organisations offer AI trip-planning capability on their own website.",
+  "value": 22,
+  "display": "22%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April 2026",
+  "period_iso": "2026-04",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "destinations-dmo",
+    "discovery-and-visibility"
+  ],
+  "sample": "103 DMO leaders",
+  "methodology": "Sojern survey of 103 DMO leaders, April 2026, fielded alongside the traveller survey. Small sample, so treat as indicative of direction rather than precise.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "sojern",
+    "name": "Sojern",
+    "type": "vendor-research",
+    "url": "https://www.sojern.com/press-release/new-research-reveals-travellers-are-two-years-ahead-of-the-travel-industry-on-ai",
+    "homepage": "https://www.sojern.com/reports/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/dmo-ai-trip-planning-on-site"
+}

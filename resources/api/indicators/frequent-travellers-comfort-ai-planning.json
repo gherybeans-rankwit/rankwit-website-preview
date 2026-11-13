@@ -1,0 +1,35 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "frequent-travellers-comfort-ai-planning",
+  "label": "Frequent travellers comfortable using AI for trip planning",
+  "question": "Are frequent travellers more comfortable with AI?",
+  "answer": "80% of frequent travellers say they are comfortable using AI for trip planning, per Travelport's State of Modern Retailing.",
+  "value": 80,
+  "display": "80%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "2024",
+  "period_iso": "2024",
+  "year_on_year_pct": null,
+  "comparison": null,
+  "geography": "Global",
+  "topics": [
+    "traveler-adoption",
+    "trust-and-autonomy"
+  ],
+  "sample": "State of Modern Retailing consumer survey",
+  "methodology": "Travelport's second annual State of Modern Retailing consumer survey, published January 2025. The frequent-traveller subset is self-defined, and the question measures comfort rather than use.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "travelport",
+    "name": "Travelport",
+    "type": "vendor-research",
+    "url": "https://www.travelport.com/press-releases/travelport-releases-second-annual-state-of-modern-retailing-report-travels-tipping-point",
+    "homepage": "https://www.travelport.com/reports"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/frequent-travellers-comfort-ai-planning"
+}

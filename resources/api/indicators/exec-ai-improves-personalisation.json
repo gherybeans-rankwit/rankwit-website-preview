@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "exec-ai-improves-personalisation",
+  "label": "US travel executives reporting AI improves personalisation",
+  "question": "What returns do travel executives report from AI?",
+  "answer": "33% of US travel executives say AI improves customer personalisation and 36% report higher-quality outputs.",
+  "value": 33,
+  "display": "33%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "September 2025",
+  "period_iso": "2025-09",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "higher-quality outputs",
+    "display": "36%",
+    "value": 36
+  },
+  "geography": "United States",
+  "topics": [
+    "airlines-distribution",
+    "economics"
+  ],
+  "sample": "86 mostly US-based travel executives, surveyed for Remapping travel with agentic AI (McKinsey with Skift)",
+  "methodology": "McKinsey with Skift, Remapping travel with agentic AI, September 2025. Sample of 86 mostly US-based travel executives, small enough that the levels are directional rather than precise.",
+  "confidence": "medium",
+  "verified_against_primary": true,
+  "source": {
+    "id": "mckinsey",
+    "name": "McKinsey & Company",
+    "type": "consultancy",
+    "url": "https://www.mckinsey.com/industries/travel/our-insights/remapping-travel-with-agentic-ai",
+    "homepage": "https://www.mckinsey.com/industries/travel/how-we-help-clients"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/exec-ai-improves-personalisation"
+}

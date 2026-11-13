@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Observation",
+  "id": "always-fact-check-ai",
+  "label": "Consumers who always fact-check AI outputs",
+  "question": "Do people check what AI tells them about travel?",
+  "answer": "42% of consumers always fact-check AI outputs and a further 29% do so sometimes.",
+  "value": 42,
+  "display": "42%",
+  "unit": "percent",
+  "evidence_type": "survey",
+  "period": "April–May 2025",
+  "period_iso": "2025-04",
+  "year_on_year_pct": null,
+  "comparison": {
+    "label": "sometimes fact-check",
+    "display": "29%",
+    "value": 29
+  },
+  "geography": "Global (33 markets)",
+  "topics": [
+    "trust-and-autonomy",
+    "governance-risk"
+  ],
+  "sample": "37,325 respondents across 33 markets",
+  "methodology": "Booking.com Global AI Sentiment Report, April–May 2025, 37,325 respondents across 33 markets.",
+  "confidence": "high",
+  "verified_against_primary": true,
+  "source": {
+    "id": "booking",
+    "name": "Booking.com",
+    "type": "platform-data",
+    "url": "https://news.booking.com/bookingcom-releases-the-global-ai-sentiment-report",
+    "homepage": "https://news.booking.com/"
+  },
+  "located_via": null,
+  "last_checked": "2026-10-02",
+  "page_url": "https://www.rankwit.ai/resources/data/always-fact-check-ai"
+}
