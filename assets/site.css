@@ -6032,3 +6032,12 @@ html:not(.js) .giant .g-you {
   line-height: 1.3;
   color: #fff;
 }
+/* More air between the lines of the giant answer, so the lit name does not touch the line above */
+.gscene .giant-answer,
+.gscene.is-pinned .giant-answer {
+  line-height: 1.28;
+}
+/* On short screens the pinned scene must still fit: the taller lines are paid back with a slightly smaller size */
+.gscene.is-pinned .giant-answer {
+  font-size: clamp(2.4rem, min(6.4vw, 9.4vh), 7rem);
+}
