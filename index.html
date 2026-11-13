@@ -23,7 +23,7 @@
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/bukra-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css?v=20261113a">
+<link rel="stylesheet" href="assets/site.css?v=20261113b">
 <meta property="og:title" content="GEO and AI visibility for hotels and destinations | RankWit">
 <meta property="og:description" content="RankWit measures every week how ChatGPT, Gemini, Perplexity, Claude and Google AI Overviews recommend hotels and destinations, and what to change.">
 <meta property="og:image" content="https://www.rankwit.ai/assets/og/home-en.png">
@@ -90,7 +90,7 @@
     <div class="al-wrap">
       <p class="answer-line" data-nosnippet data-answer-line role="img" aria-label="An AI answer that names three places and leaves yours out">
         <span class="al-eng" aria-hidden="true"><svg><use href="#m-openai"/></svg></span>
-        <span class="al-text" aria-hidden="true"><span class="al-lead">Three hotels worth a look:</span> <span class="al-nw"><i class="al-bar" style="--w:4.8em"></i>,</span> <span class="al-nw"><i class="al-bar" style="--w:3.8em"></i> and</span> <span class="al-slot"><span class="al-you">your hotel</span><i class="al-bar al-bar3" style="--w:4.4em"></i>.</span></span>
+        <span class="al-text" aria-hidden="true"><span class="al-lead">Three hotels worth a look:</span> <span class="al-nw"><span class="al-word" data-al-a>a competitor</span>,</span> <span class="al-nw"><span class="al-word" data-al-b>another</span> and</span> <span class="al-slot"><span class="al-you">your hotel</span><span class="al-word al-word3" data-al-c>one more</span>.</span></span>
       </p>
       <p class="al-caption" data-al-caption aria-live="polite"></p>
     </div>
@@ -152,14 +152,14 @@
     <div class="scene-bg" aria-hidden="true"><img src="assets/photos/tuscany-dusk-1280.webp" srcset="assets/photos/tuscany-dusk-828.webp 828w, assets/photos/tuscany-dusk-1280.webp 1280w, assets/photos/tuscany-dusk-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="" decoding="async" loading="lazy"></div>
     <div class="wrap scene-grid">
       <div class="scene-say">
-    <p class="ask"><svg><use href="#m-openai"/></svg> A traveler asks: "Where should we go for a slow weekend in Tuscany?"</p>
-    <p class="giant-answer">I would suggest <span class="g-nw"><i class="g-bar" style="--w:4.2em"></i>,</span> <span class="g-nw"><i class="g-bar" style="--w:3.2em"></i> and</span> <span class="g-nw"><span class="g-slot"><i class="g-bar"></i><span class="g-you">your name</span></span>.</span></p>
+    <p class="ask"><span class="ask-who"><svg><use href="#m-openai"/></svg>A traveler asks</span><span class="ask-q">"Where should we go for a slow weekend in Tuscany?"</span></p>
+    <p class="giant-answer">I would suggest <span class="g-nw"><span class="g-you">your name</span>,</span> <span class="g-nw"><span class="g-word">a competitor</span></span> <span class="g-nw">and <span class="g-word">another</span>.</span></p>
     <p class="lead">The answer has room for three or four names. We work to make yours one of them.</p>
       </div>
       <ul class="scene-cards">
         <li class="scard up"><span class="scard-who"><svg><use href="#m-claude"/></svg>Claude, on a hotel in Florence</span><p class="scard-q">A small hotel near Santa Croce, praised for its breakfast and its staff.</p><span class="scard-tag">Named</span></li>
         <li class="scard warn"><span class="scard-who"><svg><use href="#m-gemini"/></svg>Gemini, on a valley in the Dolomites</span><p class="scard-q">The lifts in the valley close in September.</p><span class="scard-tag">Out of date</span><span class="scard-src">It comes from an events page from 2022.</span></li>
-        <li class="scard down"><span class="scard-who"><svg><use href="#m-perplexity"/></svg>Perplexity, on a weekend in Tuscany</span><p class="scard-q">Three places worth a look: <i class="g-bar"></i>, <i class="g-bar"></i> and <i class="g-bar"></i>.</p><span class="scard-tag">Left out</span></li>
+        <li class="scard down"><span class="scard-who"><svg><use href="#m-perplexity"/></svg>Perplexity, on a weekend in Tuscany</span><p class="scard-q">Three places worth a look: <span class="g-word">a competitor</span>, <span class="g-word">another</span> and <span class="g-word">one more</span>.</p><span class="scard-tag">Left out</span></li>
       </ul>
     </div>
   </div>
@@ -481,6 +481,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js?v=20261113a"></script>
+<script src="assets/site.js?v=20261113b"></script>
 </body>
 </html>

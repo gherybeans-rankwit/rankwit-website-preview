@@ -583,7 +583,8 @@
   }
 
   /* ---------- Answer line: a hotel answer, then a destination answer; "you" appears whole, then is usually struck out ---------- */
-  /* Never type the name letter by letter: partial words such as "your ho" read badly. */
+  /* Never type the name letter by letter: partial words such as "your ho" read badly.
+     Slow on purpose (13 November 2026): one round takes about 14 seconds, so the sentence can be read before the name is struck. */
   const line = document.querySelector("[data-answer-line]");
   if (line) {
     const engines = ["openai", "gemini", "perplexity", "claude", "google"];
@@ -592,13 +593,13 @@
           hotel: {
             you: "il tuo hotel",
             lost: "Il tuo hotel è rimasto fuori.",
-            w: "4.6em",
+            words: ["un concorrente", "un altro", "un altro ancora"],
             leads: ["Ti consiglio", "Di solito si sceglie tra", "Gli hotel più citati sono", "Da tenere d'occhio:", "Tra i più apprezzati ci sono"],
           },
           destination: {
             you: "la tua destinazione",
             lost: "La tua destinazione è rimasta fuori.",
-            w: "7em",
+            words: ["una meta", "un'altra", "un'altra ancora"],
             leads: ["Per un weekend tra le cantine, prova", "Per una settimana di trekking, valuta", "Di solito si sceglie tra", "Per mangiare bene e rallentare, prova", "Tra le mete più amate ci sono"],
           },
         }
@@ -606,13 +607,13 @@
       hotel: {
         you: "your hotel",
         lost: "Your hotel was left out.",
-        w: "4.4em",
+        words: ["a competitor", "another", "one more"],
         leads: ["Three hotels worth a look:", "Travelers usually pick", "The most cited hotels are", "I would start with", "Popular picks include"],
       },
       destination: {
         you: "your destination",
         lost: "Your destination was left out.",
-        w: "6.2em",
+        words: ["one place", "another", "one more"],
         leads: ["For a wine weekend, try", "For a week of hiking, go to", "Travelers usually choose between", "For food and slow travel, try", "Popular choices include"],
       },
     };
@@ -620,7 +621,7 @@
     const use = line.querySelector(".al-eng use");
     const lead = line.querySelector(".al-lead");
     const you = line.querySelector(".al-you");
-    const bar3 = line.querySelector(".al-bar3");
+    const slots = ["a", "b", "c"].map((k) => line.querySelector("[data-al-" + k + "]"));
     const caption = document.querySelector("[data-al-caption]");
     const say = (text, kind) => {
       caption.textContent = text;
@@ -641,28 +642,28 @@
           use.setAttribute("href", "#m-" + engines[v]);
           lead.textContent = k.leads[v];
           you.textContent = k.you;
-          bar3.style.setProperty("--w", k.w);
+          slots.forEach((el, i) => { if (el) el.textContent = k.words[i]; });
           caption.className = "al-caption";
           line.classList.add("is-reset");
           line.classList.remove("is-in", "is-lit", "is-strike", "is-dropped", "is-out");
           await wait(60);
           line.classList.remove("is-reset");
-          await wait(1200);
+          await wait(2640);
           line.classList.add("is-in");
-          await wait(1000);
+          await wait(2200);
           if (named) {
             line.classList.add("is-lit");
             say(NAMED, "ok");
           } else {
             line.classList.add("is-strike");
-            await wait(900);
+            await wait(1980);
             line.classList.add("is-dropped");
             say(k.lost, "bad");
           }
-          await wait(4200);
+          await wait(6300);
           line.classList.add("is-out");
           caption.classList.remove("is-show");
-          await wait(480);
+          await wait(1060);
           v = (v + 1) % engines.length;
           n++;
         }
