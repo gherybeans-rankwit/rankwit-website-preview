@@ -982,3 +982,65 @@
     });
   });
 })();
+
+/* ---------- Webinar banner: Thursday 19 November 2026, 15:00 in Rome ----------
+   A card at the bottom of every page that links /it/webinar. It hides itself on the webinar page, once closed
+   (remembered in this browser), and for everyone from 16:00 on the day (15:00 UTC). Self-contained: it brings
+   its own styles, so the same block runs on the Webflow site. */
+(function () {
+  if (Date.now() > Date.parse("2026-11-19T15:00:00Z")) return;
+  var path = window.location.pathname;
+  if (/\/webinar(\.html)?\/?$/.test(path)) return;
+  var KEY = "rkw_webinar_20261119";
+  try { if (localStorage.getItem(KEY)) return; } catch (e) {}
+  var it = (document.documentElement.lang || "en").slice(0, 2) === "it";
+  var base = path.indexOf("/rankwit-website-preview/") === 0 ? "/rankwit-website-preview" : "";
+  var t = it
+    ? { tag: "Webinar gratuito", text: "Giovedì 19 novembre alle 15: cosa cambia per hotel e tour operator con Business Hub di ChatGPT.", btn: "Iscriviti", close: "Chiudi" }
+    : { tag: "Free webinar in Italian", text: "Thursday 19 November, 3pm CET: what ChatGPT Business Hub changes for hotels and tour operators.", btn: "Register", close: "Close" };
+  var css =
+    ".wbar{position:fixed;left:50%;bottom:16px;z-index:9999;width:min(780px,calc(100% - 24px));display:flex;align-items:center;" +
+    "background:#09041d;color:#f0eeff;border:1px solid rgba(240,238,255,.12);border-radius:18px;" +
+    "box-shadow:0 2px 4px rgba(9,4,29,.06),0 30px 70px -24px rgba(9,4,29,.6);opacity:0;transform:translate(-50%,16px);" +
+    "transition:opacity .35s ease,transform .35s ease;font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}" +
+    ".wbar.is-on{opacity:1;transform:translate(-50%,0)}" +
+    ".wbar-link{flex:1;min-width:0;display:flex;align-items:center;gap:14px;padding:12px 6px 12px 18px;color:inherit;text-decoration:none}" +
+    ".wbar-tag{flex:none;display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',ui-monospace,'SF Mono',Menlo,monospace;" +
+    "font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#b5b1fa;white-space:nowrap}" +
+    ".wbar-tag:before{content:'';width:7px;height:7px;border-radius:50%;background:#706ef8;box-shadow:0 0 0 3px rgba(112,110,248,.25)}" +
+    ".wbar-text{flex:1;min-width:0;font-size:15px;line-height:1.35;font-weight:500;color:#f0eeff}" +
+    ".wbar-btn{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;" +
+    "background:#5f5cf0;color:#fff;font-size:14px;font-weight:600;line-height:1;white-space:nowrap;transition:background .18s ease}" +
+    ".wbar-btn svg{width:15px;height:15px}" +
+    ".wbar-link:hover .wbar-btn{background:#5350d6}" +
+    ".wbar-link:focus-visible{outline:2px solid #706ef8;outline-offset:2px;border-radius:16px}" +
+    ".wbar-x{flex:none;width:40px;height:40px;margin-right:8px;padding:0;border:0;border-radius:50%;background:transparent;" +
+    "color:rgba(240,238,255,.6);cursor:pointer;display:grid;place-items:center}" +
+    ".wbar-x svg{width:16px;height:16px}" +
+    ".wbar-x:hover{color:#fff;background:rgba(240,238,255,.08)}" +
+    "@media (max-width:640px){.wbar{align-items:flex-start;bottom:12px}.wbar-link{flex-wrap:wrap;gap:8px 12px;padding:14px 0 14px 16px}" +
+    ".wbar-text{flex-basis:100%;order:2;font-size:14px}.wbar-tag{order:1}.wbar-btn{order:3;min-height:36px}.wbar-x{margin:6px 6px 0 0}}" +
+    "@media (prefers-reduced-motion:reduce){.wbar{transition:none}}";
+  var arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>';
+  var cross = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+  function mount() {
+    var style = document.createElement("style");
+    style.textContent = css;
+    document.head.appendChild(style);
+    var bar = document.createElement("aside");
+    bar.className = "wbar";
+    bar.setAttribute("aria-label", t.tag);
+    bar.innerHTML =
+      '<a class="wbar-link" href="' + base + '/it/webinar"><span class="wbar-tag">' + t.tag + '</span><span class="wbar-text">' + t.text +
+      '</span><span class="wbar-btn">' + t.btn + " " + arrow + '</span></a><button class="wbar-x" type="button" aria-label="' + t.close + '">' + cross + "</button>";
+    document.body.appendChild(bar);
+    bar.querySelector(".wbar-x").addEventListener("click", function () {
+      try { localStorage.setItem(KEY, "1"); } catch (e) {}
+      bar.classList.remove("is-on");
+      setTimeout(function () { bar.remove(); }, 400);
+    });
+    setTimeout(function () { bar.classList.add("is-on"); }, 900);
+  }
+  if (document.readyState !== "loading") mount();
+  else document.addEventListener("DOMContentLoaded", mount);
+})();
