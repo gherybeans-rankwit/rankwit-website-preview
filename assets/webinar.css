@@ -348,13 +348,14 @@
 
 .wb-demo {
   position: relative;
-  padding-bottom: 96px;
+  width: min(100%, 580px);
+  justify-self: center;
 }
 
 .wb-chat {
   display: grid;
   gap: 14px;
-  width: min(100%, 560px);
+  width: 100%;
   padding: clamp(18px, 2vw, 26px);
   border-radius: 26px;
   background: var(--surface);
@@ -522,10 +523,10 @@
 }
 
 .wb-insights {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: min(300px, 62%);
+  position: relative;
+  z-index: 1;
+  width: min(330px, 78%);
+  margin: -40px -28px 0 auto;
   padding: 20px;
   border-radius: 22px;
   background: #09041d;
@@ -972,14 +973,8 @@
   .wb-stats {
     grid-template-columns: 1fr;
   }
-  .wb-demo {
-    padding-bottom: 0;
-  }
   .wb-insights {
-    position: relative;
-    width: auto;
     margin: -28px 12px 0 auto;
-    max-width: 320px;
   }
   .wb-tile {
     min-width: 0;
