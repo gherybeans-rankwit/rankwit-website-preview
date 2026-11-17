@@ -19,7 +19,7 @@
 <link rel="preload" href="../assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="../assets/photos/terrace-bluehour-1280.webp" imagesrcset="../assets/photos/terrace-bluehour-828.webp 828w, ../assets/photos/terrace-bluehour-1280.webp 1280w, ../assets/photos/terrace-bluehour-1920.webp 1920w" imagesizes="100vw">
 <link rel="stylesheet" href="../assets/site.css?v=20261117a">
-<link rel="stylesheet" href="../assets/webinar.css?v=20261117b">
+<link rel="stylesheet" href="../assets/webinar.css?v=20261117d">
 <meta property="og:title" content="Webinar gratuito: Business Hub di ChatGPT per hotel e tour operator | RankWit">
 <meta property="og:description" content="Giovedì 19 novembre alle 15, online e gratuito. Un'ora con Gherardo Fagioli e Davide Filiaggi su cosa cambia per hotel e tour operator con i profili aziendali in ChatGPT.">
 <meta property="og:image" content="https://www.rankwit.ai/assets/og/audit-it.png">
@@ -40,6 +40,7 @@
   <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
@@ -62,12 +63,12 @@
       <a href="https://visibility-lab.rankwit.ai" target="_blank" rel="noopener">Lab</a>
       <a href="https://www.rankwit.ai/it/blog">Blog</a>
       <a href="https://gherybeans-rankwit.github.io/rankwit-meet/">Contatti</a>
-      <span class="nav-menu-extra"><a class="btn btn-ghost" href="https://try.rankwit.ai/login">Accedi</a><a class="btn btn-primary" href="audit">Audit AI gratuito</a></span>
+      <span class="nav-menu-extra"><a class="btn btn-ghost" href="https://try.rankwit.ai/login">Accedi</a><a class="btn btn-primary" href="#iscrizione" data-to-form>Prenota il posto</a></span>
     </nav>
     <div class="nav-right">
       <a class="lang" href="../" hreflang="en" lang="en" aria-label="English version">EN</a>
       <a class="btn btn-ghost" href="https://try.rankwit.ai/login">Accedi</a>
-      <a class="btn btn-primary" href="audit">Audit AI gratuito</a>
+      <a class="btn btn-primary" href="#iscrizione" data-to-form>Prenota il posto</a>
     </div>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" data-toggle><svg><use href="#i-menu"/></svg></button>
   </div>
@@ -80,63 +81,73 @@
     <img src="../assets/photos/terrace-bluehour-1280.webp" srcset="../assets/photos/terrace-bluehour-828.webp 828w, ../assets/photos/terrace-bluehour-1280.webp 1280w, ../assets/photos/terrace-bluehour-1920.webp 1920w" sizes="100vw" width="1920" height="1280" alt="" decoding="async" fetchpriority="high">
   </div>
   <div class="wrap wb-hero-grid">
-    <div class="wb-intro">
-      <ul class="wb-chips">
-        <li class="wb-chip is-live"><span class="wb-dot"></span>Webinar gratuito</li>
-        <li class="wb-chip">Giovedì 19 novembre, ore 15</li>
-        <li class="wb-chip">Online, in italiano</li>
-      </ul>
-      <h1>ChatGPT ora ha i profili delle aziende. <span class="soft">Cosa cambia per hotel e tour operator.</span></h1>
-      <p class="wb-lead">La settimana scorsa OpenAI ha aperto Business Hub: le aziende possono rivendicare il loro profilo ufficiale in ChatGPT e vedere quante volte vengono nominate. In un'ora ti mostriamo, con esempi veri, cosa significa per chi vende soggiorni ed esperienze e cosa fare nei prossimi 30 giorni.</p>
+    <div class="wb-head">
+      <h1>ChatGPT ora ha i profili delle aziende.</h1>
+      <p class="wb-lead">Cosa cambia per hotel e tour operator, e cosa fare nei prossimi 30 giorni. Un'ora gratuita, con esempi veri.</p>
+      <dl class="wb-when">
+        <div><dt>Quando</dt><dd><time datetime="2026-11-19T15:00+01:00">Giovedì 19 novembre</time></dd></div>
+        <div><dt>Orario</dt><dd>dalle 15 alle 16</dd></div>
+        <div><dt>Dove</dt><dd>Online, in italiano</dd></div>
+      </dl>
+    </div>
+
+    <div class="wb-meta">
       <div class="wb-count" data-countdown aria-live="off">
-        <p class="wb-count-label" data-cd-label>Mancano</p>
-        <div class="wb-count-tiles">
+        <p class="wb-count-label" data-cd-label>Inizia tra</p>
+        <div class="wb-count-tiles" aria-hidden="true">
           <span class="wb-tile"><b data-cd="d">2</b><i>giorni</i></span>
           <span class="wb-tile"><b data-cd="h">00</b><i>ore</i></span>
-          <span class="wb-tile"><b data-cd="m">00</b><i>minuti</i></span>
-          <span class="wb-tile"><b data-cd="s">00</b><i>secondi</i></span>
+          <span class="wb-tile"><b data-cd="m">00</b><i>min</i></span>
+          <span class="wb-tile"><b data-cd="s">00</b><i>sec</i></span>
         </div>
       </div>
       <div class="wb-hosts">
         <span class="wb-avatars"><img src="../assets/team/gherardo-500.webp" width="500" height="500" alt="" decoding="async"><img src="../assets/team/davide-500.webp" width="500" height="500" alt="" decoding="async"></span>
-        <span>Con <b>Gherardo Fagioli</b> e <b>Davide Filiaggi</b> di RankWit</span>
+        <span>Con <b>Gherardo Fagioli</b> e <b>Davide Filiaggi</b>, RankWit</span>
       </div>
     </div>
 
-    <form class="panel light audit-form wb-form" id="iscrizione" method="post" action="/api/webinar" data-webinar>
+    <form class="panel light audit-form wb-form" id="iscrizione" method="post" action="/api/webinar" data-webinar novalidate>
       <div class="panel-bar"><span class="pill"><svg><use href="#mark"/></svg> Iscrizione gratuita</span><span class="right"><span class="pill">1 minuto</span></span></div>
       <div class="panel-body form">
-        <p class="wb-form-h">Prenota il tuo posto</p>
+        <h2 class="wb-form-h">Prenota il tuo posto</h2>
         <label>Nome e cognome
           <input type="text" name="name" autocomplete="name" required>
         </label>
         <label>Email di lavoro
-          <input type="email" name="email" autocomplete="email" required>
+          <input type="email" name="email" autocomplete="email" inputmode="email" required>
         </label>
         <label>Struttura o azienda
           <input type="text" name="company" autocomplete="organization" required>
         </label>
-        <fieldset class="fstep is-on">
-          <legend class="wb-legend">Di cosa ti occupi?</legend>
-          <div class="choices">
-            <label class="choice"><input type="radio" name="segment" value="hotel" required><span>Hotel</span></label>
-            <label class="choice"><input type="radio" name="segment" value="tour-operator"><span>Tour operator o DMC</span></label>
-            <label class="choice"><input type="radio" name="segment" value="agency"><span>Agenzia o consulente</span></label>
-            <label class="choice"><input type="radio" name="segment" value="other"><span>Altro</span></label>
+        <fieldset class="wb-seg">
+          <legend>Di cosa ti occupi?</legend>
+          <div class="wb-pills">
+            <label><input type="radio" name="segment" value="hotel" required><span>Hotel</span></label>
+            <label><input type="radio" name="segment" value="tour-operator"><span>Tour operator o DMC</span></label>
+            <label><input type="radio" name="segment" value="agency"><span>Agenzia o consulente</span></label>
+            <label><input type="radio" name="segment" value="other"><span>Altro</span></label>
           </div>
         </fieldset>
-        <label><span>Una domanda per noi <span class="opt">(facoltativa)</span></span>
-          <textarea name="question" rows="2" placeholder="Ti rispondiamo durante la diretta"></textarea>
-        </label>
+        <details class="wb-q">
+          <summary><svg><use href="#i-plus"/></svg>Aggiungi una domanda per noi</summary>
+          <textarea name="question" rows="3" aria-label="La tua domanda" placeholder="Ti rispondiamo durante la diretta"></textarea>
+        </details>
         <div class="hp" hidden aria-hidden="true"><label>Lascia vuoto questo campo <input type="text" name="extra_field" tabindex="-1" autocomplete="off"></label></div>
-        <button class="btn btn-primary btn-lg" type="submit" data-send>Iscrivimi <svg><use href="#i-arrow"/></svg></button>
+        <p class="wb-invalid" data-invalid hidden role="alert"></p>
+        <button class="btn btn-primary btn-lg" type="submit" data-send><span data-send-label>Prenota il mio posto</span> <svg><use href="#i-arrow"/></svg></button>
         <p class="note err" data-error hidden role="alert">Non siamo riusciti a inviare l'iscrizione. Riprova, oppure scrivi a info@rankwit.ai.</p>
-        <p class="note">Ti mandiamo il link della diretta per email prima dell'inizio. Usiamo questi dati per il webinar e per scriverti dopo. <a href="https://www.rankwit.ai/it/legal/privacy-policy-webapp">Privacy policy</a>.</p>
+        <p class="note">Il link della diretta arriva per email prima dell'inizio. Usiamo questi dati per il webinar e per scriverti dopo. <a href="https://www.rankwit.ai/it/legal/privacy-policy-webapp">Privacy policy</a></p>
       </div>
       <div class="panel-body wb-done" hidden>
         <span class="wb-done-ico"><svg><use href="#i-check"/></svg></span>
-        <h2 tabindex="-1">Ci vediamo giovedì alle 15.</h2>
-        <p class="quiet">Ti mandiamo il link della diretta per email prima dell'inizio. Se non lo trovi, controlla lo spam o scrivi a info@rankwit.ai.</p>
+        <h2 tabindex="-1">Posto prenotato.</h2>
+        <p>Ci vediamo giovedì 19 novembre alle 15. Il link della diretta arriva per email prima dell'inizio.</p>
+        <div class="wb-cal">
+          <a class="btn btn-primary" data-cal-google target="_blank" rel="noopener">Aggiungi a Google Calendar</a>
+          <a class="btn btn-ghost" data-cal-ics download="webinar-rankwit-19-novembre.ics">Scarica l'invito</a>
+        </div>
+        <p class="quiet">Non trovi l'email? Controlla lo spam o scrivi a info@rankwit.ai.</p>
       </div>
     </form>
   </div>
@@ -145,10 +156,10 @@
 <section class="wb-sec wb-example light" data-nav="light">
   <div class="wrap wb-example-grid">
     <div class="wb-example-text">
-      <p class="wb-eyebrow">Un esempio concreto</p>
       <h2>Stessa domanda di sempre, due cose nuove</h2>
       <p class="wb-p">Una famiglia chiede a ChatGPT dove dormire a Rimini. La risposta nomina tre o quattro strutture, come prima. Adesso però una struttura può avere il <b>profilo ufficiale con la spunta</b>, e chi lo gestisce vede <b>quante volte è stata nominata</b>, quanti clic sono arrivati al sito e su quali temi compare.</p>
-      <div class="wb-callout">
+      <div class="wb-note">
+        <svg><use href="#i-alert"/></svg>
         <p><b>Il profilo non ti fa salire nella risposta.</b> Lo dice OpenAI stessa: rivendicarlo non garantisce più visibilità né più vendite. Per entrare nella lista contano ancora il sito e le fonti che parlano di te, ed è da lì che partiamo giovedì.</p>
       </div>
     </div>
@@ -172,22 +183,22 @@
         </ol>
       </div>
       <div class="wb-insights wb-step">
-        <p class="wb-ins-top"><b>Business Hub</b><span>Insights</span></p>
+        <p class="wb-ins-top"><b>Business Hub</b><span>Insights, dati di esempio</span></p>
         <div class="wb-ins-main">
           <p class="wb-ins-k">Menzioni in ChatGPT</p>
           <p class="wb-ins-big" data-count-to="126">126</p>
-          <div class="wb-spark" aria-hidden="true"><i style="--v:.35"></i><i style="--v:.5"></i><i style="--v:.42"></i><i style="--v:.6"></i><i style="--v:.55"></i><i style="--v:.7"></i><i style="--v:.48"></i><i style="--v:.66"></i><i style="--v:.8"></i><i style="--v:.62"></i><i style="--v:.74"></i><i style="--v:.9"></i><i style="--v:.7"></i><i style="--v:1"></i></div>
+          <div class="wb-bars" aria-hidden="true"><i style="--v:.35"></i><i style="--v:.5"></i><i style="--v:.42"></i><i style="--v:.6"></i><i style="--v:.55"></i><i style="--v:.7"></i><i style="--v:.48"></i><i style="--v:.66"></i><i style="--v:.8"></i><i style="--v:.62"></i><i style="--v:.74"></i><i style="--v:.9"></i><i style="--v:.7"></i><i style="--v:1"></i></div>
         </div>
         <div class="wb-ins-row">
           <p><span>Clic al sito</span><b data-count-to="17">17</b></p>
           <p><span>Temi in cui compari</span><em><i>famiglie</i><i>piscina</i><i>vicino al mare</i></em></p>
         </div>
-        <p class="wb-ins-note">Dati di esempio</p>
       </div>
     </div>
   </div>
 
   <div class="wrap">
+    <h3 class="wb-facts-h">Cosa ha lanciato OpenAI</h3>
     <ul class="wb-facts">
       <li><b>Gratis</b><span>Business Hub e i Business Agent sono gratuiti al lancio.</span></li>
       <li><b>La spunta</b><span>Il profilo si rivendica nei Paesi dove c'è ChatGPT. Dopo la verifica dell'identità compare la spunta.</span></li>
@@ -200,29 +211,25 @@
 <section class="wb-sec wb-prog dark" data-nav="dark">
   <div class="hero-glow"></div>
   <div class="wrap">
-    <div class="wb-head">
-      <p class="wb-eyebrow">Il programma</p>
-      <h2>Un'ora, quattro cose da portarti a casa</h2>
+    <div class="wb-prog-head">
+      <h2>In un'ora, quattro cose da portarti a casa</h2>
+      <p>L'81% dei viaggiatori usa già l'AI per scoprire destinazioni e organizzare i viaggi. <span class="wb-src">Alipay+ e S&amp;P Global, settembre 2026, 6.000 persone in 9 Paesi.</span></p>
     </div>
     <ol class="wb-rows">
       <li class="wb-row">
-        <span class="wb-big-n">01</span>
-        <div class="wb-row-text"><h3>Cosa cambia per la tua visibilità</h3><p>Perché il profilo ti rende riconoscibile ma non ti mette nella lista, e cosa decide chi viene nominato.</p></div>
+        <div class="wb-row-text"><span class="wb-step-n">1</span><h3>Cosa cambia per la tua visibilità</h3><p>Perché il profilo ti rende riconoscibile ma non ti mette nella lista, e cosa decide chi viene nominato.</p></div>
         <div class="wb-ex"><span class="wb-ex-k">Esempio</span><p>Per «migliori hotel a Firenze» gli assistenti fanno di solito tre o quattro nomi. Se il tuo non c'è, il profilo non lo apre nessuno.</p></div>
       </li>
       <li class="wb-row">
-        <span class="wb-big-n">02</span>
-        <div class="wb-row-text"><h3>Profilo, Business Agent e pubblicità</h3><p>A cosa serve ciascuno, cosa si può fare già oggi dall'Italia e cosa conviene aspettare.</p></div>
+        <div class="wb-row-text"><span class="wb-step-n">2</span><h3>Profilo, Business Agent e pubblicità</h3><p>A cosa serve ciascuno, cosa si può fare già oggi dall'Italia e cosa conviene aspettare.</p></div>
         <div class="wb-ex"><span class="wb-ex-k">Esempio</span><p>Un tour operator che vende escursioni in laguna a Venezia: cosa scrivere nel profilo, quali domande coprire sul sito, quando ha senso pagare.</p></div>
       </li>
       <li class="wb-row">
-        <span class="wb-big-n">03</span>
-        <div class="wb-row-text"><h3>I nuovi dati accanto ai tuoi report</h3><p>Come leggere menzioni, clic al sito e temi insieme a Search Console, Analytics e prenotazioni dirette.</p></div>
+        <div class="wb-row-text"><span class="wb-step-n">3</span><h3>I nuovi dati accanto ai tuoi report</h3><p>Come leggere menzioni, clic al sito e temi insieme a Search Console, Analytics e prenotazioni dirette.</p></div>
         <div class="wb-ex"><span class="wb-ex-k">Esempio</span><p>17 clic al sito in un mese sono tanti o pochi? Come confrontarli con le visite da ChatGPT che trovi già in Analytics.</p></div>
       </li>
       <li class="wb-row">
-        <span class="wb-big-n">04</span>
-        <div class="wb-row-text"><h3>Le priorità dei prossimi 30 giorni</h3><p>Una lista breve, per la tua struttura o per i clienti che segui.</p></div>
+        <div class="wb-row-text"><span class="wb-step-n">4</span><h3>Le priorità dei prossimi 30 giorni</h3><p>Una lista breve, per la tua struttura o per i clienti che segui.</p></div>
         <div class="wb-ex wb-check">
           <span class="wb-ex-k">La lista</span>
           <p><svg><use href="#i-check"/></svg>Rivendica il profilo, con dati identici a quelli del sito</p>
@@ -234,45 +241,41 @@
   </div>
 </section>
 
-<section class="wb-sec wb-proof light" data-nav="light">
-  <div class="wrap">
-    <div class="wb-stats">
-      <div class="wb-stat"><b>81%</b><p>dei viaggiatori usa già l'AI per scoprire destinazioni e organizzare i viaggi</p><small>Alipay+ e S&amp;P Global, settembre 2026, 6.000 persone in 9 Paesi</small></div>
-      <div class="wb-stat"><b>5</b><p>assistenti AI che misuriamo ogni settimana: ChatGPT, Gemini, Claude, Perplexity e Google AI Overviews</p></div>
-      <div class="wb-stat"><b>300+</b><p>aziende del turismo usano RankWit. Tra queste:</p></div>
-    </div>
-    <div class="logos">
-      <ul class="logos-track">
-        <li><img src="../assets/logos/best-western.webp" width="627" height="140" style="--h:40px" alt="Best Western Italia" loading="lazy" decoding="async"></li><li><img src="../assets/logos/loly.webp" width="351" height="140" style="--h:46px" alt="Loly Boutique Hotel" loading="lazy" decoding="async"></li><li><img src="../assets/logos/puleera.webp" width="427" height="140" style="--h:46px" alt="Puleera Boutique Hotel" loading="lazy" decoding="async"></li><li><img src="../assets/logos/chalet-del-sogno.webp" width="198" height="140" style="--h:66px" alt="Chalet del Sogno" loading="lazy" decoding="async"></li><li><img src="../assets/logos/carattere-toscano.webp" width="532" height="140" style="--h:50px" alt="Carattere Toscano Hotels &amp; Resorts" loading="lazy" decoding="async"></li><li><img src="../assets/logos/garden-primavera.webp" width="165" height="140" style="--h:66px" alt="Garden Hotel Primavera" loading="lazy" decoding="async"></li><li><img src="../assets/logos/ars-collection.webp" width="713" height="140" style="--h:34px" alt="Ars Collection Firenze" loading="lazy" decoding="async"></li><li><img src="../assets/logos/annunziata.webp" width="170" height="140" style="--h:64px" alt="Hotel Annunziata" loading="lazy" decoding="async"></li><li><img src="../assets/logos/visit-romagna.webp" width="262" height="140" style="--h:56px" alt="Visit Romagna" loading="lazy" decoding="async"></li><li><img src="../assets/logos/maliosa.webp" width="211" height="140" style="--h:60px" alt="Fattoria La Maliosa" loading="lazy" decoding="async"></li><li><img src="../assets/logos/out-of-the-box.webp" width="165" height="140" style="--h:70px" alt="Out of the Box Florence" loading="lazy" decoding="async"></li>
-        <li aria-hidden="true"><img src="../assets/logos/best-western.webp" width="627" height="140" style="--h:40px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/loly.webp" width="351" height="140" style="--h:46px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/puleera.webp" width="427" height="140" style="--h:46px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/chalet-del-sogno.webp" width="198" height="140" style="--h:66px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/carattere-toscano.webp" width="532" height="140" style="--h:50px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/garden-primavera.webp" width="165" height="140" style="--h:66px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/ars-collection.webp" width="713" height="140" style="--h:34px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/annunziata.webp" width="170" height="140" style="--h:64px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/visit-romagna.webp" width="262" height="140" style="--h:56px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/maliosa.webp" width="211" height="140" style="--h:60px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/out-of-the-box.webp" width="165" height="140" style="--h:70px" alt="" loading="lazy" decoding="async"></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <section class="wb-sec wb-people-sec light" data-nav="light">
-  <div class="wrap wb-people-grid">
-    <div class="wb-people">
-      <div class="wb-person">
-        <img src="../assets/team/gherardo-800.webp" width="800" height="800" alt="Gherardo Fagioli" decoding="async" loading="lazy">
-        <div><h3>Gherardo Fagioli</h3><p class="wb-role">CMO di RankWit</p><p>Segue marketing e contenuti di RankWit. Giovedì ti mostra cosa cambia nel profilo e come leggere i nuovi dati.</p></div>
+  <div class="wrap">
+    <div class="wb-people-grid">
+      <div class="wb-people">
+        <h2>Chi parla</h2>
+        <div class="wb-person">
+          <img src="../assets/team/gherardo-500.webp" srcset="../assets/team/gherardo-500.webp 500w, ../assets/team/gherardo-800.webp 800w" sizes="132px" width="500" height="500" alt="Gherardo Fagioli" decoding="async" loading="lazy">
+          <div><h3>Gherardo Fagioli</h3><p class="wb-role">CMO di RankWit</p><p>Segue marketing e contenuti di RankWit. Giovedì ti mostra cosa cambia nel profilo e come leggere i nuovi dati.</p></div>
+        </div>
+        <div class="wb-person">
+          <img src="../assets/team/davide-500.webp" srcset="../assets/team/davide-500.webp 500w, ../assets/team/davide-800.webp 800w" sizes="132px" width="500" height="500" alt="Davide Filiaggi" decoding="async" loading="lazy">
+          <div><h3>Davide Filiaggi</h3><p class="wb-role">COO e co-founder di RankWit</p><p>Segue i rapporti con hotel e destinazioni e parla spesso agli eventi del turismo, tra cui Destinationlab e GatewAI.</p></div>
+        </div>
       </div>
-      <div class="wb-person">
-        <img src="../assets/team/davide-800.webp" width="800" height="800" alt="Davide Filiaggi" decoding="async" loading="lazy">
-        <div><h3>Davide Filiaggi</h3><p class="wb-role">COO e co-founder di RankWit</p><p>Segue i rapporti con hotel e destinazioni e parla spesso agli eventi del turismo, tra cui Destinationlab e GatewAI.</p></div>
+      <aside class="wb-lab">
+        <h3>Gli stessi temi dell'AI Visibility Lab, dal vivo</h3>
+        <p>Da settembre il Lab gira l'Italia: Firenze, Rimini, Casentino, Pistoia. In sala ogni partecipante lavora sul report della propria struttura. Giovedì ne portiamo online un'ora, sulla novità della settimana.</p>
+        <ul class="wb-stops">
+          <li><b>23 nov</b><span>Follonica</span></li>
+          <li><b>25 nov</b><span>Venezia, al BITESP</span></li>
+          <li><b>10 dic</b><span>Garfagnana</span></li>
+        </ul>
+        <a class="link" href="https://visibility-lab.rankwit.ai" target="_blank" rel="noopener">Le tappe del Lab <svg><use href="#i-arrow"/></svg></a>
+      </aside>
+    </div>
+
+    <div class="wb-proof">
+      <p class="wb-proof-h">Più di 300 aziende del turismo misurano la loro visibilità AI con RankWit, tra cui</p>
+      <div class="logos">
+        <ul class="logos-track">
+          <li><img src="../assets/logos/best-western.webp" width="627" height="140" style="--h:40px" alt="Best Western Italia" loading="lazy" decoding="async"></li><li><img src="../assets/logos/loly.webp" width="351" height="140" style="--h:46px" alt="Loly Boutique Hotel" loading="lazy" decoding="async"></li><li><img src="../assets/logos/puleera.webp" width="427" height="140" style="--h:46px" alt="Puleera Boutique Hotel" loading="lazy" decoding="async"></li><li><img src="../assets/logos/chalet-del-sogno.webp" width="198" height="140" style="--h:66px" alt="Chalet del Sogno" loading="lazy" decoding="async"></li><li><img src="../assets/logos/carattere-toscano.webp" width="532" height="140" style="--h:50px" alt="Carattere Toscano Hotels &amp; Resorts" loading="lazy" decoding="async"></li><li><img src="../assets/logos/garden-primavera.webp" width="165" height="140" style="--h:66px" alt="Garden Hotel Primavera" loading="lazy" decoding="async"></li><li><img src="../assets/logos/ars-collection.webp" width="713" height="140" style="--h:34px" alt="Ars Collection Firenze" loading="lazy" decoding="async"></li><li><img src="../assets/logos/annunziata.webp" width="170" height="140" style="--h:64px" alt="Hotel Annunziata" loading="lazy" decoding="async"></li><li><img src="../assets/logos/visit-romagna.webp" width="262" height="140" style="--h:56px" alt="Visit Romagna" loading="lazy" decoding="async"></li><li><img src="../assets/logos/maliosa.webp" width="211" height="140" style="--h:60px" alt="Fattoria La Maliosa" loading="lazy" decoding="async"></li><li><img src="../assets/logos/out-of-the-box.webp" width="165" height="140" style="--h:70px" alt="Out of the Box Florence" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="../assets/logos/best-western.webp" width="627" height="140" style="--h:40px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/loly.webp" width="351" height="140" style="--h:46px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/puleera.webp" width="427" height="140" style="--h:46px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/chalet-del-sogno.webp" width="198" height="140" style="--h:66px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/carattere-toscano.webp" width="532" height="140" style="--h:50px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/garden-primavera.webp" width="165" height="140" style="--h:66px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/ars-collection.webp" width="713" height="140" style="--h:34px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/annunziata.webp" width="170" height="140" style="--h:64px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/visit-romagna.webp" width="262" height="140" style="--h:56px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/maliosa.webp" width="211" height="140" style="--h:60px" alt="" loading="lazy" decoding="async"></li><li aria-hidden="true"><img src="../assets/logos/out-of-the-box.webp" width="165" height="140" style="--h:70px" alt="" loading="lazy" decoding="async"></li>
+        </ul>
       </div>
     </div>
-    <aside class="wb-lab">
-      <p class="wb-eyebrow">Dal vivo</p>
-      <h3>Gli stessi temi dell'AI Visibility Lab</h3>
-      <p>Da settembre il Lab gira l'Italia: Firenze, Rimini, Casentino, Pistoia. In sala ogni partecipante lavora sul report della propria struttura. Giovedì ne portiamo online un'ora, sulla novità della settimana.</p>
-      <ul class="wb-stops">
-        <li><b>23 nov</b><span>Follonica</span></li>
-        <li><b>25 nov</b><span>Venezia, al BITESP</span></li>
-        <li><b>10 dic</b><span>Garfagnana</span></li>
-      </ul>
-      <a class="link" href="https://visibility-lab.rankwit.ai" target="_blank" rel="noopener">Le tappe del Lab <svg><use href="#i-arrow"/></svg></a>
-    </aside>
   </div>
 </section>
 
@@ -281,12 +284,16 @@
     <img src="../assets/photos/venice-canal-1280.webp" srcset="../assets/photos/venice-canal-828.webp 828w, ../assets/photos/venice-canal-1280.webp 1280w, ../assets/photos/venice-canal-1920.webp 1920w" sizes="100vw" width="1920" height="1280" alt="" decoding="async" loading="lazy">
   </div>
   <div class="wrap wb-final-body">
-    <p class="wb-eyebrow">Giovedì 19 novembre, ore 15</p>
-    <h2>Un'ora per capire cosa fare <span class="soft">prima dei tuoi concorrenti.</span></h2>
+    <h2>Giovedì alle 15, <span class="soft">un'ora per capire cosa fare prima dei concorrenti.</span></h2>
     <p class="wb-lead">Online, gratuito, in italiano. Il link arriva per email.</p>
-    <a class="btn btn-primary btn-lg" href="#iscrizione">Prenota il tuo posto <svg><use href="#i-arrow"/></svg></a>
+    <a class="btn btn-primary btn-lg" href="#iscrizione" data-to-form>Prenota il tuo posto <svg><use href="#i-arrow"/></svg></a>
   </div>
 </section>
+
+<div class="wb-sticky" data-sticky hidden>
+  <span><b>Giovedì 19, ore 15</b> Gratuito, online</span>
+  <a class="btn btn-primary" href="#iscrizione" data-to-form>Prenota il posto</a>
+</div>
 
 </main>
 
@@ -330,6 +337,6 @@
 </footer>
 
 <script src="../assets/site.js?v=20261117a"></script>
-<script src="../assets/webinar.js?v=20261117a"></script>
+<script src="../assets/webinar.js?v=20261117d"></script>
 </body>
 </html>
