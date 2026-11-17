@@ -1,7 +1,7 @@
-/* Webinar page: countdown, the animated example, the registration form, the phone sticky bar.
-   The form, on www.rankwit.ai (and Cloudflare Pages previews), posts JSON to /api/webinar (functions/api/webinar.js),
-   which forwards it to the Make webhook in WEBINAR_WEBHOOK. Anywhere else (the GitHub Pages preview, a local
-   server) there is no endpoint: the page shows the confirmation without sending anything. */
+/* Webinar page: countdown, the example that builds up, the registration form, the phone sticky bar.
+   The form posts JSON straight to its Make webhook (the form's action): Make scenario 10178828 saves the
+   registration in the data store «Webinar 19 novembre - iscritti», tells info@ and sends the confirmation.
+   On localhost it shows the confirmation without sending anything. */
 (function () {
   const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const START = Date.parse("2026-11-19T14:00:00Z");
@@ -40,13 +40,11 @@
     }
   });
 
-  /* ---------- The example: type the question, then the answer and the numbers appear ---------- */
+  /* ---------- The example: the answer and the numbers appear, whole elements, one after the other ---------- */
   const demo = document.querySelector("[data-demo]");
   if (demo && !reduced && "IntersectionObserver" in window) {
-    const ask = demo.querySelector("[data-demo-ask]");
     const steps = Array.from(demo.querySelectorAll(".wb-step"));
     const counters = Array.from(demo.querySelectorAll("[data-count-to]"));
-    const full = ask.dataset.text || ask.textContent;
     demo.classList.add("is-waiting");
     const countUp = () => {
       counters.forEach((el) => {
@@ -60,27 +58,14 @@
         requestAnimationFrame(run);
       });
     };
-    const play = () => {
-      counters.forEach((el) => { el.textContent = "0"; });
-      ask.textContent = "";
-      ask.classList.add("is-typing");
-      let i = 0;
-      const type = () => {
-        ask.textContent = full.slice(0, ++i);
-        if (i < full.length) return setTimeout(type, 26);
-        ask.classList.remove("is-typing");
-        steps.forEach((s, k) => s.style.setProperty("--d", (0.1 + k * 0.28).toFixed(2) + "s"));
-        demo.classList.remove("is-waiting");
-        setTimeout(countUp, 250 + steps.length * 280);
-      };
-      setTimeout(type, 200);
-    };
     const io = new IntersectionObserver((entries) => {
-      if (entries.some((e) => e.isIntersecting)) {
-        io.disconnect();
-        play();
-      }
-    }, { threshold: 0.35 });
+      if (!entries.some((e) => e.isIntersecting)) return;
+      io.disconnect();
+      counters.forEach((el) => { el.textContent = "0"; });
+      steps.forEach((s, k) => s.style.setProperty("--d", (0.1 + k * 0.22).toFixed(2) + "s"));
+      demo.classList.remove("is-waiting");
+      setTimeout(countUp, 300 + steps.length * 220);
+    }, { threshold: 0.3 });
     io.observe(demo);
   }
 
@@ -93,7 +78,7 @@
   const invalid = form.querySelector("[data-invalid]");
   const seg = form.querySelector(".wb-seg");
   const sticky = document.querySelector("[data-sticky]");
-  const live = /(^|\.)rankwit\.ai$|\.pages\.dev$/.test(window.location.hostname);
+  const local = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
   let done = false;
   let attrib = null;
   try {
@@ -167,7 +152,7 @@
 
   /* Calendar: Google link and an .ics file, built here so they work without a server */
   const calTitle = "Webinar RankWit: Business Hub di ChatGPT per hotel e tour operator";
-  const calText = "Il link della diretta arriva per email prima dell'inizio. Pagina: https://www.rankwit.ai/it/webinar";
+  const calText = "Il link per entrare arriva per email giovedì alle 14, un'ora prima dell'inizio.";
   const g = form.querySelector("[data-cal-google]");
   const ics = form.querySelector("[data-cal-ics]");
   g.href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(calTitle) +
@@ -207,9 +192,9 @@
     ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach((k) => {
       payload[k] = params.get(k) || (attrib && attrib[k]) || "";
     });
-    if (live && !payload.extra_field) {
+    if (!local && !payload.extra_field) {
       try {
-        const res = await fetch("/api/webinar", { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) });
+        const res = await fetch(form.action, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
         if (!res.ok) throw new Error(String(res.status));
       } catch (err) {
         send.disabled = false;

@@ -99,9 +99,13 @@ html {
 
 .wb-hero h1 {
   color: #fff;
-  font-size: clamp(2.5rem, 5.6vw, 5rem);
-  line-height: 1;
-  max-width: 12ch;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  line-height: 1.02;
+  max-width: 14ch;
+}
+
+.wb-hero h1 .soft {
+  color: #b5b1fa;
 }
 
 .wb-lead {
@@ -434,38 +438,40 @@ html {
 
 /* ---------- The example: an answer with a verified profile, and the Business Hub numbers ---------- */
 
-.wb-example-grid {
+.wb-example-head {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(40px, 6vw, 96px);
-  align-items: center;
-}
-
-.wb-example-text {
-  display: grid;
-  gap: 22px;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(20px, 5vw, 80px);
+  align-items: end;
+  margin-bottom: clamp(32px, 4vw, 52px);
 }
 
 .wb-p {
   font-size: 1.08rem;
   line-height: 1.65;
   color: var(--ink-2);
-  max-width: 52ch;
+  max-width: 60ch;
 }
 
-.wb-p b {
-  color: var(--ink);
+.wb-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(16px, 2.4vw, 32px);
+  padding: clamp(16px, 2.6vw, 36px);
+  border-radius: 30px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
 }
 
 .wb-note {
   display: flex;
   gap: 14px;
   align-items: flex-start;
-  padding: 16px 18px;
+  margin-top: 20px;
+  padding: 16px 20px;
   border-radius: 16px;
   background: var(--amber-soft);
   border: 1px solid rgba(154, 95, 0, 0.18);
-  max-width: 52ch;
 }
 
 .wb-note svg {
@@ -479,16 +485,40 @@ html {
 .wb-note p {
   line-height: 1.55;
   color: var(--ink-2);
+  max-width: 90ch;
 }
 
 .wb-note b {
   color: var(--ink);
 }
 
-.wb-demo {
-  position: relative;
-  width: min(100%, 580px);
-  justify-self: center;
+.wb-fig {
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 14px;
+  min-width: 0;
+}
+
+.wb-fig figcaption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.wb-fig-n {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
 .wb-chat {
@@ -545,23 +575,6 @@ html {
   color: #fff;
   font-weight: 500;
   line-height: 1.45;
-}
-
-.wb-ask.is-typing::after {
-  content: "";
-  display: inline-block;
-  width: 2px;
-  height: 1em;
-  margin-left: 2px;
-  vertical-align: -2px;
-  background: currentColor;
-  animation: wb-blink 0.9s steps(1) infinite;
-}
-
-@keyframes wb-blink {
-  50% {
-    opacity: 0;
-  }
 }
 
 .wb-say {
@@ -663,16 +676,13 @@ html {
 }
 
 .wb-insights {
-  position: relative;
-  z-index: 1;
-  width: min(330px, 78%);
-  margin: -40px -28px 0 auto;
-  padding: 20px;
+  padding: clamp(18px, 2vw, 26px);
   border-radius: 22px;
   background: #09041d;
   color: #f0eeff;
   box-shadow: 0 30px 70px -24px rgba(9, 4, 29, 0.7);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
 }
 
@@ -685,6 +695,39 @@ html {
 
 .wb-ins-top span {
   color: rgba(240, 238, 255, 0.55);
+}
+
+.wb-ins-topics {
+  display: grid;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(240, 238, 255, 0.12);
+  font-size: 0.85rem;
+  color: rgba(240, 238, 255, 0.7);
+}
+
+.wb-ins-topics ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.wb-ins-topics li {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(147, 144, 249, 0.2);
+  color: #d2cffc;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.wb-ins-note {
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: rgba(240, 238, 255, 0.45);
 }
 
 .wb-ins-k {
@@ -763,11 +806,11 @@ html {
 
 /* the answer builds up once the demo scrolls into view: visible by default, hidden only while waiting to play */
 @media (prefers-reduced-motion: no-preference) {
-  .js .wb-demo .wb-step {
+  .js .wb-stage .wb-step {
     transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), translate 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     transition-delay: var(--d, 0s);
   }
-  .js .wb-demo.is-waiting .wb-step {
+  .js .wb-stage.is-waiting .wb-step {
     opacity: 0;
     translate: 0 12px;
   }
@@ -1168,7 +1211,7 @@ html {
     justify-self: start;
     max-width: 560px;
   }
-  .wb-example-grid,
+  .wb-example-head,
   .wb-people-grid {
     grid-template-columns: 1fr;
   }
@@ -1177,13 +1220,16 @@ html {
   }
 }
 
+@media (max-width: 900px) {
+  .wb-stage {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 760px) {
   .wb-row {
     grid-template-columns: 1fr;
     gap: 16px;
-  }
-  .wb-insights {
-    margin: -28px 12px 0 auto;
   }
   .wb-when > div {
     padding: 2px 14px;
