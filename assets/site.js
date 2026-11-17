@@ -986,7 +986,7 @@
 /* ---------- Webinar banner: Thursday 19 November 2026, 15:00 in Rome ----------
    A card at the bottom of every page that links /it/webinar. It hides itself on the webinar page, once closed
    (remembered in this browser), and for everyone from 16:00 on the day (15:00 UTC). Self-contained: it brings
-   its own styles, so the same block runs on the Webflow site. */
+   its own styles. Fonts: 29LT Bukra for the date, Plus Jakarta Sans for the rest. */
 (function () {
   if (Date.now() > Date.parse("2026-11-19T15:00:00Z")) return;
   var path = window.location.pathname;
@@ -996,30 +996,35 @@
   var it = (document.documentElement.lang || "en").slice(0, 2) === "it";
   var base = path.indexOf("/rankwit-website-preview/") === 0 ? "/rankwit-website-preview" : "";
   var t = it
-    ? { tag: "Webinar gratuito", text: "Giovedì 19 novembre alle 15: cosa cambia per hotel e tour operator con Business Hub di ChatGPT.", btn: "Iscriviti", close: "Chiudi" }
-    : { tag: "Free webinar in Italian", text: "Thursday 19 November, 3pm CET: what ChatGPT Business Hub changes for hotels and tour operators.", btn: "Register", close: "Close" };
+    ? { tag: "Webinar gratuito, ore 15", text: "Business Hub di ChatGPT: cosa cambia per hotel e tour operator", btn: "Iscriviti", close: "Chiudi", mon: "NOV", label: "Webinar gratuito" }
+    : { tag: "Free webinar in Italian, 3pm CET", text: "ChatGPT Business Hub: what changes for hotels and tour operators", btn: "Register", close: "Close", mon: "NOV", label: "Free webinar" };
+  var sans = "'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif";
   var css =
-    ".wbar{position:fixed;left:50%;bottom:16px;z-index:9999;width:min(780px,calc(100% - 24px));display:flex;align-items:center;" +
-    "background:#09041d;color:#f0eeff;border:1px solid rgba(240,238,255,.12);border-radius:18px;" +
-    "box-shadow:0 2px 4px rgba(9,4,29,.06),0 30px 70px -24px rgba(9,4,29,.6);opacity:0;transform:translate(-50%,16px);" +
-    "transition:opacity .35s ease,transform .35s ease;font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}" +
+    ".wbar{position:fixed;left:50%;bottom:16px;z-index:9999;width:min(760px,calc(100% - 24px));display:flex;align-items:center;" +
+    "background:linear-gradient(#0d0726,#09041d) padding-box,linear-gradient(120deg,rgba(147,144,249,.85),rgba(240,238,255,.08) 45%,rgba(112,110,248,.6)) border-box;" +
+    "border:1px solid transparent;border-radius:20px;color:#f0eeff;font-family:" + sans + ";-webkit-font-smoothing:antialiased;" +
+    "box-shadow:0 2px 4px rgba(9,4,29,.08),0 30px 70px -20px rgba(9,4,29,.65),0 0 0 1px rgba(9,4,29,.2);" +
+    "opacity:0;transform:translate(-50%,18px);transition:opacity .4s ease,transform .5s cubic-bezier(.16,1,.3,1)}" +
     ".wbar.is-on{opacity:1;transform:translate(-50%,0)}" +
-    ".wbar-link{flex:1;min-width:0;display:flex;align-items:center;gap:14px;padding:12px 6px 12px 18px;color:inherit;text-decoration:none}" +
-    ".wbar-tag{flex:none;display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',ui-monospace,'SF Mono',Menlo,monospace;" +
-    "font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#b5b1fa;white-space:nowrap}" +
-    ".wbar-tag:before{content:'';width:7px;height:7px;border-radius:50%;background:#706ef8;box-shadow:0 0 0 3px rgba(112,110,248,.25)}" +
-    ".wbar-text{flex:1;min-width:0;font-size:15px;line-height:1.35;font-weight:500;color:#f0eeff}" +
-    ".wbar-btn{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;" +
-    "background:#5f5cf0;color:#fff;font-size:14px;font-weight:600;line-height:1;white-space:nowrap;transition:background .18s ease}" +
+    ".wbar-link{flex:1;min-width:0;display:flex;align-items:center;gap:14px;padding:10px 6px 10px 10px;color:inherit;text-decoration:none}" +
+    ".wbar-date{flex:none;width:54px;height:54px;border-radius:14px;background:linear-gradient(150deg,#7d7bfa,#5350d6);display:grid;place-content:center;text-align:center;color:#fff;" +
+    "box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}" +
+    ".wbar-date b{font-family:'29LT Bukra'," + sans + ";font-weight:700;font-size:22px;line-height:1}" +
+    ".wbar-date i{font-style:normal;font-size:10px;font-weight:800;letter-spacing:.14em;margin-top:2px}" +
+    ".wbar-body{flex:1;min-width:0;display:grid;gap:3px}" +
+    ".wbar-tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#b5b1fa}" +
+    ".wbar-text{font-size:15px;line-height:1.3;font-weight:600;color:#fff}" +
+    ".wbar-btn{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 18px;border-radius:999px;" +
+    "background:#f0eeff;color:#09041d;font-size:14px;font-weight:700;line-height:1;white-space:nowrap;transition:background .18s ease,transform .18s ease}" +
     ".wbar-btn svg{width:15px;height:15px}" +
-    ".wbar-link:hover .wbar-btn{background:#5350d6}" +
-    ".wbar-link:focus-visible{outline:2px solid #706ef8;outline-offset:2px;border-radius:16px}" +
-    ".wbar-x{flex:none;width:40px;height:40px;margin-right:8px;padding:0;border:0;border-radius:50%;background:transparent;" +
-    "color:rgba(240,238,255,.6);cursor:pointer;display:grid;place-items:center}" +
+    ".wbar-link:hover .wbar-btn{background:#fff;transform:translateX(2px)}" +
+    ".wbar-link:focus-visible{outline:2px solid #9390f9;outline-offset:2px;border-radius:18px}" +
+    ".wbar-x{flex:none;width:36px;height:36px;margin-right:8px;padding:0;border:0;border-radius:50%;background:transparent;" +
+    "color:rgba(240,238,255,.55);cursor:pointer;display:grid;place-items:center}" +
     ".wbar-x svg{width:16px;height:16px}" +
     ".wbar-x:hover{color:#fff;background:rgba(240,238,255,.08)}" +
-    "@media (max-width:640px){.wbar{align-items:flex-start;bottom:12px}.wbar-link{flex-wrap:wrap;gap:8px 12px;padding:14px 0 14px 16px}" +
-    ".wbar-text{flex-basis:100%;order:2;font-size:14px}.wbar-tag{order:1}.wbar-btn{order:3;min-height:36px}.wbar-x{margin:6px 6px 0 0}}" +
+    "@media (max-width:640px){.wbar{align-items:flex-start;bottom:12px}.wbar-link{flex-wrap:wrap;gap:10px 12px;padding:12px 0 12px 12px}" +
+    ".wbar-body{flex:1 1 calc(100% - 66px)}.wbar-text{font-size:14px}.wbar-btn{margin-left:66px;min-height:36px}.wbar-x{margin:8px 6px 0 0}}" +
     "@media (prefers-reduced-motion:reduce){.wbar{transition:none}}";
   var arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>';
   var cross = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>';
@@ -1029,10 +1034,11 @@
     document.head.appendChild(style);
     var bar = document.createElement("aside");
     bar.className = "wbar";
-    bar.setAttribute("aria-label", t.tag);
+    bar.setAttribute("aria-label", t.label);
     bar.innerHTML =
-      '<a class="wbar-link" href="' + base + '/it/webinar"><span class="wbar-tag">' + t.tag + '</span><span class="wbar-text">' + t.text +
-      '</span><span class="wbar-btn">' + t.btn + " " + arrow + '</span></a><button class="wbar-x" type="button" aria-label="' + t.close + '">' + cross + "</button>";
+      '<a class="wbar-link" href="' + base + '/it/webinar"><span class="wbar-date" aria-hidden="true"><b>19</b><i>' + t.mon + '</i></span>' +
+      '<span class="wbar-body"><span class="wbar-tag">' + t.tag + '</span><span class="wbar-text">' + t.text + '</span></span>' +
+      '<span class="wbar-btn">' + t.btn + " " + arrow + '</span></a><button class="wbar-x" type="button" aria-label="' + t.close + '">' + cross + "</button>";
     document.body.appendChild(bar);
     bar.querySelector(".wbar-x").addEventListener("click", function () {
       try { localStorage.setItem(KEY, "1"); } catch (e) {}
