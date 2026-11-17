@@ -162,6 +162,7 @@
   form.addEventListener("input", (ev) => {
     if (ev.target.getAttribute("aria-invalid") === "true") ev.target.setAttribute("aria-invalid", "false");
     if (ev.target.name === "segment") seg.classList.remove("is-invalid");
+    if (!invalid.hidden && !form.querySelector('[aria-invalid="true"]') && !seg.classList.contains("is-invalid")) invalid.hidden = true;
   });
 
   /* Calendar: Google link and an .ics file, built here so they work without a server */
