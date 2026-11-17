@@ -736,10 +736,11 @@ html {
 }
 
 .wb-ins-big {
+  margin-top: 10px;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 3rem;
-  line-height: 1;
+  line-height: 1.1;
   font-variant-numeric: tabular-nums;
   color: #fff;
 }
