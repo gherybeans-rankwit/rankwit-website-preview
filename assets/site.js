@@ -619,10 +619,6 @@
     };
     const NAMED = IT ? "Questa volta ci sei." : "Named this time.";
     const use = line.querySelector(".al-eng use");
-    const who = document.querySelector("[data-al-who]");
-    const WHO = IT
-      ? ["ChatGPT risponde", "Gemini risponde", "Perplexity risponde", "Claude risponde", "Le Panoramiche AI di Google rispondono"]
-      : ["ChatGPT answers", "Gemini answers", "Perplexity answers", "Claude answers", "Google AI Overviews answer"];
     const lead = line.querySelector(".al-lead");
     const you = line.querySelector(".al-you");
     const slots = ["a", "b", "c"].map((k) => line.querySelector("[data-al-" + k + "]"));
@@ -644,7 +640,6 @@
           const k = kinds[n % 2 === 0 ? "hotel" : "destination"];
           const named = n % 4 === 3;
           use.setAttribute("href", "#m-" + engines[v]);
-          if (who) who.textContent = WHO[v];
           lead.textContent = k.leads[v];
           you.textContent = k.you;
           slots.forEach((el, i) => { if (el) el.textContent = k.words[i]; });
@@ -988,12 +983,12 @@
   });
 })();
 
-/* ---------- Webinar banner: Thursday 19 November 2026, 15:00 in Rome ----------
+/* ---------- Webinar banner: Thursday 19 November 2026, 17:00 to 17:45 in Rome ----------
    A card at the bottom of every page that links /it/webinar. It hides itself on the webinar page, once closed
-   (remembered in this browser), and for everyone from 16:00 on the day (15:00 UTC). Self-contained: it brings
+   (remembered in this browser), and for everyone from 17:45 on the day (16:45 UTC). Self-contained: it brings
    its own styles. Fonts: 29LT Bukra for the date, Plus Jakarta Sans for the rest. */
 (function () {
-  if (Date.now() > Date.parse("2026-11-19T15:00:00Z")) return;
+  if (Date.now() > Date.parse("2026-11-19T16:45:00Z")) return;
   var path = window.location.pathname;
   if (/\/webinar(\.html)?\/?$/.test(path)) return;
   var KEY = "rkw_webinar_20261119";
@@ -1001,8 +996,8 @@
   var it = (document.documentElement.lang || "en").slice(0, 2) === "it";
   var base = path.indexOf("/rankwit-website-preview/") === 0 ? "/rankwit-website-preview" : "";
   var t = it
-    ? { tag: "Webinar gratuito, ore 15", text: "ChatGPT apre i profili alle aziende: cosa cambia per hotel e tour operator", btn: "Iscriviti", close: "Chiudi", mon: "NOV", label: "Webinar gratuito" }
-    : { tag: "Free webinar in Italian, 3pm CET", text: "ChatGPT Business Hub: what changes for hotels and tour operators", btn: "Register", close: "Close", mon: "NOV", label: "Free webinar" };
+    ? { tag: "Webinar gratuito, giovedì ore 17", text: "ChatGPT apre i profili alle aziende. E adesso che si fa?", btn: "Iscriviti", close: "Chiudi", mon: "NOV", label: "Webinar gratuito" }
+    : { tag: "Free webinar in Italian, Thursday 5pm CET", text: "ChatGPT opens business profiles: what to do now", btn: "Register", close: "Close", mon: "NOV", label: "Free webinar" };
   var sans = "'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif";
   var css =
     ".wbar{position:fixed;left:50%;bottom:16px;z-index:9999;width:min(760px,calc(100% - 24px));display:flex;align-items:center;" +

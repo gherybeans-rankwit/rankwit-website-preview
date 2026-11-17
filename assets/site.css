@@ -6041,27 +6041,3 @@ html:not(.js) .giant .g-you {
 .gscene.is-pinned .giant-answer {
   font-size: clamp(2.4rem, min(6.4vw, 9.4vh), 7rem);
 }
-
-/* 17 November 2026: who is speaking in the demos, and the "what we work on" section */
-.al-who { margin: 0 0 10px; font-size: 17px; font-weight: 700; letter-spacing: 0; opacity: 1; }
-.gscene .answer-ask { margin: 18px 0 6px; }
-.work-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px 24px; }
-.work-grid li { border-top: 1px solid rgba(9, 4, 29, 0.14); padding-top: 18px; }
-.work-grid .n { font-size: 13px; font-weight: 600; opacity: 0.55; }
-.work-grid h3 { margin: 10px 0 8px; font-size: 20px; }
-.work-grid p { margin: 0; font-size: 15.5px; line-height: 1.55; opacity: 0.8; }
-@media (max-width: 1100px) { .work-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (max-width: 700px) { .work-grid { grid-template-columns: 1fr; } }
-.scard-who { font-size: 1.02rem; font-weight: 700; color: #fff; }
-.scard-who svg { width: 19px; height: 19px; }
-
-/* 17 November 2026: the giant block is now a plain statement. The lit part is a whole clause, so it must wrap
-   like the rest of the sentence, and the text stays in front of the answer cards. */
-.gscene .scene-say { position: relative; z-index: 2; }
-.giant .g-you { white-space: normal; -webkit-box-decoration-break: clone; box-decoration-break: clone; margin-left: 0; margin-right: 0; padding: 0 0.12em; }
-.gscene .giant-answer { max-width: 15ch; }
-.gscene.is-pinned .giant-answer { font-size: clamp(2.2rem, min(5.6vw, 8.6vh), 6.2rem); }
-/* The larger speaker labels make the cards taller: tighter cards while the scene is pinned, so three still fit. */
-.gscene.is-pinned .scard { padding: 14px 18px 15px; gap: 7px; }
-.gscene.is-pinned .scard-who { font-size: 0.95rem; }
-.gscene.is-pinned .scene-cards { gap: 10px; }

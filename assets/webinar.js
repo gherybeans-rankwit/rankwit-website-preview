@@ -1,79 +1,43 @@
-/* Webinar page: countdown, the example that builds up, the registration form, the phone sticky bar.
+/* Webinar page: how long until it starts, the registration form, the phone sticky bar.
    The form posts JSON straight to its Make webhook (the form's action): Make scenario 10178828 saves the
    registration in the data store «Webinar 19 novembre - iscritti», tells info@ and sends the confirmation.
    On localhost it shows the confirmation without sending anything. */
 (function () {
   const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const START = Date.parse("2026-11-19T14:00:00Z");
-  const END = Date.parse("2026-11-19T15:00:00Z");
+  /* Thursday 19 November 2026, 17:00 to 17:45 in Rome (UTC+1) */
+  const START = Date.parse("2026-11-19T16:00:00Z");
+  const END = Date.parse("2026-11-19T16:45:00Z");
 
-  /* ---------- Countdown to Thursday 19 November 2026, 15:00 in Rome ---------- */
-  document.querySelectorAll("[data-countdown]").forEach((box) => {
-    const label = box.querySelector("[data-cd-label]");
-    const f = (k) => box.querySelector('[data-cd="' + k + '"]');
-    const pad = (n) => String(n).padStart(2, "0");
+  /* ---------- «Tra 2 giorni», «Domani», «Oggi, tra 3 ore», counted on the Rome calendar ---------- */
+  const romeDay = (t) => {
+    const p = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(t));
+    return Date.parse(p + "T00:00:00Z");
+  };
+  document.querySelectorAll("[data-countdown]").forEach((el) => {
     const tick = () => {
       const now = Date.now();
-      if (now >= END) {
-        box.classList.add("is-live");
-        label.textContent = "Il webinar si è concluso";
-        return false;
+      if (now >= END) { el.textContent = "Il webinar si è concluso"; return false; }
+      if (now >= START) { el.textContent = "In diretta adesso"; return true; }
+      const days = Math.round((romeDay(START) - romeDay(now)) / 86400000);
+      if (days >= 2) el.textContent = "Tra " + days + " giorni";
+      else if (days === 1) el.textContent = "Domani";
+      else {
+        const min = Math.ceil((START - now) / 60000);
+        el.textContent = min > 90 ? "Oggi, tra " + Math.round(min / 60) + " ore" : min > 1 ? "Oggi, tra " + min + " minuti" : "Oggi, tra un minuto";
       }
-      if (now >= START) {
-        box.classList.add("is-live");
-        label.textContent = "In diretta adesso";
-        return true;
-      }
-      let s = Math.floor((START - now) / 1000);
-      const d = Math.floor(s / 86400); s -= d * 86400;
-      const h = Math.floor(s / 3600); s -= h * 3600;
-      const m = Math.floor(s / 60); s -= m * 60;
-      f("d").textContent = d;
-      f("h").textContent = pad(h);
-      f("m").textContent = pad(m);
-      f("s").textContent = pad(s);
-      label.setAttribute("aria-label", "Inizia tra " + d + " giorni, " + h + " ore e " + m + " minuti");
       return true;
     };
     if (tick()) {
-      const id = setInterval(() => { if (!tick()) clearInterval(id); }, 1000);
+      const id = setInterval(() => { if (!tick()) clearInterval(id); }, 30000);
     }
   });
-
-  /* ---------- The example: the answer and the numbers appear, whole elements, one after the other ---------- */
-  const demo = document.querySelector("[data-demo]");
-  if (demo && !reduced && "IntersectionObserver" in window) {
-    const steps = Array.from(demo.querySelectorAll(".wb-step"));
-    const counters = Array.from(demo.querySelectorAll("[data-count-to]"));
-    demo.classList.add("is-waiting");
-    const countUp = () => {
-      counters.forEach((el) => {
-        const to = Number(el.dataset.countTo);
-        const t0 = performance.now();
-        const run = (t) => {
-          const p = Math.min(1, (t - t0) / 1100);
-          el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
-          if (p < 1) requestAnimationFrame(run);
-        };
-        requestAnimationFrame(run);
-      });
-    };
-    const io = new IntersectionObserver((entries) => {
-      if (!entries.some((e) => e.isIntersecting)) return;
-      io.disconnect();
-      counters.forEach((el) => { el.textContent = "0"; });
-      steps.forEach((s, k) => s.style.setProperty("--d", (0.1 + k * 0.22).toFixed(2) + "s"));
-      demo.classList.remove("is-waiting");
-      setTimeout(countUp, 300 + steps.length * 220);
-    }, { threshold: 0.3 });
-    io.observe(demo);
-  }
 
   /* ---------- Registration form ---------- */
   const form = document.querySelector("[data-webinar]");
   if (!form) return;
   const send = form.querySelector("[data-send]");
   const sendLabel = form.querySelector("[data-send-label]");
+  const sendText = sendLabel.textContent;
   const error = form.querySelector("[data-error]");
   const invalid = form.querySelector("[data-invalid]");
   const seg = form.querySelector(".wb-seg");
@@ -97,45 +61,51 @@
     });
   });
 
-  /* Sticky bar on phones while the form is off screen */
+  /* Sticky bar on phones once the hero has scrolled away, hidden again while the form is on screen */
   if (sticky && "IntersectionObserver" in window) {
-    new IntersectionObserver((entries) => {
-      entries.forEach((e) => { sticky.hidden = done || e.isIntersecting; });
-    }, { threshold: 0.15 }).observe(form);
+    const seen = new Map();
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => seen.set(e.target, e.isIntersecting));
+      sticky.hidden = done || Array.from(seen.values()).some(Boolean);
+    }, { threshold: 0.05 });
+    io.observe(form);
+    const hero = document.querySelector(".wb-head");
+    if (hero) io.observe(hero);
   }
 
-  /* Validation in Italian, next to the fields */
+  /* Validation in Italian, next to the button */
   const fields = {
     name: { el: form.elements.name, label: "nome e cognome" },
     email: { el: form.elements.email, label: "email" },
-    company: { el: form.elements.company, label: "struttura o azienda" },
+    company: { el: form.elements.company, label: "azienda" },
+    website: { el: form.elements.website, label: "sito web" },
   };
   const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+  const siteOk = (v) => /^(https?:\/\/)?[^\s/.]+(\.[^\s/.]+)+(\/\S*)?$/i.test(v);
   const check = () => {
     const missing = [];
-    let badEmail = false;
+    const wrong = [];
     let first = null;
     Object.keys(fields).forEach((k) => {
       const el = fields[k].el;
       const v = el.value.trim();
       const empty = !v;
-      const wrong = !empty && k === "email" && !emailOk(v);
-      el.setAttribute("aria-invalid", empty || wrong ? "true" : "false");
+      const bad = !empty && ((k === "email" && !emailOk(v)) || (k === "website" && !siteOk(v)));
+      el.setAttribute("aria-invalid", empty || bad ? "true" : "false");
       if (empty) missing.push(fields[k].label);
-      if (wrong) badEmail = true;
-      if ((empty || wrong) && !first) first = el;
+      if (bad) wrong.push(k === "email" ? "Controlla l'email, sembra incompleta." : "Controlla il sito, per esempio azienda.it.");
+      if ((empty || bad) && !first) first = el;
     });
     const segOk = !!form.querySelector("input[name=segment]:checked");
     seg.classList.toggle("is-invalid", !segOk);
     if (!segOk) {
-      missing.push("di cosa ti occupi");
+      missing.push("come ti iscrivi");
       first = first || form.querySelector("input[name=segment]");
     }
-    if (missing.length || badEmail) {
+    if (missing.length || wrong.length) {
       const parts = [];
       if (missing.length) parts.push("Mancano: " + missing.join(", ") + ".");
-      if (badEmail) parts.push("Controlla l'email, sembra incompleta.");
-      invalid.textContent = parts.join(" ");
+      invalid.textContent = parts.concat(wrong).join(" ");
       invalid.hidden = false;
       first.focus();
       return false;
@@ -150,15 +120,15 @@
   });
 
   /* Calendar: Google link and an .ics file, built here so they work without a server */
-  const calTitle = "Webinar RankWit: Business Hub di ChatGPT per hotel e tour operator";
-  const calText = "Il link per collegarti arriva per email giovedì alle 14.";
+  const calTitle = "Webinar RankWit: ChatGPT apre i profili alle aziende";
+  const calText = "Il link per collegarti arriva per email giovedì alle 16.";
   const g = form.querySelector("[data-cal-google]");
   const ics = form.querySelector("[data-cal-ics]");
   g.href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(calTitle) +
-    "&dates=20261119T140000Z/20261119T150000Z&details=" + encodeURIComponent(calText) + "&location=" + encodeURIComponent("Online");
+    "&dates=20261119T160000Z/20261119T164500Z&details=" + encodeURIComponent(calText) + "&location=" + encodeURIComponent("Online");
   const icsBody = [
     "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//RankWit//Webinar//IT", "BEGIN:VEVENT",
-    "UID:webinar-20261119@rankwit.ai", "DTSTAMP:20261116T120000Z", "DTSTART:20261119T140000Z", "DTEND:20261119T150000Z",
+    "UID:webinar-20261119@rankwit.ai", "DTSTAMP:20261117T150000Z", "DTSTART:20261119T160000Z", "DTEND:20261119T164500Z",
     "SUMMARY:" + calTitle, "DESCRIPTION:" + calText.replace(/,/g, "\\,"), "LOCATION:Online",
     "END:VEVENT", "END:VCALENDAR",
   ].join("\r\n");
@@ -175,12 +145,13 @@
     const params = new URLSearchParams(window.location.search);
     const payload = {
       form: "webinar-2026-11-19",
-      webinar: "Business Hub di ChatGPT: cosa cambia per hotel e tour operator",
-      webinar_date: "2026-11-19T15:00:00+01:00",
+      webinar: "ChatGPT apre i profili alle aziende. E adesso che si fa?",
+      webinar_date: "2026-11-19T17:00:00+01:00",
       submitted_at: new Date().toISOString(),
       name: text("name"),
       email: text("email"),
       company: text("company"),
+      website: text("website"),
       segment: text("segment"),
       question: text("question"),
       extra_field: text("extra_field"),
@@ -197,14 +168,14 @@
         if (!res.ok) throw new Error(String(res.status));
       } catch (err) {
         send.disabled = false;
-        sendLabel.textContent = "Iscrivimi";
+        sendLabel.textContent = sendText;
         error.hidden = false;
         return;
       }
     }
     done = true;
     if (sticky) sticky.hidden = true;
-    form.querySelector(".panel-body.form").hidden = true;
+    form.querySelector(".wb-form-body:not(.wb-done)").hidden = true;
     const ok = form.querySelector(".wb-done");
     ok.hidden = false;
     ok.scrollIntoView({ block: "center", behavior: reduced ? "auto" : "smooth" });
