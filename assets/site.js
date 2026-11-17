@@ -996,7 +996,7 @@
   var it = (document.documentElement.lang || "en").slice(0, 2) === "it";
   var base = path.indexOf("/rankwit-website-preview/") === 0 ? "/rankwit-website-preview" : "";
   var t = it
-    ? { tag: "Webinar gratuito, ore 15", text: "Business Hub di ChatGPT: cosa cambia per hotel e tour operator", btn: "Iscriviti", close: "Chiudi", mon: "NOV", label: "Webinar gratuito" }
+    ? { tag: "Webinar gratuito, ore 15", text: "ChatGPT apre i profili alle aziende: cosa cambia per hotel e tour operator", btn: "Iscriviti", close: "Chiudi", mon: "NOV", label: "Webinar gratuito" }
     : { tag: "Free webinar in Italian, 3pm CET", text: "ChatGPT Business Hub: what changes for hotels and tour operators", btn: "Register", close: "Close", mon: "NOV", label: "Free webinar" };
   var sans = "'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif";
   var css =

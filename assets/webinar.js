@@ -111,7 +111,6 @@
     company: { el: form.elements.company, label: "struttura o azienda" },
   };
   const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
-  const list = (a) => (a.length > 1 ? a.slice(0, -1).join(", ") + " e " + a[a.length - 1] : a[0]);
   const check = () => {
     const missing = [];
     let badEmail = false;
@@ -134,8 +133,8 @@
     }
     if (missing.length || badEmail) {
       const parts = [];
-      if (missing.length) parts.push("Completa " + list(missing) + ".");
-      if (badEmail) parts.push("L'email non sembra completa.");
+      if (missing.length) parts.push("Mancano: " + missing.join(", ") + ".");
+      if (badEmail) parts.push("Controlla l'email, sembra incompleta.");
       invalid.textContent = parts.join(" ");
       invalid.hidden = false;
       first.focus();
@@ -152,7 +151,7 @@
 
   /* Calendar: Google link and an .ics file, built here so they work without a server */
   const calTitle = "Webinar RankWit: Business Hub di ChatGPT per hotel e tour operator";
-  const calText = "Il link per entrare arriva per email giovedì alle 14, un'ora prima dell'inizio.";
+  const calText = "Il link per collegarti arriva per email giovedì alle 14.";
   const g = form.querySelector("[data-cal-google]");
   const ics = form.querySelector("[data-cal-ics]");
   g.href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(calTitle) +
@@ -198,7 +197,7 @@
         if (!res.ok) throw new Error(String(res.status));
       } catch (err) {
         send.disabled = false;
-        sendLabel.textContent = "Prenota il mio posto";
+        sendLabel.textContent = "Iscrivimi";
         error.hidden = false;
         return;
       }

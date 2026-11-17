@@ -731,16 +731,17 @@ html {
 }
 
 .wb-ins-k {
-  font-size: 0.82rem;
-  color: rgba(240, 238, 255, 0.65);
+  margin-top: 6px;
+  font-size: 0.88rem;
+  color: rgba(240, 238, 255, 0.7);
 }
 
 .wb-ins-big {
-  margin-top: 10px;
+  margin: 4px 0 0;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 3rem;
-  line-height: 1.1;
+  line-height: 1.05;
   font-variant-numeric: tabular-nums;
   color: #fff;
 }
@@ -833,17 +834,22 @@ html {
 }
 
 .wb-facts li {
-  display: grid;
-  align-content: start;
-  gap: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   padding-top: 16px;
   border-top: 1px solid var(--line-2);
 }
 
-.wb-facts b {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--ink);
+.wb-facts svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  padding: 4px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
 }
 
 .wb-facts span {
@@ -907,15 +913,13 @@ html {
 }
 
 .wb-row-text {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  column-gap: 18px;
-  row-gap: 10px;
-  align-items: baseline;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .wb-step-n {
-  grid-row: span 2;
+  flex: none;
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -941,10 +945,16 @@ html {
   font-size: clamp(1.3rem, 2.1vw, 1.7rem);
 }
 
-.wb-row-text p {
-  color: rgba(240, 238, 255, 0.75);
-  line-height: 1.6;
-  max-width: 46ch;
+.wb-row-body {
+  display: grid;
+  gap: 10px;
+}
+
+.wb-row-body p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(240, 238, 255, 0.82);
+  max-width: 58ch;
 }
 
 .wb-ex {
