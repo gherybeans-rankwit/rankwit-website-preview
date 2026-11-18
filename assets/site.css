@@ -6065,20 +6065,3 @@ html:not(.js) .giant .g-you {
 .gscene.is-pinned .scard { padding: 14px 18px 15px; gap: 7px; }
 .gscene.is-pinned .scard-who { font-size: 0.95rem; }
 .gscene.is-pinned .scene-cards { gap: 10px; }
-
-/* 17 Nov 2026 (10): "What you can get" */
-.gain-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.gain-case { margin-top: 44px; padding: 28px 30px 24px; border-radius: 20px; background: rgba(9, 4, 29, 0.045); }
-.gain-case-h { margin: 0 0 22px; font-size: 16px; }
-.gain-case-h span { opacity: 0.7; }
-.gain-nums { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 32px; }
-.gain-nums .big { display: block; font-family: var(--font-display, inherit); font-weight: 700; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.05; white-space: nowrap; }
-.gain-nums .what { margin: 10px 0 0; font-size: 15.5px; line-height: 1.5; opacity: 0.8; }
-.gain-src { margin: 22px 0 0; font-size: 12.5px; line-height: 1.5; opacity: 0.6; }
-.gain-time-h { margin: 44px 0 18px; font-size: 22px; }
-.gain-time { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 32px; }
-.gain-time li { border-top: 2px solid currentColor; padding-top: 14px; }
-.gain-time b { display: block; font-size: 20px; margin-bottom: 6px; }
-.gain-time span { font-size: 15.5px; line-height: 1.55; opacity: 0.8; }
-@media (max-width: 1100px) { .gain-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 700px) { .gain-grid, .gain-nums, .gain-time { grid-template-columns: 1fr; } .gain-case { padding: 22px 20px; } }

@@ -121,15 +121,16 @@
 
   /* Calendar: Google link and an .ics file, built here so they work without a server */
   const calTitle = "Webinar RankWit: ChatGPT apre i profili alle aziende";
-  const calText = "Il link per collegarti arriva per email giovedì alle 16.";
+  const zoom = "https://us06web.zoom.us/j/83293995156?pwd=7y93axuC46Cb7xfaxMVIAsTNVegsTR.1";
+  const calText = "Link per collegarti su Zoom: " + zoom;
   const g = form.querySelector("[data-cal-google]");
   const ics = form.querySelector("[data-cal-ics]");
   g.href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(calTitle) +
-    "&dates=20261119T160000Z/20261119T164500Z&details=" + encodeURIComponent(calText) + "&location=" + encodeURIComponent("Online");
+    "&dates=20261119T160000Z/20261119T164500Z&details=" + encodeURIComponent(calText) + "&location=" + encodeURIComponent(zoom);
   const icsBody = [
     "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//RankWit//Webinar//IT", "BEGIN:VEVENT",
     "UID:webinar-20261119@rankwit.ai", "DTSTAMP:20261117T150000Z", "DTSTART:20261119T160000Z", "DTEND:20261119T164500Z",
-    "SUMMARY:" + calTitle, "DESCRIPTION:" + calText.replace(/,/g, "\\,"), "LOCATION:Online",
+    "SUMMARY:" + calTitle, "DESCRIPTION:" + calText.replace(/,/g, "\\,"), "LOCATION:" + zoom,
     "END:VEVENT", "END:VCALENDAR",
   ].join("\r\n");
   ics.href = "data:text/calendar;charset=utf-8," + encodeURIComponent(icsBody);
