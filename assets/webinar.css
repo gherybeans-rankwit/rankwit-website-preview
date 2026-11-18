@@ -654,27 +654,77 @@ html {
   color: rgba(240, 238, 255, 0.75);
 }
 
+.wb-ads-foot {
+  grid-column: 1 / -1;
+  font-size: 0.95rem;
+  color: #a3a1fb;
+}
+
 /* ---------- Agenda ---------- */
 
 .wb-agenda {
   border-top: 1px solid var(--line);
 }
 
-.wb-agenda-list {
+.wb-timeline {
   margin-top: clamp(40px, 5vw, 64px);
+}
+
+.wb-bar {
+  display: flex;
+  gap: 3px;
+}
+
+.wb-bar i {
+  flex: var(--m) 1 0;
+  height: 12px;
+  background: #09041d;
+}
+
+.wb-bar i:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.wb-bar i:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.wb-bar i.q {
+  background: #9390f9;
+}
+
+.wb-ticks {
+  position: relative;
+  height: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+
+.wb-ticks span {
+  position: absolute;
+  top: 10px;
+  left: calc(var(--at) / 45 * 100%);
+}
+
+.wb-ticks span:last-child {
+  transform: translateX(-100%);
+}
+
+.wb-agenda-list {
   border-top: 1px solid var(--ink);
 }
 
 .wb-agenda-list li {
   display: grid;
-  grid-template-columns: clamp(56px, 7vw, 110px) minmax(0, 1fr);
+  grid-template-columns: clamp(110px, 12vw, 173px) minmax(0, 1fr) auto;
   gap: 16px;
   align-items: baseline;
   padding: clamp(18px, 2vw, 24px) 0;
   border-bottom: 1px solid var(--line-2);
 }
 
-.wb-agenda-list .n,
+.wb-agenda-list time,
 .wb-agenda-list h3 {
   font-family: var(--font-display);
   font-weight: 700;
@@ -683,13 +733,20 @@ html {
   letter-spacing: -0.015em;
 }
 
-.wb-agenda-list .n {
+.wb-agenda-list time {
   color: var(--accent-ink);
   font-variant-numeric: tabular-nums;
 }
 
-.wb-agenda-list li.q .n {
+.wb-agenda-list li.q time {
   color: var(--ink-3);
+}
+
+.wb-agenda-list span {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink-3);
+  white-space: nowrap;
 }
 
 /* ---------- Report for who signs up ---------- */
@@ -905,13 +962,19 @@ html {
   .wb-ads-grid > div + div {
     border-top: 1px solid rgba(240, 238, 255, 0.16);
   }
-  .wb-agenda-list li {
-    grid-template-columns: 36px minmax(0, 1fr);
-    gap: 4px 12px;
+  .wb-ticks span:not(:first-child):not(:last-child) {
+    display: none;
   }
-  .wb-agenda-list .n,
+  .wb-agenda-list li {
+    grid-template-columns: 74px minmax(0, 1fr);
+    gap: 4px 14px;
+  }
+  .wb-agenda-list time,
   .wb-agenda-list h3 {
     font-size: 1.2rem;
+  }
+  .wb-agenda-list span {
+    grid-column: 2;
   }
   .wb-report {
     padding-bottom: calc(clamp(72px, 9vw, 128px) + 64px);

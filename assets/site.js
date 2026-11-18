@@ -619,6 +619,10 @@
     };
     const NAMED = IT ? "Questa volta ci sei." : "Named this time.";
     const use = line.querySelector(".al-eng use");
+    const who = document.querySelector("[data-al-who]");
+    const WHO = IT
+      ? ["ChatGPT risponde", "Gemini risponde", "Perplexity risponde", "Claude risponde", "Le Panoramiche AI di Google rispondono"]
+      : ["ChatGPT answers", "Gemini answers", "Perplexity answers", "Claude answers", "Google AI Overviews answer"];
     const lead = line.querySelector(".al-lead");
     const you = line.querySelector(".al-you");
     const slots = ["a", "b", "c"].map((k) => line.querySelector("[data-al-" + k + "]"));
@@ -640,6 +644,7 @@
           const k = kinds[n % 2 === 0 ? "hotel" : "destination"];
           const named = n % 4 === 3;
           use.setAttribute("href", "#m-" + engines[v]);
+          if (who) who.textContent = WHO[v];
           lead.textContent = k.leads[v];
           you.textContent = k.you;
           slots.forEach((el, i) => { if (el) el.textContent = k.words[i]; });
